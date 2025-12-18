@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Faizyab Hussain</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .error-page {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: var(--bg-body);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .error-content {
+            z-index: 2;
+        }
+
+        .error-code {
+            font-size: 15rem;
+            font-weight: 900;
+            font-family: 'Outfit', sans-serif;
+            background: linear-gradient(135deg, var(--primary), var(--secondary-glow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+
+        .error-title {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+
+        .error-text {
+            color: var(--text-secondary);
+            max-width: 500px;
+            margin: 0 auto 2.5rem;
+            font-size: 1.1rem;
+        }
+
+        .error-shapes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .circle {
+            position: absolute;
+            border-radius: 50%;
+            background: var(--primary);
+            filter: blur(100px);
+            opacity: 0.1;
+        }
+
+        .circle-1 {
+            width: 400px;
+            height: 400px;
+            top: -100px;
+            right: -100px;
+        }
+
+        .circle-2 {
+            width: 300px;
+            height: 300px;
+            bottom: -50px;
+            left: -50px;
+            background: var(--secondary-glow);
+        }
+
+        @media (max-width: 768px) {
+            .error-code {
+                font-size: 10rem;
+            }
+
+            .error-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header scrolled" id="header"></header>
+
+    <main>
+        <section class="error-page">
+            <div class="error-shapes">
+                <div class="circle circle-1"></div>
+                <div class="circle circle-2"></div>
+            </div>
+
+            <div class="container error-content">
+                <div class="error-code" data-reveal>404</div>
+                <h1 class="error-title" data-reveal>Oops! Page Not Found</h1>
+                <p class="error-text" data-reveal>
+                    The page you're looking for might have been removed, had its name changed, or is temporarily
+                    unavailable.
+                </p>
+                <div class="error-btns" data-reveal>
+                    <a href="index.html" class="btn btn-primary">Return Home</a>
+                    <a href="projects.html" class="btn btn-secondary">Explore Projects</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
