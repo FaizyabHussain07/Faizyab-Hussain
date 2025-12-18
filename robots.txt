@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://faizyab-hussain07.vercel.app/sitemap.xml
+Sitemap: https://faizyab-hussain.vercel.app/sitemap.xml
+
+Sitemap: https://faizyab-hussain.netlify.app/sitemap.xml
