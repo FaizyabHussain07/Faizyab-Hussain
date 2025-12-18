@@ -67,14 +67,230 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- FontAwesome - Preload for faster icon loading -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    </noscript>
+
+    <!-- Custom CSS -->
+    <style>
+        :root {
+            --bg-deep: #0B0F14;
+            --bg-card: #141A23;
+            --bg-card-hover: #1C242F;
+            --primary: #4F8CFF;
+            --secondary: #22D3EE;
+            --text-primary: #E5E7EB;
+            --text-secondary: #9CA3AF;
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --font-heading: 'Outfit', sans-serif;
+            --font-body: 'Inter', sans-serif;
+            --container-max: 1200px;
+            --section-padding: 100px 5%;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth
+        }
+
+        body {
+            background-color: var(--bg-deep);
+            color: var(--text-secondary);
+            font-family: var(--font-body);
+            line-height: 1.6;
+            overflow-x: hidden
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-weight: 700
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition)
+        }
+
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 20px
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: transparent;
+            transition: var(--transition);
+            padding: 20px 0
+        }
+
+        .header.scrolled {
+            background: rgba(11, 15, 20, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border)
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary)
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem
+        }
+
+        .nav-links a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-secondary)
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 100px
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            max-width: 800px
+        }
+
+        .hero-title {
+            font-size: clamp(2.5rem, 8vw, 4.5rem);
+            line-height: 1.1;
+            margin-bottom: 1.5rem
+        }
+
+        .hero-title .highlight {
+            color: var(--primary)
+        }
+
+        .hero-lead {
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            font-weight: 500
+        }
+
+        .hero-desc {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin-bottom: 2.5rem
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap
+        }
+
+        .btn {
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white
+        }
+
+        .hero-shapes .shape {
+            position: absolute;
+            filter: blur(80px);
+            z-index: 1;
+            border-radius: 50%
+        }
+
+        .shape-1 {
+            width: 400px;
+            height: 400px;
+            background: rgba(79, 140, 255, 0.1);
+            top: -100px;
+            right: -100px
+        }
+
+        .shape-2 {
+            width: 300px;
+            height: 300px;
+            background: rgba(34, 211, 238, 0.05);
+            bottom: -50px;
+            left: -50px
+        }
+
+        @media (max-width:768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: var(--bg-deep);
+                flex-direction: column;
+                padding: 2rem;
+                border-bottom: 1px solid var(--border);
+                text-align: center
+            }
+
+            .nav-links.active {
+                display: flex
+            }
+
+            .mobile-toggle {
+                display: block
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-
+    <link rel="preload" href="style.css" as="style">
+    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 
 <body>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="loader-content">
+            <div class="loader-logo">FH</div>
+            <div class="loader-bar"></div>
+        </div>
+    </div>
 
     <header class="header" id="header">
         <!-- Loaded via JS -->
@@ -113,7 +329,7 @@
     </footer>
 
     <!-- JS -->
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 
 </html>

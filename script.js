@@ -59,23 +59,50 @@ function initHeader() {
 
 // Initialize on page load
 document.addEventListener('DOMContentLoaded', () => {
+    // Priority 1: Header (Needed for navigation and initial layout)
     loadComponent('header', 'header.html');
-    loadComponent('footer', 'footer.html');
+
+    // Priority 2: Footer (Not critical for initial view)
+    if ('requestIdleCallback' in window) {
+        requestIdleCallback(() => {
+            loadComponent('footer', 'footer.html');
+        });
+    } else {
+        setTimeout(() => {
+            loadComponent('footer', 'footer.html');
+        }, 1000);
+    }
+});
+
+// Preloader Handler
+window.addEventListener('load', () => {
+    const preloader = document.getElementById('preloader');
+    if (preloader) {
+        setTimeout(() => {
+            preloader.classList.add('fade-out');
+            setTimeout(() => {
+                preloader.style.display = 'none';
+            }, 800);
+        }, 1000); // 1s delay for a premium feel
+    }
 });
 
 // Original logic below (Refactored)
 
 // Reveal on Scroll
-const revealElements = document.querySelectorAll('[data-reveal]');
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
-}, { threshold: 0.1 });
+function initReveal() {
+    const revealElements = document.querySelectorAll('[data-reveal]');
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
 
-revealElements.forEach(el => revealObserver.observe(el));
+    revealElements.forEach(el => revealObserver.observe(el));
+}
+initReveal();
 
 // Project Filtering
 const filterBtns = document.querySelectorAll('.filter-btn');
@@ -124,29 +151,66 @@ if (filterBtns.length > 0) {
                         section.style.opacity = '0';
                     }
                 });
-            }, 350); // Wait for card transition to finish for a smoother effect
+            }, 350);
         });
     });
 }
 
-// Contact Form Handler
-const contactForm = document.querySelector('.contact-form');
+// Contact Form Handler (FormSubmit + AJAX + Modal)
+const contactForm = document.getElementById('contact-form');
+const thankYouModal = document.getElementById('thank-you-modal');
+const closeModalBtn = document.getElementById('close-modal');
+
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        const btn = contactForm.querySelector('button');
-        const originalText = btn.textContent;
-        btn.textContent = 'Sending...';
+
+        const btn = contactForm.querySelector('button[type="submit"]');
+        const originalText = btn.innerHTML;
+        btn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Sending...';
         btn.disabled = true;
-        setTimeout(() => {
-            btn.textContent = 'Message Sent!';
-            btn.style.background = '#22c55e';
-            contactForm.reset();
-            setTimeout(() => {
-                btn.textContent = originalText;
-                btn.style.background = '';
-                btn.disabled = false;
-            }, 3000);
-        }, 1500);
+
+        try {
+            const formData = new FormData(contactForm);
+
+            // Submission to Netlify (Requires URLSearchParams and form-name)
+            const netlifySubmit = fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            });
+
+            // Submission to FormSubmit
+            const formSubmitSubmit = fetch(contactForm.getAttribute("action"), {
+                method: "POST",
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
+
+            // Wait for both to be initiated (at least one success for UI feedback)
+            const results = await Promise.all([netlifySubmit, formSubmitSubmit]);
+
+            if (results[0].ok || results[1].ok) {
+                // Show Success Modal
+                thankYouModal.classList.add('active');
+                contactForm.reset();
+            } else {
+                throw new Error('Both submissions failed');
+            }
+        } catch (error) {
+            console.error('Submission error:', error);
+            alert('Something went wrong. Please try again or contact me directly via email.');
+        } finally {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+        }
+    });
+}
+
+if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', () => {
+        thankYouModal.classList.remove('active');
     });
 }
