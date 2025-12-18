@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me | Faizyab Hussain - Get in Touch</title>
+    <meta name="description"
+        content="Ready to start your next project? Contact Faizyab Hussain for web development and design inquiries.">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header scrolled" id="header">
+        <!-- Loaded via JS -->
+    </header>
+
+    <main>
+        <section class="contact section" style="padding-top: 150px;">
+            <div class="container">
+                <div class="contact-grid">
+                    <div class="contact-info" data-reveal>
+                        <h1 class="section-title" style="text-align: left;" data-reveal>Let's Create Something Amazing
+                        </h1>
+                        <p>I'm currently available for new projects and collaborations. Whether you have a specific idea
+                            or just want to chat about possibilities, I'd love to hear from you.</p>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4>Email Me</h4>
+                                    <span>syedfaizyabhussain07@gmail.com</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-solid fa-phone"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <span>+92 3352811970</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-brands fa-linkedin"></i>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <span>faizyabhussain</span>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fa-brands fa-github"></i>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <span>Faizyabhussain07</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="availability">
+                            <span class="dot"></span> Available for new projects
+                        </div>
+                    </div>
+                    <form class="contact-form" data-reveal>
+                        <h3 style="margin-bottom: 2rem;">Send a Message</h3>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <select required
+                                style="width: 100%; padding: 0.8rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-secondary); outline: none; margin-bottom: 1rem;">
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="web-dev">Custom Web Development</option>
+                                <option value="uiux">UI/UX Design</option>
+                                <option value="fullstack">Full Stack Application</option>
+                                <option value="ecommerce">E-commerce Solution</option>
+                                <option value="performance">Performance Optimization</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <select required
+                                style="width: 100%; padding: 0.8rem 1rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; color: var(--text-secondary); outline: none; margin-bottom: 1rem;">
+                                <option value="" disabled selected>Estimated Budget</option>
+                                <option value="basic">
+                                    < $500</option>
+                                <option value="pro">$500 - $1,500</option>
+                                <option value="enterprise">$1,500+</option>
+                                <option value="hourly">Hourly Rate</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Project Reference Link (Optional)">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Expected Timeline (e.g. 2 weeks, 1 month)" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea rows="4" placeholder="Your Message / Project Details" required></textarea>
+                        </div>
+                        <div class="form-group" style="text-align: center;">
+                            <button type="submit" class="btn btn-primary" style="padding: 1rem 3rem;">Send
+                                Inquiry</button>
+                            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 1rem;">Typical response
+                                time: Within 24 hours</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer">
+        <!-- Loaded via JS -->
+    </footer>
+
+    <style>
+        /* Dropdown Styling */
+        select {
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        select:focus {
+            border-color: var(--primary) !important;
+            background: rgba(255, 255, 255, 0.08) !important;
+        }
+
+        select option {
+            background-color: #111;
+            color: #fff;
+            padding: 12px;
+        }
+    </style>
+
+    <!-- JS -->
+    <script src="script.js"></script>
+</body>
+
+</html>

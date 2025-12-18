@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://faizyab-hussain07.vercel.app/sitemap.xml
