@@ -4,286 +4,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Faizyab Hussain | Full Stack Developer & Vibe Coder</title>
-    <!-- SEO Meta Tags -->
+    <title>Faizyab Hussain | Full-Stack Developer & Vibe Coder</title>
     <meta name="description"
-        content="Portfolio of Faizyab Hussain, a Frontend / Full-Stack Developer (In Progress) @SMIT, Founder of DevWeaveX & Faizyab Al-Quran. Building modern, high-performance web applications.">
+        content="Faizyab Hussain is a Full-Stack Developer building modern interfaces and AI-powered tools. Exploring 31+ web development projects, services, and digital solutions.">
     <meta name="keywords"
-        content="Faizyab Hussain, Full Stack Developer, Web Developer, SMIT, Karachi, Frontend Developer, DevWeaveX, Faizyab Al-Quran, Vibe Coder, Portfolio">
-    <meta name="author" content="Faizyab Hussain">
-    <link rel="canonical" href="https://faizyab-hussain07.vercel.app/">
+        content="Faizyab Hussain, Full-Stack Developer, Web Development, React, Next.js, UI/UX Design, Portfolio, Freelance Developer">
 
-    <!-- Open Graph / Facebook -->
+    <!-- OpenGraph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://faizyab-hussain07.vercel.app/">
-    <meta property="og:title" content="Faizyab Hussain | Full Stack Developer & Vibe Coder">
+    <meta property="og:url" content="https://faizyab-hussain.vercel.app/">
+    <meta property="og:title" content="Faizyab Hussain — Full-Stack Developer & Builder">
     <meta property="og:description"
-        content="Explore the portfolio of Faizyab Hussain - building the future of the web with modern tech stacks.">
-    <meta property="og:image" content="https://faizyab-hussain07.vercel.app/og-image.jpg">
+        content="Full-Stack Developer building modern interfaces & AI-powered tools. Explorer 31+ projects.">
+    <meta property="og:image" content="https://faizyab-hussain.vercel.app/favicon.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://faizyab-hussain07.vercel.app/">
-    <meta property="twitter:title" content="Faizyab Hussain | Full Stack Developer & Vibe Coder">
-    <meta property="twitter:description"
-        content="Explore the portfolio of Faizyab Hussain - building the future of the web with modern tech stacks.">
-    <meta property="twitter:image" content="https://faizyab-hussain07.vercel.app/og-image.jpg">
+    <meta property="twitter:url" content="https://faizyab-hussain.vercel.app/">
+    <meta property="twitter:title" content="Faizyab Hussain — Builder">
+    <meta property="twitter:description" content="Full-Stack Developer building modern interfaces & AI-powered tools.">
+    <meta property="twitter:image" content="https://faizyab-hussain.vercel.app/favicon.png">
 
-    <!-- Structured Data (JSON-LD) -->
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://faizyab-hussain.vercel.app/">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Faizyab Hussain",
-      "url": "https://faizyab-hussain07.vercel.app/",
-      "jobTitle": "Full Stack Developer",
-      "worksFor": [
-        {
-          "@type": "Organization",
-          "name": "DevWeaveX"
-        },
-        {
-          "@type": "Organization",
-          "name": "Faizyab Al-Quran"
-        }
-      ],
-      "description": "Frontend / Full-Stack Developer dedicated to building modern, responsive, and user-friendly web applications.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Karachi",
-        "addressRegion": "Sindh",
-        "addressCountry": "Pakistan"
-      },
+      "url": "https://faizyab-hussain.vercel.app/",
+      "jobTitle": "Full-Stack Developer",
+      "image": "https://faizyab-hussain.vercel.app/favicon.png",
       "sameAs": [
-        "https://github.com/Faizyabhussain07",
-        "https://linkedin.com/in/faizyabhussain"
-      ]
+        "https://github.com/faizyab",
+        "https://linkedin.com/in/faizyabhussain",
+        "https://x.com/FaizyabHus74391"
+      ],
+      "knowsAbout": ["Web Development", "UI/UX Design", "Full-Stack Development", "React", "Node.js"]
     }
     </script>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
-        rel="stylesheet">
-
-    <!-- FontAwesome - Preload for faster icon loading -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </noscript>
-
-    <!-- Custom CSS -->
-    <style>
-        :root {
-            --bg-deep: #0B0F14;
-            --bg-card: #141A23;
-            --bg-card-hover: #1C242F;
-            --primary: #4F8CFF;
-            --secondary: #22D3EE;
-            --text-primary: #E5E7EB;
-            --text-secondary: #9CA3AF;
-            --border: rgba(255, 255, 255, 0.08);
-            --border-hover: rgba(255, 255, 255, 0.15);
-            --font-heading: 'Outfit', sans-serif;
-            --font-body: 'Inter', sans-serif;
-            --container-max: 1200px;
-            --section-padding: 100px 5%;
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1)
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth
-        }
-
-        body {
-            background-color: var(--bg-deep);
-            color: var(--text-secondary);
-            font-family: var(--font-body);
-            line-height: 1.6;
-            overflow-x: hidden
-        }
-
-        h1,
-        h2,
-        h3 {
-            color: var(--text-primary);
-            font-family: var(--font-heading);
-            font-weight: 700
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition)
-        }
-
-        .container {
-            max-width: var(--container-max);
-            margin: 0 auto;
-            padding: 0 20px
-        }
-
-        .header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: transparent;
-            transition: var(--transition);
-            padding: 20px 0
-        }
-
-        .header.scrolled {
-            background: rgba(11, 15, 20, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 15px 0;
-            border-bottom: 1px solid var(--border)
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: space-between;
-            align-items: center
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary)
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem
-        }
-
-        .nav-links a {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-secondary)
-        }
-
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            position: relative;
-            overflow: hidden;
-            padding-top: 100px
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 10;
-            max-width: 800px
-        }
-
-        .hero-title {
-            font-size: clamp(2.5rem, 8vw, 4.5rem);
-            line-height: 1.1;
-            margin-bottom: 1.5rem
-        }
-
-        .hero-title .highlight {
-            color: var(--primary)
-        }
-
-        .hero-lead {
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            font-weight: 500
-        }
-
-        .hero-desc {
-            font-size: 1.1rem;
-            max-width: 600px;
-            margin-bottom: 2.5rem
-        }
-
-        .hero-btns {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap
-        }
-
-        .btn {
-            padding: 14px 28px;
-            border-radius: 12px;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px
-        }
-
-        .btn-primary {
-            background: var(--primary);
-            color: white
-        }
-
-        .hero-shapes .shape {
-            position: absolute;
-            filter: blur(80px);
-            z-index: 1;
-            border-radius: 50%
-        }
-
-        .shape-1 {
-            width: 400px;
-            height: 400px;
-            background: rgba(79, 140, 255, 0.1);
-            top: -100px;
-            right: -100px
-        }
-
-        .shape-2 {
-            width: 300px;
-            height: 300px;
-            background: rgba(34, 211, 238, 0.05);
-            bottom: -50px;
-            left: -50px
-        }
-
-        @media (max-width:768px) {
-            .nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background: var(--bg-deep);
-                flex-direction: column;
-                padding: 2rem;
-                border-bottom: 1px solid var(--border);
-                text-align: center
-            }
-
-            .nav-links.active {
-                display: flex
-            }
-
-            .mobile-toggle {
-                display: block
-            }
-        }
-    </style>
-    <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="style.css" as="style">
-    <link rel="icon" href="favicon.png" type="image/png">
 </head>
 
 <body>
-
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="loader-content">
@@ -292,44 +61,1046 @@
         </div>
     </div>
 
-    <header class="header" id="header">
-        <!-- Loaded via JS -->
-    </header>
+    <!-- Animated background -->
+    <div class="gradient-bg"></div>
+    <div class="grid-overlay"></div>
 
-    <main>
-        <!-- Hero Section -->
-        <section id="home" class="hero section">
-            <div class="container hero-content">
-                <h1 class="hero-title" data-reveal>Hi, I'm <span class="highlight">Faizyab Hussain</span></h1>
-                <p class="hero-lead" data-reveal>Frontend Developer | Web Developer | Full Stack Developer (In Progress)
-                    @SMIT</p>
-                <div class="hero-location" data-reveal
-                    style="margin-bottom: 1.5rem; color: var(--text-secondary); display: flex; align-items: center; gap: 8px;">
-                    <i class="fa-solid fa-location-dot" style="color: var(--primary);"></i> Karachi Division, Sindh,
-                    Pakistan
+    <!-- Main container -->
+    <div class="relative z-10">
+        <!-- Navigation -->
+        <nav class="fixed top-0 w-full z-50">
+            <div class="max-w-7xl mx-auto px-6 py-4">
+                <div class="glass-card rounded-2xl px-8 py-4 flex justify-between items-center">
+                    <!-- Logo with animation -->
+                    <a href="#" class="flex items-center gap-3 group">
+                        <img src="favicon.png" alt="Logo"
+                            class="w-10 h-10 rounded-lg transform group-hover:rotate-6 transition-transform duration-300">
+                        <div class="hidden md:block">
+                            <div class="font-bold text-lg leading-none">Faizyab Hussain</div>
+                            <div class="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">Full-Stack Developer
+                            </div>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex items-center gap-2">
+                        <a href="#about"
+                            class="nav-link px-4 py-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-2">
+                            <i class="fas fa-user text-xs"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="#services"
+                            class="nav-link px-4 py-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-2">
+                            <i class="fas fa-layer-group text-xs"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="#work"
+                            class="nav-link px-4 py-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-2">
+                            <i class="fas fa-briefcase text-xs"></i>
+                            <span>Work</span>
+                        </a>
+                        <a href="#pricing"
+                            class="nav-link px-4 py-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-2">
+                            <i class="fas fa-tags text-xs"></i>
+                            <span>Pricing</span>
+                        </a>
+                        <a href="#contact"
+                            class="nav-link px-4 py-2 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-2">
+                            <i class="fas fa-envelope text-xs"></i>
+                            <span>Contact</span>
+                        </a>
+                        <div class="w-px h-6 bg-zinc-700 mx-2"></div>
+                        <a href="https://github.com/faizyab" target="_blank"
+                            class="w-9 h-9 rounded-lg hover:bg-zinc-800/50 flex items-center justify-center transition-all duration-300 hover:text-indigo-400">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:syedfaizyabhussain07@gmail.com"
+                            class="w-9 h-9 rounded-lg hover:bg-zinc-800/50 flex items-center justify-center transition-all duration-300 hover:text-indigo-400">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobileMenuBtn"
+                        class="md:hidden w-10 h-10 rounded-lg hover:bg-zinc-800/50 flex items-center justify-center transition-all duration-300">
+                        <i class="fas fa-bars"></i>
+                    </button>
                 </div>
-                <p class="hero-desc" data-reveal>I’m a passionate Frontend / Full-Stack Developer dedicated to building
-                    modern, responsive, and user-friendly web applications. I enjoy transforming ideas into functional,
-                    visually appealing, and high-performance digital products.</p>
-                <div class="hero-btns" data-reveal>
-                    <a href="projects.html" class="btn btn-primary">View My Work</a>
-                    <a href="contact.html" class="btn btn-secondary">Hire Me</a>
-                    <a href="resume.html" class="btn btn-outline"><i class="fa-solid fa-file-pdf"></i> Resume</a>
+
+                <!-- Mobile Menu -->
+                <div id="mobileMenu" class="md:hidden hidden mt-4">
+                    <div class="glass-card rounded-2xl p-6 space-y-3">
+                        <a href="#about"
+                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
+                            <i class="fas fa-user text-indigo-400"></i>
+                            <span>About</span>
+                        </a>
+                        <a href="#services"
+                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
+                            <i class="fas fa-layer-group text-indigo-400"></i>
+                            <span>Services</span>
+                        </a>
+                        <a href="#work"
+                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
+                            <i class="fas fa-briefcase text-indigo-400"></i>
+                            <span>Work</span>
+                        </a>
+                        <a href="#pricing"
+                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
+                            <i class="fas fa-tags text-indigo-400"></i>
+                            <span>Pricing</span>
+                        </a>
+                        <a href="#contact"
+                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
+                            <i class="fas fa-envelope text-indigo-400"></i>
+                            <span>Contact</span>
+                        </a>
+                        <div class="border-t border-zinc-700 pt-3 flex gap-3">
+                            <a href="https://github.com/faizyab" target="_blank"
+                                class="flex-1 py-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-700/50 flex items-center justify-center transition-all duration-300">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="mailto:syedfaizyabhussain07@gmail.com"
+                                class="flex-1 py-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-700/50 flex items-center justify-center transition-all duration-300">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="hero-shapes">
-                <div class="shape shape-1"></div>
-                <div class="shape shape-2"></div>
+        </nav>
+
+        <!-- Hero Section - Centered -->
+        <section class="min-h-screen flex items-center justify-center px-6 md:px-12 pt-20">
+            <div class="max-w-4xl w-full text-center">
+                <!-- Status badge -->
+                <div class="flex items-center justify-center gap-2 mb-8">
+                    <div class="status-indicator w-2 h-2 bg-green-500 rounded-full"></div>
+                    <span class="text-sm text-zinc-400 tracking-wider uppercase">Available for Work</span>
+                </div>
+
+                <!-- Name -->
+                <h1 class="hero-title text-6xl md:text-8xl font-bold mb-6">
+                    <span class="neon-glow">Faizyab Hussain</span>
+                </h1>
+
+                <!-- Tagline -->
+                <p class="hero-subtitle text-xl md:text-2xl text-zinc-300 mb-6 leading-relaxed">
+                    Full-Stack Developer Building
+                    <span class="text-indigo-400 font-semibold">Modern Interfaces</span> &
+                    <span class="text-purple-400 font-semibold">AI-Powered Tools</span>
+                </p>
+
+                <!-- Summary -->
+                <p class="hero-description text-base text-zinc-500 mb-12 max-w-2xl mx-auto leading-relaxed">
+                    I transform creative ideas into high-performance digital products.
+                    Clean code. Intuitive design. Systems that scale.
+                </p>
+
+                <div class="hero-buttons flex flex-wrap justify-center gap-4">
+                    <a href="#work"
+                        class="px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+                        View Work
+                    </a>
+                    <a href="resume.html"
+                        class="px-8 py-4 border border-zinc-700 hover:border-indigo-600 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+                        View Resume
+                    </a>
+                    <a href="#contact"
+                        class="px-8 py-4 border border-zinc-700 hover:border-indigo-600 rounded-lg font-medium transition-all duration-300 hover:scale-105">
+                        Let's Talk
+                    </a>
+                </div>
             </div>
         </section>
-    </main>
 
-    <footer class="footer" id="footer">
-        <!-- Loaded via JS -->
-    </footer>
+        <!-- What I'm Building Section -->
+        <section class="py-32 px-6 md:px-12" id="about">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center">
+                    What I'm <span class="text-indigo-400">Building</span>
+                </h2>
 
-    <!-- JS -->
-    <script src="script.js" defer></script>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- DevWeaveX -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-layer-group text-indigo-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-indigo-400 text-xs font-medium uppercase tracking-wider">Dec 2025 —
+                                    Present</div>
+                                <h3 class="text-2xl font-bold">DevWeaveX</h3>
+                            </div>
+                        </div>
+                        <p class="text-zinc-400 mb-4 leading-relaxed">Leading a professional agency platform focused on
+                            scalable architecture and premium UI/UX. Building systems that scale.</p>
+                        <div class="text-sm text-indigo-400 font-medium">Founder & Lead Developer</div>
+                    </div>
+
+                    <!-- Web Template Hub -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-code text-emerald-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-emerald-400 text-xs font-medium uppercase tracking-wider">2025 —
+                                    Present</div>
+                                <h3 class="text-2xl font-bold">Web Template Hub</h3>
+                            </div>
+                        </div>
+                        <p class="text-zinc-400 mb-4 leading-relaxed">Curated collection of modern, responsive web
+                            templates. Ready-to-use designs for developers and businesses.</p>
+                        <a href="https://web-template-hub.netlify.app" target="_blank"
+                            class="text-sm text-emerald-400 font-medium hover:text-emerald-300 transition-colors flex items-center gap-2">
+                            View Live <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Faizyab Al-Quran -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <div class="flex items-center gap-3 mb-4">
+                            <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-book-open text-purple-400 text-xl"></i>
+                            </div>
+                            <div>
+                                <div class="text-purple-400 text-xs font-medium uppercase tracking-wider">July 2024 —
+                                    Present</div>
+                                <h3 class="text-2xl font-bold">Faizyab Al-Quran</h3>
+                            </div>
+                        </div>
+                        <p class="text-zinc-400 mb-4 leading-relaxed">Modern LMS combining Quranic studies with academic
+                            support. Technology meeting tradition in a thoughtful way.</p>
+                        <div class="text-sm text-purple-400 font-medium">Founder</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section with Icons -->
+        <section class="py-32 px-6 md:px-12">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center">
+                    My <span class="text-indigo-400">Tech Stack</span>
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-12">
+                    <!-- Frontend -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-indigo-400 flex items-center gap-2">
+                            <i class="fas fa-code"></i>
+                            Frontend
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#61DAFB]">
+                                    <i class="fab fa-react"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">React.js</div>
+                                    <div class="text-xs text-zinc-500">UI Library</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-white">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                        <path
+                                            d="M11.572 0c-.176 0-.31.001-.358.007a19.76 19.76 0 0 1-.364.033C7.443.346 4.25 2.185 2.228 5.012a11.875 11.875 0 0 0-2.119 5.243c-.096.659-.108.854-.108 1.747s.012 1.089.108 1.748c.652 4.506 3.86 8.292 8.209 9.695.779.25 1.6.422 2.534.525.363.04 1.935.04 2.299 0 1.611-.178 2.977-.577 4.323-1.264.207-.106.247-.134.219-.158-.02-.013-.9-1.193-1.955-2.62l-1.919-2.592-2.404-3.558a338.739 338.739 0 0 0-2.422-3.556c-.009-.002-.018 1.579-.023 3.51-.007 3.38-.01 3.515-.052 3.595a.426.426 0 0 1-.206.214c-.075.037-.14.044-.495.044H7.81l-.108-.068a.438.438 0 0 1-.157-.171l-.05-.106.006-4.703.007-4.705.072-.092a.645.645 0 0 1 .174-.143c.096-.047.134-.051.54-.051.478 0 .558.018.682.154.035.038 1.337 1.999 2.895 4.361a10760.433 10760.433 0 0 0 4.735 7.17l1.9 2.879.096-.063a12.317 12.317 0 0 0 2.466-2.163 11.944 11.944 0 0 0 2.824-6.134c.096-.66.108-.854.108-1.748 0-.893-.012-1.088-.108-1.747-.652-4.506-3.859-8.292-8.208-9.695a12.597 12.597 0 0 0-2.499-.523A33.119 33.119 0 0 0 11.573 0zm4.069 7.217c.347 0 .408.005.486.047a.473.473 0 0 1 .237.277c.018.06.023 1.365.018 4.304l-.006 4.218-.744-1.14-.746-1.14v-3.066c0-1.982.01-3.097.023-3.15a.478.478 0 0 1 .233-.296c.096-.05.13-.054.5-.054z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Next.js</div>
+                                    <div class="text-xs text-zinc-500">React Framework</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#F7DF1E]">
+                                    <i class="fab fa-js"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">JavaScript</div>
+                                    <div class="text-xs text-zinc-500">ES6+</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#06B6D4]">
+                                    <svg viewBox="0 0 24 24" fill="currentColor" class="w-6 h-6">
+                                        <path
+                                            d="M12.001,4.8c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 C13.666,10.618,15.027,12,18.001,12c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C16.337,6.182,14.976,4.8,12.001,4.8z M6.001,12c-3.2,0-5.2,1.6-6,4.8c1.2-1.6,2.6-2.2,4.2-1.8c0.913,0.228,1.565,0.89,2.288,1.624 c1.177,1.194,2.538,2.576,5.512,2.576c3.2,0,5.2-1.6,6-4.8c-1.2,1.6-2.6,2.2-4.2,1.8c-0.913-0.228-1.565-0.89-2.288-1.624 C10.337,13.382,8.976,12,6.001,12z" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Tailwind CSS</div>
+                                    <div class="text-xs text-zinc-500">Utility Framework</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#E34F26]">
+                                    <i class="fab fa-html5"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">HTML5 & CSS3</div>
+                                    <div class="text-xs text-zinc-500">Web Standards</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend & Tools -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-purple-400 flex items-center gap-2">
+                            <i class="fas fa-server"></i>
+                            Backend & Tools
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#339933]">
+                                    <i class="fab fa-node-js"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Node.js</div>
+                                    <div class="text-xs text-zinc-500">Runtime</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#FFCA28]">
+                                    <i class="fas fa-fire"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Firebase</div>
+                                    <div class="text-xs text-zinc-500">Backend Platform</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#3ECF8E]">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Supabase</div>
+                                    <div class="text-xs text-zinc-500">Database</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#F05032]">
+                                    <i class="fab fa-git-alt"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Git & GitHub</div>
+                                    <div class="text-xs text-zinc-500">Version Control</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-white">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Vercel & Netlify</div>
+                                    <div class="text-xs text-zinc-500">Deployment</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Design & AI -->
+                    <div>
+                        <h3 class="text-lg font-semibold mb-6 text-indigo-400 flex items-center gap-2">
+                            <i class="fas fa-palette"></i>
+                            Design & AI
+                        </h3>
+                        <div class="space-y-4">
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-[#F24E1E]">
+                                    <i class="fab fa-figma"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">Figma</div>
+                                    <div class="text-xs text-zinc-500">Design Tool</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-indigo-400">
+                                    <i class="fas fa-pen-nib"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">UI/UX Design</div>
+                                    <div class="text-xs text-zinc-500">User Experience</div>
+                                </div>
+                            </div>
+
+                            <div class="tech-item glass-card p-4 rounded-xl flex items-center gap-4">
+                                <div class="tech-icon text-purple-400">
+                                    <i class="fas fa-robot"></i>
+                                </div>
+                                <div>
+                                    <div class="font-medium">AI Development</div>
+                                    <div class="text-xs text-zinc-500">Cursor & Bolt</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section class="py-32 px-6 md:px-12" id="services">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center" data-reveal>
+                    My <span class="text-indigo-400">Services</span>
+                </h2>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Service 1 -->
+                    <div class="glass-card p-8 rounded-2xl" data-reveal>
+                        <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-laptop-code text-indigo-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">Web Development</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">High-performance websites tailored to your
+                            specific business needs using modern technologies.</p>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="glass-card p-8 rounded-2xl" data-reveal>
+                        <div class="w-12 h-12 bg-purple-600/20 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-pen-nib text-purple-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">UI/UX Design</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Clean, modern UIs that prioritize user
+                            experience and drive higher engagement and conversions.</p>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="glass-card p-8 rounded-2xl" data-reveal>
+                        <div class="w-12 h-12 bg-emerald-600/20 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-rocket text-emerald-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">SEO Optimization</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Specialized in speeding up existing sites to
+                            improve core web vitals and SEO rankings.</p>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="glass-card p-8 rounded-2xl" data-reveal>
+                        <div class="w-12 h-12 bg-indigo-600/20 rounded-lg flex items-center justify-center mb-6">
+                            <i class="fas fa-cart-shopping text-indigo-400 text-xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold mb-4">E-commerce</h3>
+                        <p class="text-zinc-400 text-sm leading-relaxed">Building secure and scalable online stores that
+                            help you sell products effectively.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Experience & Recognition Section -->
+        <section class="py-32 px-6 md:px-12" id="experience">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center">
+                    Experience & <span class="text-indigo-400">Recognition</span>
+                </h2>
+
+                <div class="grid lg:grid-cols-3 gap-16">
+                    <!-- Experience Timeline (Left) -->
+                    <div class="lg:col-span-2 space-y-8">
+                        <!-- Kohaq -->
+                        <div class="timeline-line pl-8 py-4" data-reveal>
+                            <div class="text-sm text-zinc-500 mb-2 flex items-center gap-2">
+                                <i class="far fa-calendar text-indigo-400"></i>
+                                Aug 2025 — Sept 2025
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-2">Tech Intern</h3>
+                            <div class="text-indigo-400 mb-3 font-medium">Kohaq</div>
+                            <p class="text-zinc-400 leading-relaxed">Corporate web dev workflows.
+                                Learned collaborative coding standards and
+                                professional development practices in an agile environment.</p>
+                        </div>
+
+                        <!-- Freelance -->
+                        <div class="timeline-line pl-8 py-4" data-reveal>
+                            <div class="text-sm text-zinc-500 mb-2 flex items-center gap-2">
+                                <i class="far fa-calendar text-purple-400"></i>
+                                Sept 2024 — July 2025
+                            </div>
+                            <h3 class="text-2xl font-semibold mb-2">Freelance Web Developer</h3>
+                            <div class="text-purple-400 mb-3 font-medium">Self-Employed</div>
+                            <p class="text-zinc-400 leading-relaxed">Built client websites with modern
+                                tech stacks. High performance, high
+                                satisfaction results. Learned to ship fast and manage projects
+                                effectively.</p>
+                        </div>
+                    </div>
+
+                    <!-- Recognition (Right Sidebar) -->
+                    <div class="space-y-6">
+                        <h3 class="text-xl font-bold mb-8 text-zinc-300 flex items-center gap-3">
+                            <i class="fas fa-award text-indigo-400"></i>
+                            Honors
+                        </h3>
+
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-indigo-500" data-reveal>
+                            <div class="flex items-center gap-4 mb-3">
+                                <i class="fas fa-trophy text-indigo-400 text-xl"></i>
+                                <h4 class="font-bold">SMIT Coding Night</h4>
+                            </div>
+                            <p class="text-xs text-zinc-500">Hackathon Participant</p>
+                        </div>
+
+                        <div class="glass-card p-6 rounded-2xl border-l-4 border-purple-500" data-reveal>
+                            <div class="flex items-center gap-4 mb-3">
+                                <i class="fas fa-certificate text-purple-400 text-xl"></i>
+                                <h4 class="font-bold">Intro to Programming</h4>
+                            </div>
+                            <p class="text-xs text-zinc-500">SMIT Achievement Certificate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Work Section -->
+        <section class="py-32 px-6 md:px-12" id="work">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-4 text-center">
+                    Selected <span class="text-indigo-400">Work</span>
+                </h2>
+                <p class="text-zinc-500 mb-16 text-center">A glimpse into what I've been shipping</p>
+
+                <!-- Fullstack Apps -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold mb-8 text-indigo-400 flex items-center gap-2">
+                        <i class="fas fa-laptop-code"></i>
+                        Fullstack Applications
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="glass-card p-6 rounded-xl" data-reveal>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-layer-group text-indigo-400"></i>
+                                <h4 class="font-semibold text-lg">DevWeaveX</h4>
+                            </div>
+                            <p class="text-sm text-zinc-400 mb-4">Professional agency platform for
+                                custom web solutions.
+                            </p>
+                            <a href="https://devweavex.netlify.app/" target="_blank"
+                                class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1">
+                                View Live <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl" data-reveal>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-code text-emerald-400"></i>
+                                <h4 class="font-semibold text-lg">Web Template Hub</h4>
+                            </div>
+                            <p class="text-sm text-zinc-400 mb-4">Curated collection of modern,
+                                responsive web
+                                templates.</p>
+                            <a href="https://web-template-hub.netlify.app" target="_blank"
+                                class="text-xs text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1">
+                                View Live <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl" data-reveal>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-book-open text-purple-400"></i>
+                                <h4 class="font-semibold text-lg">Faizyab Al-Quran</h4>
+                            </div>
+                            <p class="text-sm text-zinc-400 mb-4">Digital platform for Quranic studies
+                                and translations.
+                            </p>
+                            <a href="http://faizyab-al-quran.vercel.app/" target="_blank"
+                                class="text-xs text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1">
+                                View Live <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl" data-reveal>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-tools text-indigo-400"></i>
+                                <h4 class="font-semibold text-lg">MyPage Builder</h4>
+                            </div>
+                            <p class="text-sm text-zinc-400 mb-4">Modern link-in-bio and portfolio
+                                builder SaaS.</p>
+                            <a href="https://mypage-builder.vercel.app/" target="_blank"
+                                class="text-xs text-indigo-400 hover:text-indigo-300 transition-colors flex items-center gap-1">
+                                View Live <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl" data-reveal>
+                            <div class="flex items-center gap-3 mb-3">
+                                <i class="fas fa-robot text-purple-400"></i>
+                                <h4 class="font-semibold text-lg">Readme AI</h4>
+                            </div>
+                            <p class="text-sm text-zinc-400 mb-4">AI-powered README generator for
+                                documentation.</p>
+                            <a href="https://readme-builder-ai.floot.app/" target="_blank"
+                                class="text-xs text-purple-400 hover:text-purple-300 transition-colors flex items-center gap-1">
+                                View Live <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Apps -->
+                <div class="mb-16">
+                    <h3 class="text-2xl font-semibold mb-8 text-purple-400 flex items-center gap-2">
+                        <i class="fas fa-desktop"></i>
+                        Web Applications
+                    </h3>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-comments text-3xl text-indigo-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">Wibba</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Dynamic social media platform with
+                                interactive feed.
+                            </p>
+                            <a href="https://wibba.netlify.app/" target="_blank"
+                                class="text-xs text-indigo-400 hover:underline">View Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-question-circle text-3xl text-purple-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">Quiz App</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Interactive testing platform with
+                                real-time scoring.
+                            </p>
+                            <a href="https://faizyabhussain07.github.io/modern-quiz-web-app/" target="_blank"
+                                class="text-xs text-purple-400 hover:underline">View
+                                Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-qrcode text-3xl text-emerald-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">QR Generator</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Utility for creating custom scanning
+                                codes.</p>
+                            <a href="https://faizyabhussain07.github.io/Bar_QR_code-generator/" target="_blank"
+                                class="text-xs text-emerald-400 hover:underline">View
+                                Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-parking text-3xl text-indigo-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">Parking System</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Logistics tool for managing slot
+                                entries and exits.
+                            </p>
+                            <a href="https://faizyabhussain07.github.io/Parking_Managment_System/" target="_blank"
+                                class="text-xs text-indigo-400 hover:underline">View
+                                Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-graduation-cap text-3xl text-purple-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">Mark Sheet</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Academic tool for calculating results
+                                instantly.</p>
+                            <a href="http://faizyabhussain07.github.io/Marksheet/" target="_blank"
+                                class="text-xs text-purple-400 hover:underline">View Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-tasks text-3xl text-emerald-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">To-Do App</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Productivity application with
+                                persistent storage.</p>
+                            <a href="https://faizyabhussain07.github.io/advance-to-do-web/" target="_blank"
+                                class="text-xs text-emerald-400 hover:underline">View
+                                Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-gamepad text-3xl text-indigo-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">Tic Tac Toe</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Advanced version of the classic game
+                                with scoring.</p>
+                            <a href="https://faizyabhussain07.github.io/Advanced-Tic_Tac_Toi-Game/" target="_blank"
+                                class="text-xs text-indigo-400 hover:underline">View
+                                Live</a>
+                        </div>
+                        <div class="glass-card p-6 rounded-xl text-center" data-reveal>
+                            <i class="fas fa-calculator text-3xl text-purple-400 mb-4"></i>
+                            <h4 class="font-bold mb-2 text-lg">Calculator</h4>
+                            <p class="text-xs text-zinc-500 mb-4">Minimalist and responsive mathematical
+                                utility.</p>
+                            <a href="https://faizyabhussain07.github.io/mybasiccalculator/" target="_blank"
+                                class="text-xs text-purple-400 hover:underline">View
+                                Live</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Landing Pages -->
+                <div>
+                    <h3 class="text-2xl font-semibold mb-8 text-indigo-400 flex items-center gap-2">
+                        <i class="fas fa-file-code"></i>
+                        Landing Pages <span class="text-sm text-zinc-600">(17+ projects)</span>
+                    </h3>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 text-sm">
+                        <a href="https://zayka-food-restrurant.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Zayka Restaurant</span>
+                            <span class="text-[10px] text-zinc-500">Premium food landing.</span>
+                        </a>
+                        <a href="https://woodcraft-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Woodcraft</span>
+                            <span class="text-[10px] text-zinc-500">Artisanal furniture.</span>
+                        </a>
+                        <a href="https://irongym-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Iron Gym</span>
+                            <span class="text-[10px] text-zinc-500">Fitness platform.</span>
+                        </a>
+                        <a href="https://beauty-glow-poular-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Beauty Glow</span>
+                            <span class="text-[10px] text-zinc-500">Elegant skincare.</span>
+                        </a>
+                        <a href="https://dreamhouse-estate.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Dream House</span>
+                            <span class="text-[10px] text-zinc-500">Real estate showcase.</span>
+                        </a>
+                        <a href="https://edu-pro-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Edu-Pro</span>
+                            <span class="text-[10px] text-zinc-500">Ed-tech landing.</span>
+                        </a>
+                        <a href="https://grand-stay-hotel.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Grand Stay Hotel</span>
+                            <span class="text-[10px] text-zinc-500">Luxury hotel booking.</span>
+                        </a>
+                        <a href="https://fashion-ecomerce.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Fashion Ecommerce</span>
+                            <span class="text-[10px] text-zinc-500">Dynamic store landing.</span>
+                        </a>
+                        <a href="https://travel-vista-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Travel Vista</span>
+                            <span class="text-[10px] text-zinc-500">Tourism agency portal.</span>
+                        </a>
+                        <a href="https://nextech-startup-saas.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">NexTech Startup</span>
+                            <span class="text-[10px] text-zinc-500">SaaS startup landing.</span>
+                        </a>
+                        <a href="https://medical-care-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Medical Care</span>
+                            <span class="text-[10px] text-zinc-500">Clinical services.</span>
+                        </a>
+                        <a href="https://redline-dream-car-web.netlify.app/" target="_blank"
+                            class="glass-card p-4 rounded-lg hover:text-indigo-400 transition-all flex flex-col gap-1"
+                            data-reveal>
+                            <span class="font-medium">Redline Dream Car</span>
+                            <span class="text-[10px] text-zinc-500">Luxury rentals.</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="py-32 px-6 md:px-12" id="pricing">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-16 text-center" data-reveal>
+                    <span class="text-indigo-400">Pricing</span> Plans
+                </h2>
+
+                <div class="grid md:grid-cols-3 gap-8">
+                    <!-- Basic -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col group hover:border-indigo-500/50" data-reveal>
+                        <h3 class="text-2xl font-bold mb-2">Basic</h3>
+                        <p class="text-zinc-500 text-sm mb-6">Perfect for simple web presence</p>
+                        <div class="text-4xl font-bold text-indigo-400 mb-6">$299<span
+                                class="text-sm text-zinc-600 font-normal">/project</span></div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>Single Page Design</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>Fully Responsive Layout</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>Basic Contact Form</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>1 Month Free Support</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="w-full py-4 text-center border border-zinc-700 hover:border-indigo-600 rounded-lg font-medium transition-all duration-300 group-hover:bg-indigo-600/10">Get
+                            Started</a>
+                    </div>
+
+                    <!-- Professional -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col border-2 border-indigo-600/50 relative transform scale-105 shadow-2xl shadow-indigo-600/10"
+                        data-reveal>
+                        <div
+                            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-indigo-600 text-[10px] uppercase tracking-widest font-bold px-4 py-1.5 rounded-full">
+                            Most Popular</div>
+                        <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                        <p class="text-zinc-500 text-sm mb-6">Ideal for growing businesses</p>
+                        <div class="text-4xl font-bold text-indigo-400 mb-6">$599<span
+                                class="text-sm text-zinc-600 font-normal">/project</span></div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm font-medium">
+                                <i class="fas fa-bolt text-amber-400 text-xs"></i>
+                                <span class="text-zinc-200">Up to 5 Pages</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>Custom UI/UX Design</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>100% Core Web Vitals Speed</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>Dynamic Animations</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-indigo-500 text-xs"></i>
+                                <span>Full Source Code Delivery</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="w-full py-4 text-center bg-indigo-600 hover:bg-indigo-700 rounded-lg font-medium transition-all duration-300 shadow-lg shadow-indigo-600/20">Get
+                            Started</a>
+                    </div>
+
+                    <!-- E-commerce -->
+                    <div class="glass-card p-8 rounded-2xl flex flex-col group hover:border-purple-500/50" data-reveal>
+                        <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                        <p class="text-zinc-500 text-sm mb-6">Scale your online business</p>
+                        <div class="text-4xl font-bold text-purple-400 mb-6">$999<span
+                                class="text-sm text-zinc-600 font-normal">/project</span></div>
+                        <ul class="space-y-4 mb-8 flex-1">
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm font-medium">
+                                <i class="fas fa-cart-shopping text-purple-400 text-xs"></i>
+                                <span class="text-zinc-200">Full E-commerce Solution</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-purple-500 text-xs"></i>
+                                <span>Payment Gateways Integration</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-purple-500 text-xs"></i>
+                                <span>Admin Dashboard & CMS</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-purple-500 text-xs"></i>
+                                <span>Inventory & Order Manager</span>
+                            </li>
+                            <li class="flex items-center gap-3 text-zinc-400 text-sm">
+                                <i class="fas fa-check text-purple-500 text-xs"></i>
+                                <span>3 Months Maintenance</span>
+                            </li>
+                        </ul>
+                        <a href="#contact"
+                            class="w-full py-4 text-center border border-zinc-700 hover:border-purple-600 rounded-lg font-medium transition-all duration-300 group-hover:bg-purple-600/10">Get
+                            Started</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contact Section -->
+        <section class="py-32 px-6 md:px-12" id="contact">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-4xl md:text-6xl font-bold mb-8 text-center">
+                    Let's <span class="neon-glow text-indigo-400">Build</span>
+                </h2>
+
+                <p class="text-xl text-zinc-400 mb-16 max-w-2xl mx-auto text-center">
+                    I'm currently open to opportunities, collaborations, and interesting projects.
+                    Let's create something that matters.
+                </p>
+
+                <div class="grid md:grid-cols-2 gap-12 items-start">
+                    <!-- Contact Info -->
+                    <div>
+                        <h3 class="text-2xl font-semibold mb-8 flex items-center gap-2">
+                            <i class="fas fa-address-card text-indigo-400"></i>
+                            Get in Touch
+                        </h3>
+                        <div class="space-y-6">
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="flex items-start gap-4">
+                                    <i class="fas fa-envelope text-2xl text-indigo-400 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-sm text-zinc-500 mb-1 uppercase tracking-wider">
+                                            Email</h4>
+                                        <a href="mailto:syedfaizyabhussain07@gmail.com"
+                                            class="hover:text-indigo-400 transition-colors break-all">
+                                            syedfaizyabhussain07@gmail.com
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="flex items-start gap-4">
+                                    <i class="fas fa-phone text-2xl text-purple-400 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-sm text-zinc-500 mb-1 uppercase tracking-wider">
+                                            Phone</h4>
+                                        <a href="tel:+923352811970" class="hover:text-purple-400 transition-colors">
+                                            +92 335 2811970
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="flex items-start gap-4">
+                                    <i class="fas fa-map-marker-alt text-2xl text-indigo-400 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-sm text-zinc-500 mb-1 uppercase tracking-wider">
+                                            Location</h4>
+                                        <p>Karachi, Pakistan</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="glass-card p-6 rounded-xl">
+                                <div class="flex items-start gap-4">
+                                    <i class="fas fa-globe text-2xl text-purple-400 mt-1"></i>
+                                    <div>
+                                        <h4 class="text-sm text-zinc-500 mb-1 uppercase tracking-wider">
+                                            Portfolio</h4>
+                                        <a href="https://faizyab-hussain07.vercel.app" target="_blank"
+                                            class="hover:text-purple-400 transition-colors break-all">
+                                            faizyab-hussain.vercel.app
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div data-reveal>
+                        <h3 class="text-2xl font-semibold mb-8 flex items-center gap-2">
+                            <i class="fas fa-paper-plane text-indigo-400"></i>
+                            Send a Message
+                        </h3>
+                        <div class="glass-card p-8 rounded-xl">
+                            <form id="contact-form" action="https://formsubmit.co/syedfaizyabhussain07@gmail.com"
+                                method="POST" class="space-y-6">
+                                <!-- FormSubmit Hidden Fields -->
+                                <input type="hidden" name="_subject" value="New Portfolio Message!">
+                                <input type="hidden" name="_template" value="table">
+                                <input type="hidden" name="_captcha" value="false">
+
+                                <div>
+                                    <label for="name" class="block text-sm font-medium text-zinc-400 mb-2">Your
+                                        Name</label>
+                                    <input type="text" name="name" id="name"
+                                        class="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                                        placeholder="John Doe" required>
+                                </div>
+
+                                <div>
+                                    <label for="email" class="block text-sm font-medium text-zinc-400 mb-2">Your
+                                        Email</label>
+                                    <input type="email" name="email" id="email"
+                                        class="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                                        placeholder="john@example.com" required>
+                                </div>
+
+                                <div>
+                                    <label for="subject"
+                                        class="block text-sm font-medium text-zinc-400 mb-2">Subject</label>
+                                    <input type="text" name="subject" id="subject"
+                                        class="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors"
+                                        placeholder="Project Inquiry" required>
+                                </div>
+
+                                <div>
+                                    <label for="message"
+                                        class="block text-sm font-medium text-zinc-400 mb-2">Message</label>
+                                    <textarea name="message" id="message" rows="5"
+                                        class="w-full px-4 py-3 bg-zinc-900/50 border border-zinc-700 rounded-lg focus:border-indigo-500 focus:outline-none transition-colors resize-none"
+                                        placeholder="Tell me about your project..." required></textarea>
+                                </div>
+
+                                <button type="submit"
+                                    class="w-full btn-primary px-8 py-4 bg-indigo-600 hover:bg-indigo-700 rounded-lg font-medium transition-all duration-300 relative z-10 flex items-center justify-center gap-2">
+                                    <span>Send Message</span>
+                                    <i class="fas fa-arrow-right"></i>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-16 text-center">
+                    <p class="text-zinc-500 mb-6">Or connect with me on</p>
+                    <div class="flex justify-center gap-6">
+                        <a href="https://github.com/Faizyabhussain07" target="_blank" aria-label="GitHub Portfolio"
+                            class="glass-card w-12 h-12 rounded-lg flex items-center justify-center hover:bg-zinc-800 transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="mailto:syedfaizyabhussain07@gmail.com" aria-label="Email Me"
+                            class="glass-card w-12 h-12 rounded-lg flex items-center justify-center hover:bg-zinc-800 transition-colors">
+                            <i class="fas fa-envelope text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/faizyabhussain" target="_blank" aria-label="LinkedIn Profile"
+                            class="glass-card w-12 h-12 rounded-lg flex items-center justify-center hover:bg-zinc-800 transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://x.com/FaizyabHus74391" target="_blank" aria-label="X (Twitter) Profile"
+                            class="glass-card w-12 h-12 rounded-lg flex items-center justify-center hover:bg-zinc-800 transition-colors">
+                            <i class="fab fa-x-twitter text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="border-t border-zinc-800/50 pt-12 mt-16">
+                <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                    <p class="text-zinc-500 text-sm">© 2026 Faizyab Hussain. Building the future, one
+                        line at a time.
+                    </p>
+                    <a href="#"
+                        class="text-zinc-500 hover:text-indigo-400 transition-colors text-sm flex items-center gap-2">
+                        <span>Back to Top</span>
+                        <i class="fas fa-arrow-up"></i>
+                    </a>
+                </div>
+            </div>
+    </div>
+    </section>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

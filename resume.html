@@ -5,242 +5,328 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume | Faizyab Hussain - Full Stack Developer</title>
+    <meta name="description"
+        content="Professional resume of Faizyab Hussain, a Full-Stack Developer specializing in modern web interfaces and AI tools.">
+    <meta name="keywords" content="Resume, Faizyab Hussain, Full-Stack Developer, Tech Skills, Experience">
+
+    <!-- OpenGraph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://faizyab-hussain.vercel.app/resume.html">
+    <meta property="og:title" content="Resume | Faizyab Hussain">
+    <meta property="og:description" content="Check out the professional journey and skills of Faizyab Hussain.">
+    <meta property="og:image" content="https://faizyab-hussain.vercel.app/favicon.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary">
+    <meta property="twitter:title" content="Resume | Faizyab Hussain">
+    <meta property="twitter:description" content="Full-Stack Developer Resume.">
+
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700;800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
         rel="stylesheet">
-
-    <!-- FontAwesome - Preload for faster icon loading -->
-    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style"
-        onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    </noscript>
-
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="style.css">
-    <link rel="preload" href="style.css" as="style">
     <link rel="icon" href="favicon.png" type="image/png">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Faizyab Hussain",
+      "url": "https://faizyab-hussain.vercel.app/resume.html",
+      "jobTitle": "Full-Stack Developer",
+      "description": "Professional Resume of Faizyab Hussain"
+    }
+    </script>
+
     <style>
         :root {
-            --resume-bg: #ffffff;
-            --resume-text: #1a1a1a;
-            --resume-muted: #666666;
-            --resume-primary: #2563eb;
-            --resume-border: #e5e7eb;
-        }
-
-        .resume-page {
-            padding: 180px 0 100px;
-            background: var(--bg-body);
-        }
-
-        .resume-actions {
-            max-width: 850px;
-            margin: 0 auto 2rem;
-            display: flex;
-            justify-content: flex-end;
-            gap: 1rem;
+            --primary: #6366f1;
+            --accent: #a855f7;
+            --zinc-900: #18181b;
+            --zinc-950: #09090b;
         }
 
         .resume-container {
-            max-width: 850px;
+            padding: 120px 1.5rem 80px;
+            max-width: 1000px;
             margin: 0 auto;
-            background: var(--resume-bg);
-            color: var(--resume-text);
+        }
+
+        .resume-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+
+        @media (min-width: 1024px) {
+            .resume-grid {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+
+        .resume-card {
+            background: rgba(24, 24, 27, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 2rem;
             padding: 3rem;
-            border-radius: 8px;
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
-            position: relative;
-            overflow: hidden;
         }
 
-        /* HEADER */
         .resume-header {
-            border-bottom: 2px solid var(--resume-primary);
-            padding-bottom: 2rem;
-            margin-bottom: 2.5rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-end;
+            margin-bottom: 4rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 3rem;
+            text-align: center;
         }
 
-        .resume-name h1 {
-            font-size: 2.5rem;
-            color: #000;
-            margin-bottom: 0.5rem;
+        @media (min-width: 768px) {
+            .resume-header {
+                text-align: left;
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-end;
+            }
+        }
+
+        .name-title h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 1rem;
             font-family: 'Outfit', sans-serif;
         }
 
-        .resume-name p {
-            font-size: 1.1rem;
-            color: var(--resume-primary);
-            font-weight: 600;
-            letter-spacing: 0.5px;
-        }
-
-        .resume-contact-info {
-            text-align: right;
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: var(--resume-muted);
-        }
-
-        .resume-contact-info i {
-            width: 20px;
-            color: var(--resume-primary);
-        }
-
-        /* SECTION LAYOUT */
-        .resume-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 3rem;
-        }
-
-        .resume-section {
-            margin-bottom: 2.5rem;
-        }
-
-        .resume-section-title {
+        .name-title p {
             font-size: 1.25rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            color: #000;
-            margin-bottom: 1.5rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 1px solid var(--resume-border);
-            letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        /* EXPERIENCE & EDUCATION */
-        .resume-item {
-            margin-bottom: 1.8rem;
-        }
-
-        .resume-item-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            margin-bottom: 0.4rem;
-        }
-
-        .resume-item-title {
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: #111;
-        }
-
-        .resume-item-date {
-            font-size: 0.85rem;
-            color: var(--resume-muted);
-            font-weight: 500;
-        }
-
-        .resume-item-org {
-            color: var(--resume-primary);
+            color: var(--primary);
             font-weight: 600;
-            font-size: 0.95rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .resume-item-desc {
-            font-size: 0.9rem;
-            line-height: 1.6;
-            color: #444;
-        }
-
-        /* SKILLS PILLS */
-        .resume-skills-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .resume-skills-group h4 {
-            font-size: 0.9rem;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: var(--resume-muted);
-            margin-bottom: 0.8rem;
-            letter-spacing: 0.5px;
         }
 
-        .resume-skills-list {
+        .contact-pills {
             display: flex;
             flex-wrap: wrap;
-            gap: 8px;
+            gap: 1rem;
+            margin-top: 2rem;
+            justify-content: center;
         }
 
-        .skill-tag {
-            background: #f3f4f6;
-            padding: 4px 12px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: #374151;
+        @media (min-width: 768px) {
+            .contact-pills {
+                justify-content: flex-start;
+            }
         }
 
-        /* PRINT STYLES */
+        .pill {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0.5rem 1rem;
+            border-radius: 100px;
+            font-size: 0.875rem;
+            color: #a1a1aa;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .pill:hover {
+            border-color: var(--primary);
+            color: white;
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .section-title i {
+            color: var(--primary);
+        }
+
+        .exp-item {
+            position: relative;
+            padding-left: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .exp-item::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.5rem;
+            width: 10px;
+            height: 10px;
+            background: var(--primary);
+            border-radius: 50%;
+            box-shadow: 0 0 15px var(--primary);
+        }
+
+        .exp-item::after {
+            content: '';
+            position: absolute;
+            left: 4px;
+            top: 1.5rem;
+            width: 2px;
+            height: calc(100% + 2rem);
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .exp-item:last-child::after {
+            display: none;
+        }
+
+        .exp-item h3 {
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 0.25rem;
+        }
+
+        .exp-item .company {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .exp-item .desc {
+            color: #71717a;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .skill-group {
+            margin-bottom: 2rem;
+        }
+
+        .skill-group h4 {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #52525b;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .s-tag {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 0.4rem 0.8rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            color: #d4d4d8;
+        }
+
+        .s-tag:hover {
+            border-color: var(--accent);
+            color: white;
+        }
+
         @media print {
-            body * {
-                visibility: hidden;
-            }
-
-            .resume-container,
-            .resume-container * {
-                visibility: visible;
-            }
-
-            .resume-container {
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                box-shadow: none;
-                padding: 0;
+            @page {
+                size: A4;
                 margin: 0;
             }
 
-            .resume-page {
-                padding: 0;
-                background: white;
-            }
-
-            .header,
-            .footer,
-            .resume-actions {
-                display: none !important;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .resume-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 1rem;
-            }
-
-            .resume-contact-info {
-                text-align: left;
-            }
-
-            .resume-grid {
-                grid-template-columns: 1fr;
+            body {
+                background: #09090b !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+                color: white !important;
             }
 
             .resume-container {
-                padding: 2rem;
-                margin: 0 1rem;
+                padding: 2rem !important;
+                width: 100% !important;
+                max-width: none !important;
+                margin: 0 !important;
+            }
+
+            .resume-card {
+                background: rgba(24, 24, 27, 0.8) !important;
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                backdrop-filter: none !important;
+                padding: 2rem !important;
+                box-shadow: none !important;
+                width: 100% !important;
+                page-break-inside: avoid;
+            }
+
+            .gradient-bg,
+            .grid-overlay,
+            .preloader,
+            nav {
+                display: none !important;
+            }
+
+            .pill,
+            .s-tag {
+                background: rgba(255, 255, 255, 0.05) !important;
+                border: 1px solid rgba(255, 255, 255, 0.1) !important;
+                color: #a1a1aa !important;
+            }
+
+            .exp-item {
+                page-break-inside: avoid;
+                margin-bottom: 2rem !important;
+            }
+
+            .exp-item::after {
+                height: calc(100% + 1rem) !important;
+            }
+
+            .section-title {
+                margin-bottom: 1.5rem !important;
+            }
+
+            .resume-header {
+                margin-bottom: 2.5rem !important;
+                padding-bottom: 2rem !important;
+            }
+
+            /* Force single page if possible */
+            h1 {
+                font-size: 2.5rem !important;
+            }
+
+            h2 {
+                font-size: 1.25rem !important;
+            }
+
+            h3 {
+                font-size: 1.1rem !important;
+            }
+
+            p,
+            .desc {
+                font-size: 0.85rem !important;
             }
         }
     </style>
 </head>
 
 <body>
-
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="loader-content">
@@ -248,152 +334,145 @@
             <div class="loader-bar"></div>
         </div>
     </div>
-    <header class="header scrolled" id="header"></header>
 
-    <main class="resume-page">
-        <div class="resume-actions">
-            <button onclick="window.print()" class="btn btn-primary">
-                <i class="fa-solid fa-file-pdf"></i> Download PDF
-            </button>
-            <a href="contact.html" class="btn btn-secondary">Hire Me Now</a>
-        </div>
+    <div class="gradient-bg"></div>
+    <div class="grid-overlay"></div>
 
-        <div class="resume-container" id="resume-content">
-            <div class="resume-header">
-                <div class="resume-name">
-                    <h1>Faizyab Hussain</h1>
-                    <p>Frontend & Full-Stack Developer</p>
+    <nav class="fixed top-0 w-full z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4">
+            <div class="glass-card rounded-2xl px-8 py-4 flex justify-between items-center text-white">
+                <a href="index.html" class="flex items-center gap-3 group">
+                    <img src="favicon.png" alt="Logo"
+                        class="w-10 h-10 rounded-lg transform group-hover:rotate-6 transition-transform duration-300">
+                    <div class="hidden md:block">
+                        <div class="font-bold text-lg leading-none">Faizyab Hussain</div>
+                        <div class="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">Full-Stack Developer</div>
+                    </div>
+                </a>
+
+                <div class="flex items-center gap-3">
+                    <button onclick="window.print()"
+                        class="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-xl hover:border-indigo-500 transition-all text-sm font-medium flex items-center gap-2">
+                        <i class="fas fa-print text-indigo-400"></i> Print PDF
+                    </button>
+                    <a href="index.html"
+                        class="px-5 py-2.5 bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all text-sm font-bold shadow-lg shadow-indigo-600/20">Back
+                        to Home</a>
                 </div>
-                <div class="resume-contact-info">
-                    <div><i class="fa-solid fa-envelope"></i> syedfaizyabhussain07@gmail.com</div>
-                    <div><i class="fa-solid fa-phone"></i> +92 3352811970</div>
-                    <div><i class="fa-solid fa-location-dot"></i> Karachi, Pakistan</div>
-                    <div><i class="fa-solid fa-globe"></i> faizyab-hussain.vercel.app</div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="resume-container">
+        <div class="resume-card" data-reveal>
+            <div class="resume-header">
+                <div class="name-title">
+                    <h1>Faizyab Hussain</h1>
+                    <p>Full-Stack Developer & Vibe Coder</p>
+                    <div class="contact-pills">
+                        <div class="pill"><i class="fas fa-envelope"></i> syedfaizyabhussain07@gmail.com</div>
+                        <div class="pill"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
+                        <div class="pill"><i class="fas fa-phone"></i> +92 335 2811970</div>
+                        <div class="pill"><i class="fas fa-globe"></i> faizyab-hussain.vercel.app</div>
+                        <div class="pill"><i class="fas fa-globe"></i> github.com/faizyabhussain07</div>
+                        <div class="pill"><i class="fas fa-globe"></i> linkedin.com/in/faizyab-hussain</div>
+                    </div>
                 </div>
             </div>
 
             <div class="resume-grid">
-                <div class="resume-main">
-                    <section class="resume-section">
-                        <h2 class="resume-section-title">Summary</h2>
-                        <p class="resume-item-desc">
-                            Passionate Frontend / Full-Stack Developer dedicated to building modern, responsive, and
-                            user-friendly web applications. Experienced in transforming creative ideas into
-                            high-performance digital products with a focus on clean code and intuitive design.
-                        </p>
-                    </section>
-
-                    <section class="resume-section">
-                        <h2 class="resume-section-title">Experience</h2>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <span class="resume-item-title">Founder & Lead Developer</span>
-                                <span class="resume-item-date">Dec 2025 - Present</span>
+                <div class="main-col space-y-12">
+                    <section>
+                        <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
+                        <div class="experience-list">
+                            <div class="exp-item">
+                                <h3>Founder & Lead Developer</h3>
+                                <div class="company">DevWeaveX • Dec 2025 — Present</div>
+                                <p class="desc">Leading a professional agency platform for custom web solutions.
+                                    Focusing on scalable architecture, premium UI/UX, and high-performance applications.
+                                </p>
                             </div>
-                            <div class="resume-item-org">DevWeaveX</div>
-                            <p class="resume-item-desc">Leading a professional agency platform for custom web solutions,
-                                focusing on scalable architecture and premium UI/UX.</p>
-                        </div>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <span class="resume-item-title">Founder</span>
-                                <span class="resume-item-date">July 2024 - Present</span>
+                            <div class="exp-item">
+                                <h3>Founder</h3>
+                                <div class="company">Faizyab Al-Quran • July 2024 — Present</div>
+                                <p class="desc">Designed and managing a digital platform for Quranic studies. Integrated
+                                    modern LMS features and translated complex requirements into an intuitive user
+                                    interface.</p>
                             </div>
-                            <div class="resume-item-org">Faizyab Al-Quran</div>
-                            <p class="resume-item-desc">Designed and managed a modern Learning Management System (LMS)
-                                combining Quranic studies with academic support via innovative technology.</p>
-                        </div>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <span class="resume-item-title">Tech Intern</span>
-                                <span class="resume-item-date">Aug 2025 - Sept 2025</span>
+                            <div class="exp-item">
+                                <h3>Tech Intern</h3>
+                                <div class="company">Kohaq • Aug 2025 — Sept 2025</div>
+                                <p class="desc">Mastered corporate web development workflows, version control with Git,
+                                    and collaborative coding standards in an agile team environment.</p>
                             </div>
-                            <div class="resume-item-org">Kohaq</div>
-                            <p class="resume-item-desc">Gained hands-on experience in corporate web development
-                                workflows and collaborative coding standards.</p>
-                        </div>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <span class="resume-item-title">Freelance Web Developer</span>
-                                <span class="resume-item-date">Sept 2024 - July 2025</span>
+                            <div class="exp-item">
+                                <h3>Freelance Web Developer</h3>
+                                <div class="company">Self-Employed • Sept 2024 — July 2025</div>
+                                <p class="desc">Shipped over 30+ web projects for diverse clients. Specialized in
+                                    responsive landing pages, e-commerce prototypes, and portfolio sites.</p>
                             </div>
-                            <div class="resume-item-org">Self-Employed</div>
-                            <p class="resume-item-desc">Developed and deployed various client websites using modern tech
-                                stacks, ensuring high satisfaction and performance.</p>
                         </div>
                     </section>
 
-                    <section class="resume-section">
-                        <h2 class="resume-section-title">Education</h2>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <span class="resume-item-title">Web & App Development</span>
-                                <span class="resume-item-date">2024 - 2026</span>
+                    <section>
+                        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                        <div class="experience-list">
+                            <div class="exp-item">
+                                <h3>Web & App Development</h3>
+                                <div class="company">S.M.I.T (Saylani Mass I.T Training) • 2024 — 2026</div>
                             </div>
-                            <div class="resume-item-org">S.M.I.T (Saylani Mass I.T Training)</div>
-                        </div>
-
-                        <div class="resume-item">
-                            <div class="resume-item-header">
-                                <span class="resume-item-title">Intermediate (Computer Science)</span>
-                                <span class="resume-item-date">2024 - 2026</span>
+                            <div class="exp-item">
+                                <h3>Intermediate (Computer Science)</h3>
+                                <div class="company">Sirajuddullah Govt. Degree College • 2024 — 2026</div>
                             </div>
-                            <div class="resume-item-org">Sirajuddullah Govt. Degree College</div>
                         </div>
                     </section>
                 </div>
 
-                <div class="resume-sidebar">
-                    <section class="resume-section">
-                        <h2 class="resume-section-title">Skills</h2>
-
-                        <div class="resume-skills-group">
+                <div class="side-col space-y-12">
+                    <section>
+                        <h2 class="section-title"><i class="fas fa-layer-group"></i> Expertise</h2>
+                        <div class="skill-group">
                             <h4>Frontend</h4>
-                            <div class="resume-skills-list">
-                                <span class="skill-tag">HTML5 / CSS3</span>
-                                <span class="skill-tag">JavaScript (ES6+)</span>
-                                <span class="skill-tag">React.js</span>
-                                <span class="skill-tag">Next.js</span>
-                                <span class="skill-tag">Tailwind CSS</span>
-                                <span class="skill-tag">Bootstrap</span>
+                            <div class="skill-tags">
+                                <span class="s-tag">HTML5/CSS3</span>
+                                <span class="s-tag">JavaScript ES6+</span>
+                                <span class="s-tag">React.js</span>
+                                <span class="s-tag">Next.js</span>
+                                <span class="s-tag">Tailwind CSS</span>
                             </div>
                         </div>
-
-                        <div class="resume-skills-group">
-                            <h4>Backend / Tools</h4>
-                            <div class="resume-skills-list">
-                                <span class="skill-tag">Node.js</span>
-                                <span class="skill-tag">Firebase</span>
-                                <span class="skill-tag">Supabase</span>
-                                <span class="skill-tag">Git / GitHub</span>
-                                <span class="skill-tag">Netlify / Vercel</span>
+                        <div class="skill-group">
+                            <h4>Backend</h4>
+                            <div class="skill-tags">
+                                <span class="s-tag">Node.js</span>
+                                <span class="s-tag">Firebase</span>
+                                <span class="s-tag">PocketBase</span>
+                                <span class="s-tag">Netlify CMS</span>
                             </div>
                         </div>
-
-                        <div class="resume-skills-group">
-                            <h4>AI & Design</h4>
-                            <div class="resume-skills-list">
-                                <span class="skill-tag">Cursor / Bolt</span>
-                                <span class="skill-tag">Figma</span>
-                                <span class="skill-tag">UI/UX Design</span>
+                        <div class="skill-group">
+                            <h4>Design & Tools</h4>
+                            <div class="skill-tags">
+                                <span class="s-tag">Figma</span>
+                                <span class="s-tag">UI/UX</span>
+                                <span class="s-tag">Git/GitHub</span>
+                                <span class="s-tag">VS Code</span>
                             </div>
                         </div>
                     </section>
 
-                    <section class="resume-section">
-                        <h2 class="resume-section-title">Awards</h2>
-                        <div class="resume-item">
-                            <div class="resume-item-title" style="font-size: 0.9rem;">SMIT Coding Night</div>
-                            <p class="resume-item-desc" style="font-size: 0.8rem;">Hackathon Winner / Participant</p>
-                        </div>
-                        <div class="resume-item">
-                            <div class="resume-item-title" style="font-size: 0.9rem;">Intro to Programming</div>
-                            <p class="resume-item-desc" style="font-size: 0.8rem;">SMIT Achievement Certificate</p>
+                    <section>
+                        <h2 class="section-title"><i class="fas fa-award"></i> Recognition</h2>
+                        <div class="space-y-4">
+                            <div class="glass-card p-4 rounded-xl border-l-4 border-indigo-500">
+                                <p class="text-xs text-zinc-500 mb-1">SMIT ACHIEVEMENT</p>
+                                <h4 class="font-bold text-sm">Coding Night Participant</h4>
+                            </div>
+                            <div class="glass-card p-4 rounded-xl border-l-4 border-purple-500">
+                                <p class="text-xs text-zinc-500 mb-1">CERTIFICATE</p>
+                                <h4 class="font-bold text-sm">Intro to Programming</h4>
+                            </div>
                         </div>
                     </section>
                 </div>
@@ -401,9 +480,7 @@
         </div>
     </main>
 
-    <footer class="footer" id="footer"></footer>
-
-    <script src="script.js" defer></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
