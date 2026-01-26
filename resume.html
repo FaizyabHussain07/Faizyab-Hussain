@@ -4,6 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Resume | Faizyab Hussain - Full Stack Developer</title>
     <meta name="description"
         content="Professional resume of Faizyab Hussain, a Full-Stack Developer specializing in modern web interfaces and AI tools.">
@@ -55,6 +58,7 @@
             --zinc-950: #09090b;
         }
 
+        /* Screen Styles */
         .resume-container {
             padding: 120px 1.5rem 80px;
             max-width: 1000px;
@@ -138,12 +142,6 @@
             align-items: center;
             gap: 0.5rem;
             transition: all 0.3s ease;
-        }
-
-        .pill:hover {
-            border-color: var(--primary);
-            color: white;
-            background: rgba(99, 102, 241, 0.05);
         }
 
         .section-title {
@@ -238,103 +236,206 @@
             color: #d4d4d8;
         }
 
-        .s-tag:hover {
-            border-color: var(--accent);
-            color: white;
-        }
-
+        /* Print - Classic ATS Layout */
+        /* Print - Classic ATS Layout - Single Page Optimized */
         @media print {
             @page {
                 size: A4;
-                margin: 0;
+                margin: 8mm 12mm;
             }
 
             body {
-                background: #09090b !important;
-                -webkit-print-color-adjust: exact !important;
-                print-color-adjust: exact !important;
-                color: white !important;
+                background: white !important;
+                color: #333 !important;
+                font-family: 'Arial', sans-serif !important;
+                line-height: 1.3 !important;
+                font-size: 9.5pt !important;
             }
 
-            .resume-container {
-                padding: 2rem !important;
-                width: 100% !important;
-                max-width: none !important;
-                margin: 0 !important;
-            }
-
-            .resume-card {
-                background: rgba(24, 24, 27, 0.8) !important;
-                border: 1px solid rgba(255, 255, 255, 0.1) !important;
-                backdrop-filter: none !important;
-                padding: 2rem !important;
-                box-shadow: none !important;
-                width: 100% !important;
-                page-break-inside: avoid;
-            }
-
+            .resume-container,
+            nav,
             .gradient-bg,
             .grid-overlay,
             .preloader,
-            nav {
+            .splash-screen {
                 display: none !important;
             }
 
-            .pill,
-            .s-tag {
-                background: rgba(255, 255, 255, 0.05) !important;
-                border: 1px solid rgba(255, 255, 255, 0.1) !important;
-                color: #a1a1aa !important;
+            .classic-resume {
+                display: block !important;
+                padding: 0 !important;
+                width: 100% !important;
             }
 
-            .exp-item {
-                page-break-inside: avoid;
-                margin-bottom: 2rem !important;
+            .classic-resume h1 {
+                text-transform: uppercase !important;
+                margin-bottom: 2px !important;
+                color: #000 !important;
+                text-align: center !important;
+                font-size: 20pt !important;
+                font-weight: bold !important;
+                line-height: 1 !important;
             }
 
-            .exp-item::after {
-                height: calc(100% + 1rem) !important;
+            .classic-contact-info {
+                text-align: center !important;
+                font-size: 9pt !important;
+                margin-bottom: 12px !important;
+                border-bottom: 1.5pt solid #444 !important;
+                padding-bottom: 6px !important;
             }
 
-            .section-title {
-                margin-bottom: 1.5rem !important;
+            .classic-contact-info a {
+                color: #0044cc !important;
+                text-decoration: none !important;
             }
 
-            .resume-header {
-                margin-bottom: 2.5rem !important;
-                padding-bottom: 2rem !important;
+            .classic-h3 {
+                text-transform: uppercase !important;
+                border-bottom: 0.5pt solid #ccc !important;
+                margin-top: 12px !important;
+                margin-bottom: 6px !important;
+                font-size: 10.5pt !important;
+                color: #111 !important;
+                font-weight: bold !important;
+                text-align: left !important;
             }
 
-            /* Force single page if possible */
-            h1 {
-                font-size: 2.5rem !important;
+            .classic-job-title {
+                display: flex !important;
+                justify-content: space-between !important;
+                font-weight: bold !important;
+                font-size: 9.5pt !important;
+                margin-top: 2px !important;
             }
 
-            h2 {
-                font-size: 1.25rem !important;
+            .classic-company {
+                font-style: italic !important;
+                margin-bottom: 3px !important;
+                font-size: 9pt !important;
+                display: block !important;
             }
 
-            h3 {
-                font-size: 1.1rem !important;
+            .classic-resume ul {
+                margin-top: 2px !important;
+                padding-left: 18px !important;
+                list-style-type: disc !important;
+                margin-bottom: 5px !important;
             }
 
-            p,
-            .desc {
-                font-size: 0.85rem !important;
+            .classic-resume li {
+                margin-bottom: 2px !important;
+                text-align: left !important;
+                line-height: 1.3 !important;
             }
+
+            .classic-resume p {
+                margin-bottom: 6px !important;
+                text-align: justify !important;
+                line-height: 1.3 !important;
+            }
+
+            .classic-skills-section p {
+                margin: 2px 0 !important;
+            }
+
+            /* Force visibility */
+            [data-reveal] {
+                opacity: 1 !important;
+                transform: none !important;
+                visibility: visible !important;
+            }
+        }
+
+        .classic-resume {
+            display: none;
         }
     </style>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="loader-content">
-            <div class="loader-logo">FH</div>
-            <div class="loader-bar"></div>
+    <div class="classic-resume">
+        <h1>FAIZYAB HUSSAIN</h1>
+        <div class="classic-contact-info">
+            Karachi, Pakistan | +92 335 2811970<br>
+            <a href="mailto:syedfaizyabhussain07@gmail.com">syedfaizyabhussain07@gmail.com</a> |
+            <a href="https://linkedin.com/in/faizyab-hussain">LinkedIn</a> |
+            <a href="https://github.com/faizyabhussain07">GitHub</a> |
+            <a href="https://faizyab-hussain.vercel.app">Portfolio</a>
         </div>
-    </div>
 
+        <h3 class="classic-h3">Professional Summary</h3>
+        <p>Results-driven Full-Stack Developer with expertise in building scalable web applications and AI-powered
+            tools. Proficient in the complete software development lifecycle, from UI/UX design in Figma to backend
+            architecture and deployment. Proven track record of delivering 100+ freelance projects and high-performance
+            digital solutions with a focus on user experience.</p>
+
+        <h3 class="classic-h3">Technical Skills</h3>
+        <div class="classic-skills-section">
+            <p><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React.js, Next.js, Tailwind CSS, Responsive
+                Web Design.</p>
+            <p><strong>Backend & Database:</strong> Node.js, Firebase, Supabase, Appwrite, RESTful APIs.</p>
+            <p><strong>Design & Tools:</strong> Figma (UI/UX), Git, GitHub, VS Code, AI Development Tools.</p>
+            <p><strong>Workflow:</strong> Agile Methodology, Performance Optimization (Lighthouse), Version Control.</p>
+        </div>
+
+        <h3 class="classic-h3">Professional Experience</h3>
+
+        <div class="classic-job-title">
+            <span>Tech Intern</span>
+            <span>Aug 2025 – Sept 2025</span>
+        </div>
+        <div class="classic-company">Kohaq, Karachi</div>
+        <ul>
+            <li>Collaborated in an Agile team environment to develop and maintain corporate web applications.</li>
+            <li>Implemented version control workflows using Git/GitHub to ensure seamless team collaboration.</li>
+            <li>Mastered professional coding standards and participated in code reviews.</li>
+        </ul>
+
+        <div class="classic-job-title">
+            <span>Freelance Web Developer</span>
+            <span>Sept 2024 – July 2025</span>
+        </div>
+        <div class="classic-company">Self-Employed, Remote</div>
+        <ul>
+            <li>Successfully delivered over 100+ web projects including e-commerce prototypes and portfolios.</li>
+            <li>Translated client requirements into functional, high-performance websites.</li>
+            <li>Ensured 100% mobile responsiveness and cross-browser compatibility.</li>
+        </ul>
+
+        <h3 class="classic-h3">Key Projects</h3>
+        <p><strong>Web Template Hub</strong> | <em>Open Source Library</em></p>
+        <ul>
+            <li>Engineered a collection of 100+ responsive web templates using Semantic HTML and Tailwind CSS.</li>
+            <li>Achieved a Lighthouse performance score of 95+ and focused on accessibility.</li>
+        </ul>
+
+        <p><strong>Faizyab Al-Quran</strong> | <em>LMS Application</em></p>
+        <ul>
+            <li>Developed a modern LMS for Quranic studies with interactive learning modules.</li>
+            <li>Designed an intuitive UI and integrated high-performance backend architecture.</li>
+        </ul>
+
+        <h3 class="classic-h3">Education</h3>
+        <div class="classic-job-title">
+            <span>Web & App Development</span>
+            <span>2024 – 2026 (Exp.)</span>
+        </div>
+        <div class="classic-company">Saylani Mass I.T Training (S.M.I.T)</div>
+
+        <div class="classic-job-title">
+            <span>Intermediate (Computer Science)</span>
+            <span>2024 – 2026 (Exp.)</span>
+        </div>
+        <div class="classic-company">Sirajuddullah Govt. Degree College</div>
+
+        <h3 class="classic-h3">Certifications & Awards</h3>
+        <ul>
+            <li><strong>SMIT Achievement Award:</strong> Excellence in web development modules.</li>
+            <li><strong>Coding Night Participant:</strong> Competitive programming certificate.</li>
+            <li><strong>Intro to Programming:</strong> Foundational logic and development certification.</li>
+        </ul>
+    </div>
     <div class="gradient-bg"></div>
     <div class="grid-overlay"></div>
 
@@ -353,7 +454,7 @@
                 <div class="flex items-center gap-3">
                     <button onclick="window.print()"
                         class="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-xl hover:border-indigo-500 transition-all text-sm font-medium flex items-center gap-2">
-                        <i class="fas fa-print text-indigo-400"></i> Print PDF
+                        <i class="fas fa-print text-indigo-400"></i> Save as PDF
                     </button>
                     <a href="index.html"
                         class="px-5 py-2.5 bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all text-sm font-bold shadow-lg shadow-indigo-600/20">Back
@@ -365,7 +466,7 @@
 
     <main class="resume-container">
         <div class="resume-card" data-reveal>
-            <div class="resume-header">
+            <header class="resume-header">
                 <div class="name-title">
                     <h1>Faizyab Hussain</h1>
                     <p>Full-Stack Developer & Vibe Coder</p>
@@ -373,97 +474,118 @@
                         <div class="pill"><i class="fas fa-envelope"></i> syedfaizyabhussain07@gmail.com</div>
                         <div class="pill"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
                         <div class="pill"><i class="fas fa-phone"></i> +92 335 2811970</div>
-                        <div class="pill"><i class="fas fa-globe"></i> faizyab-hussain.vercel.app</div>
-                        <div class="pill"><i class="fas fa-globe"></i> github.com/faizyabhussain07</div>
-                        <div class="pill"><i class="fas fa-globe"></i> linkedin.com/in/faizyab-hussain</div>
+                        <a href="https://faizyab-hussain.vercel.app" class="pill text-decoration-none"><i
+                                class="fas fa-globe"></i> faizyab-hussain.vercel.app</a>
+                        <a href="https://github.com/faizyabhussain07" class="pill text-decoration-none"><i
+                                class="fab fa-github"></i> github.com/faizyabhussain07</a>
+                        <a href="https://linkedin.com/in/faizyab-hussain" class="pill text-decoration-none"><i
+                                class="fab fa-linkedin"></i> linkedin.com/in/faizyab-hussain</a>
                     </div>
                 </div>
-            </div>
+            </header>
 
             <div class="resume-grid">
                 <div class="main-col space-y-12">
-                    <section>
+                    <section class="summary-section">
+                        <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
+                        <p class="text-zinc-400 leading-relaxed">
+                            Full-Stack Developer with a passion for building modern, scalable web applications and
+                            AI-powered tools.
+                            Experienced in the complete development lifecycle, from UI/UX design to backend architecture
+                            and deployment.
+                            Proven track record of delivering high-performance digital solutions and freelance projects.
+                        </p>
+                    </section>
+
+                    <section class="experience-section">
                         <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
                         <div class="experience-list">
-                            <div class="exp-item">
-                                <h3>Founder & Lead Developer</h3>
-                                <div class="company">DevWeaveX • Dec 2025 — Present</div>
-                                <p class="desc">Leading a professional agency platform for custom web solutions.
-                                    Focusing on scalable architecture, premium UI/UX, and high-performance applications.
-                                </p>
-                            </div>
-                            <div class="exp-item">
-                                <h3>Founder</h3>
-                                <div class="company">Faizyab Al-Quran • July 2024 — Present</div>
-                                <p class="desc">Designed and managing a digital platform for Quranic studies. Integrated
-                                    modern LMS features and translated complex requirements into an intuitive user
-                                    interface.</p>
-                            </div>
-                            <div class="exp-item">
+                            <article class="exp-item">
                                 <h3>Tech Intern</h3>
                                 <div class="company">Kohaq • Aug 2025 — Sept 2025</div>
                                 <p class="desc">Mastered corporate web development workflows, version control with Git,
                                     and collaborative coding standards in an agile team environment.</p>
-                            </div>
-                            <div class="exp-item">
+                            </article>
+                            <article class="exp-item">
                                 <h3>Freelance Web Developer</h3>
                                 <div class="company">Self-Employed • Sept 2024 — July 2025</div>
-                                <p class="desc">Shipped over 30+ web projects for diverse clients. Specialized in
+                                <p class="desc">Shipped over 100+ web projects for diverse clients. Specialized in
                                     responsive landing pages, e-commerce prototypes, and portfolio sites.</p>
-                            </div>
+                            </article>
                         </div>
                     </section>
 
-                    <section>
+                    <section class="projects-section">
+                        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Key Projects</h2>
+                        <div class="experience-list">
+                            <article class="exp-item">
+                                <h3>Web Template Hub</h3>
+                                <div class="company">Open Source Library of Components & Templates</div>
+                                <p class="desc">Engineered a curated collection of 100+ modern, responsive web templates
+                                    and UI components. Built with semantic HTML, Tailwind CSS, and optimized for
+                                    performance.
+                                    <a href="https://web-template-hub.netlify.app"
+                                        class="text-indigo-400 no-underline hover:text-indigo-300">View Project</a>
+                                </p>
+                            </article>
+                            <article class="exp-item">
+                                <h3>Faizyab Al-Quran</h3>
+                                <div class="company">Modern LMS Application</div>
+                                <p class="desc">Digital platform for Quranic studies combining modern technology with
+                                    academic support. Featuring interactive learning modules and intuitive UI.
+                                    <a href="http://faizyab-al-quran.vercel.app/"
+                                        class="text-indigo-400 no-underline hover:text-indigo-300">View Project</a>
+                                </p>
+                            </article>
+                        </div>
+                    </section>
+
+                    <section class="education-section">
                         <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
                         <div class="experience-list">
-                            <div class="exp-item">
+                            <article class="exp-item">
                                 <h3>Web & App Development</h3>
                                 <div class="company">S.M.I.T (Saylani Mass I.T Training) • 2024 — 2026</div>
-                            </div>
-                            <div class="exp-item">
+                            </article>
+                            <article class="exp-item">
                                 <h3>Intermediate (Computer Science)</h3>
                                 <div class="company">Sirajuddullah Govt. Degree College • 2024 — 2026</div>
-                            </div>
+                            </article>
                         </div>
                     </section>
                 </div>
 
                 <div class="side-col space-y-12">
-                    <section>
-                        <h2 class="section-title"><i class="fas fa-layer-group"></i> Expertise</h2>
+                    <section class="skills-section">
+                        <h2 class="section-title"><i class="fas fa-layer-group"></i> Technical Skills</h2>
                         <div class="skill-group">
-                            <h4>Frontend</h4>
+                            <h4>Frontend Development</h4>
                             <div class="skill-tags">
-                                <span class="s-tag">HTML5/CSS3</span>
-                                <span class="s-tag">JavaScript ES6+</span>
-                                <span class="s-tag">React.js</span>
-                                <span class="s-tag">Next.js</span>
-                                <span class="s-tag">Tailwind CSS</span>
+                                <span class="s-tag">HTML5</span> <span class="s-tag">CSS3</span> <span
+                                    class="s-tag">JS</span> <span class="s-tag">React</span> <span
+                                    class="s-tag">Next.js</span> <span class="s-tag">Tailwind</span>
                             </div>
                         </div>
                         <div class="skill-group">
-                            <h4>Backend</h4>
+                            <h4>Backend & Database</h4>
                             <div class="skill-tags">
-                                <span class="s-tag">Node.js</span>
-                                <span class="s-tag">Firebase</span>
-                                <span class="s-tag">PocketBase</span>
-                                <span class="s-tag">Netlify CMS</span>
+                                <span class="s-tag">Node.js</span> <span class="s-tag">Firebase</span> <span
+                                    class="s-tag">Supabase</span> <span class="s-tag">Appwrite</span> <span
+                                    class="s-tag">REST APIs</span>
                             </div>
                         </div>
                         <div class="skill-group">
-                            <h4>Design & Tools</h4>
+                            <h4>Tools & Design</h4>
                             <div class="skill-tags">
-                                <span class="s-tag">Figma</span>
-                                <span class="s-tag">UI/UX</span>
-                                <span class="s-tag">Git/GitHub</span>
-                                <span class="s-tag">VS Code</span>
+                                <span class="s-tag">Git</span> <span class="s-tag">GitHub</span> <span
+                                    class="s-tag">Figma</span> <span class="s-tag">UI/UX</span> <span class="s-tag">AI
+                                    Tools</span>
                             </div>
                         </div>
                     </section>
 
-                    <section>
-                        <h2 class="section-title"><i class="fas fa-award"></i> Recognition</h2>
+                    <section class="awards-section">
+                        <h2 class="section-title"><i class="fas fa-award"></i> Certifications & Awards</h2>
                         <div class="space-y-4">
                             <div class="glass-card p-4 rounded-xl border-l-4 border-indigo-500">
                                 <p class="text-xs text-zinc-500 mb-1">SMIT ACHIEVEMENT</p>

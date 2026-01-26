@@ -1,13 +1,23 @@
-// Preloader Handler
+// Splash Screen Handler
 window.addEventListener('load', () => {
-    const preloader = document.getElementById('preloader');
-    if (preloader) {
+    const splashScreen = document.getElementById('splashScreen');
+    if (!splashScreen) return;
+
+    // Check if splash has been shown in this session
+    const hasShownSplash = sessionStorage.getItem('splashShown');
+
+    if (hasShownSplash) {
+        // If already shown, hide immediately (or very quickly)
+        splashScreen.style.display = 'none';
+    } else {
+        // First load: Show animation then hide
         setTimeout(() => {
-            preloader.classList.add('fade-out');
+            splashScreen.classList.add('fade-out');
             setTimeout(() => {
-                preloader.style.display = 'none';
-            }, 800);
-        }, 1000); // 1s delay for a premium feel
+                splashScreen.style.display = 'none';
+                sessionStorage.setItem('splashShown', 'true');
+            }, 800); // 800ms matches CSS transition
+        }, 3000); // 3s duration for splash
     }
 });
 
@@ -179,10 +189,24 @@ window.addEventListener('scroll', () => {
         }
     });
 
+    // Desktop Nav
     navItems.forEach((item) => {
         item.classList.remove("text-indigo-400", "bg-zinc-800/50");
         if (item.getAttribute("href") === `#${current}`) {
             item.classList.add("text-indigo-400", "bg-zinc-800/50");
+        }
+    });
+
+    // Mobile Bottom Nav
+    const mobileNavItems = document.querySelectorAll(".mobile-nav-item");
+    mobileNavItems.forEach((item) => {
+        item.classList.remove("active");
+        // Default to home if top of page
+        if (pageYOffset < 100 && item.getAttribute("href") === "#") {
+            item.classList.add("active");
+        }
+        else if (item.getAttribute("href") === `#${current}`) {
+            item.classList.add("active");
         }
     });
 });

@@ -3,19 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <title>Faizyab Hussain | Full-Stack Developer & Vibe Coder</title>
     <meta name="description"
-        content="Faizyab Hussain is a Full-Stack Developer building modern interfaces and AI-powered tools. Exploring 31+ web development projects, services, and digital solutions.">
+        content="Faizyab Hussain is a Full-Stack Developer specializing in modern web interfaces, AI-powered tools, and scalable applications. View my portfolio and projects.">
     <meta name="keywords"
-        content="Faizyab Hussain, Full-Stack Developer, Web Development, React, Next.js, UI/UX Design, Portfolio, Freelance Developer">
+        content="Faizyab Hussain, Full-Stack Developer, Web Development, React, Next.js, UI/UX Design, Portfolio, Freelance Developer, Pakistan">
+    <meta name="author" content="Faizyab Hussain">
+    <meta name="robots" content="index, follow">
 
     <!-- OpenGraph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://faizyab-hussain.vercel.app/">
     <meta property="og:title" content="Faizyab Hussain — Full-Stack Developer & Builder">
     <meta property="og:description"
-        content="Full-Stack Developer building modern interfaces & AI-powered tools. Explorer 31+ projects.">
+        content="Full-Stack Developer building modern interfaces & AI-powered tools. Explore my projects and services.">
     <meta property="og:image" content="https://faizyab-hussain.vercel.app/favicon.png">
 
     <!-- Twitter -->
@@ -43,21 +48,26 @@
       "jobTitle": "Full-Stack Developer",
       "image": "https://faizyab-hussain.vercel.app/favicon.png",
       "sameAs": [
-        "https://github.com/faizyab",
+        "https://github.com/faizyabhussain07",
         "https://linkedin.com/in/faizyabhussain",
         "https://x.com/FaizyabHus74391"
       ],
-      "knowsAbout": ["Web Development", "UI/UX Design", "Full-Stack Development", "React", "Node.js"]
+      "knowsAbout": ["Web Development", "UI/UX Design", "Full-Stack Development", "React", "Node.js", "AI Integration"],
+      "description": "Full-Stack Developer building modern interfaces and AI-powered tools."
     }
     </script>
 </head>
 
 <body>
-    <!-- Preloader -->
-    <div class="preloader" id="preloader">
-        <div class="loader-content">
-            <div class="loader-logo">FH</div>
-            <div class="loader-bar"></div>
+    <!-- Splash Screen -->
+    <div class="splash-screen" id="splashScreen">
+        <div class="splash-content text-center">
+            <div class="splash-logo mb-6 relative">
+                <img src="favicon.png" alt="FH Logo" class="w-20 h-20 rounded-2xl shadow-2xl mx-auto relative z-10">
+                <div class="absolute inset-0 bg-indigo-500/30 blur-xl rounded-full animate-pulse"></div>
+            </div>
+            <h1 class="text-3xl font-bold text-white mb-2 tracking-tight">Faizyab Hussain</h1>
+            <p class="text-indigo-400 text-sm font-medium tracking-widest uppercase">Building Modern Experiences</p>
         </div>
     </div>
 
@@ -120,56 +130,34 @@
                         </a>
                     </div>
 
-                    <!-- Mobile Menu Button -->
-                    <button id="mobileMenuBtn"
-                        class="md:hidden w-10 h-10 rounded-lg hover:bg-zinc-800/50 flex items-center justify-center transition-all duration-300">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-
-                <!-- Mobile Menu -->
-                <div id="mobileMenu" class="md:hidden hidden mt-4">
-                    <div class="glass-card rounded-2xl p-6 space-y-3">
-                        <a href="#about"
-                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
-                            <i class="fas fa-user text-indigo-400"></i>
-                            <span>About</span>
-                        </a>
-                        <a href="#services"
-                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
-                            <i class="fas fa-layer-group text-indigo-400"></i>
-                            <span>Services</span>
-                        </a>
-                        <a href="#work"
-                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
-                            <i class="fas fa-briefcase text-indigo-400"></i>
-                            <span>Work</span>
-                        </a>
-                        <a href="#pricing"
-                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
-                            <i class="fas fa-tags text-indigo-400"></i>
-                            <span>Pricing</span>
-                        </a>
-                        <a href="#contact"
-                            class="block px-4 py-3 rounded-lg hover:bg-zinc-800/50 transition-all duration-300 flex items-center gap-3">
-                            <i class="fas fa-envelope text-indigo-400"></i>
-                            <span>Contact</span>
-                        </a>
-                        <div class="border-t border-zinc-700 pt-3 flex gap-3">
-                            <a href="https://github.com/faizyabhussain07" target="_blank"
-                                class="flex-1 py-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-700/50 flex items-center justify-center transition-all duration-300">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="mailto:syedfaizyabhussain07@gmail.com"
-                                class="flex-1 py-3 rounded-lg bg-zinc-800/50 hover:bg-zinc-700/50 flex items-center justify-center transition-all duration-300">
-                                <i class="fas fa-envelope"></i>
-                            </a>
-                        </div>
-                    </div>
+                    <!-- Mobile Menu Button (Hidden if we want pure app feel, but let's keep for non-primary links if any, or hide it if bottom nav is enough) -->
+                    <!-- For now, we keep it but it might be redundant with bottom nav. Let's hide it for cleaner app feel since bottom nav covers main sections -->
+                    <a href="resume.html"
+                        class="md:hidden px-4 py-2 text-xs font-bold text-indigo-400 bg-zinc-800/50 rounded-lg border border-zinc-700/50">Resume</a>
                 </div>
             </div>
         </nav>
 
+        <!-- Mobile Bottom Navigation -->
+        <nav class="mobile-bottom-nav">
+            <a href="#" class="mobile-nav-item active">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="#work" class="mobile-nav-item">
+                <i class="fas fa-briefcase"></i>
+                <span>Work</span>
+            </a>
+            <a href="#services" class="mobile-nav-item">
+                <i class="fas fa-layer-group"></i>
+                <span>Services</span>
+            </a>
+            <a href="#contact" class="mobile-nav-item">
+                <i class="fas fa-envelope"></i>
+                <span>Contact</span>
+            </a>
+        </nav>
+        <br><br>
         <!-- Hero Section - Centered -->
         <section class="min-h-screen flex items-center justify-center px-6 md:px-12 pt-20">
             <div class="max-w-4xl w-full text-center">
