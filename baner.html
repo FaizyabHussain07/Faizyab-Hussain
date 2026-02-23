@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@800;900&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --secondary: #a855f7;
+            --bg: #09090b;
+        }
+
+        body {
+            margin: 0;
+            width: 1200px;
+            height: 630px;
+            background: var(--bg);
+            font-family: 'Inter', sans-serif;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            position: relative;
+            border: 8px solid #18181b;
+            box-sizing: border-box;
+        }
+
+        /* Abstract Background Elements */
+        .grid-overlay {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+
+        .glow {
+            position: absolute;
+            width: 800px;
+            height: 800px;
+            border-radius: 50%;
+            filter: blur(140px);
+            opacity: 0.2;
+            z-index: 2;
+        }
+
+        .orb-1 {
+            background: var(--primary);
+            top: -200px;
+            right: -100px;
+            animation: float 15s infinite alternate;
+        }
+
+        .orb-2 {
+            background: var(--secondary);
+            bottom: -200px;
+            left: -100px;
+            animation: float 15s infinite alternate-reverse;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translate(0, 0);
+            }
+
+            100% {
+                transform: translate(60px, 40px);
+            }
+        }
+
+        /* Content Area */
+        .content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            max-width: 1000px;
+        }
+
+        .category-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 8px 16px;
+            border-radius: 100px;
+            color: var(--primary);
+            font-size: 14px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 110px;
+            font-weight: 900;
+            margin: 0;
+            line-height: 0.9;
+            letter-spacing: -4px;
+            background: linear-gradient(to bottom, #fff 40%, rgba(255, 255, 255, 0.7) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: 36px;
+            font-weight: 500;
+            color: #a1a1aa;
+            margin-top: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .separator {
+            width: 40px;
+            height: 2px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Tech Icons Floating */
+        .tech-chips {
+            margin-top: 50px;
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .chip {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 10px 20px;
+            border-radius: 12px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #d4d4d8;
+        }
+
+        .chip i {
+            color: var(--primary);
+        }
+
+        /* Floating Corner Decorations */
+        .decor {
+            position: absolute;
+            font-family: monospace;
+            font-size: 14px;
+            color: rgba(99, 102, 241, 0.2);
+            z-index: 5;
+        }
+
+        .decor-tl {
+            top: 40px;
+            left: 40px;
+        }
+
+        .decor-br {
+            bottom: 40px;
+            right: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="grid-overlay"></div>
+    <div class="glow orb-1"></div>
+    <div class="glow orb-2"></div>
+
+    <div class="decor decor-tl">const build = (ideas) => modern_apps;</div>
+    <div class="decor decor-br">
+        <\ /f_hussain>
+    </div>
+
+    <div class="content">
+        <div class="category-badge">
+            <i class="fas fa-bolt"></i> Available for New Projects
+        </div>
+
+        <h1>Faizyab<br />Hussain</h1>
+
+        <div class="subtitle">
+            <span>Full-Stack Architect</span>
+            <div class="separator"></div>
+            <span>AI Solutions</span>
+        </div>
+
+        <div class="tech-chips">
+            <div class="chip"><i class="fab fa-react"></i> React / Next.js</div>
+            <div class="chip"><i class="fas fa-brain"></i> AI / Agents</div>
+            <div class="chip"><i class="fas fa-layer-group"></i> UI / UX</div>
+        </div>
+    </div>
+</body>
+
+</html>
