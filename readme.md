@@ -33,6 +33,7 @@ I'm **Faizyab Hussain**, a **Full-Stack Developer & Vibe Coder** pioneering high
 
 ### ⚡ What I'm Shipping Currently:
 - 🏢 **DevWeaveX**: Leading an elite agency focused on scalable UI/UX & AI.
+- 🔗 **PasteLink Pro**: Secure, production-ready text sharing platform with auto-expiry.
 - 🛠️ **ProdSpark**: A curated directory for the world's most innovative tools.
 - 🎨 **WebTemplate Hub**: High-impact collection of modern, responsive UI templates for builders.
 - 🧠 **QuizSpark**: Revolutionizing education with AI-powered quiz generation.
@@ -71,6 +72,7 @@ I'm **Faizyab Hussain**, a **Full-Stack Developer & Vibe Coder** pioneering high
 
 | Project | Concept | Live Experience |
 | :--- | :--- | :--- |
+| **PasteLink Pro** | Secure Text Sharing | [**Share Securely**](https://paste-link-pro.vercel.app/) |
 | **ProdSpark** | Tool Discovery Engine | [**Launch Platform**](https://prodspark.vercel.app/) |
 | **QuizSpark** | AI Quiz Generator | [**Start Quizzing**](https://quiz-spark-ai.base44.app/) |
 | **DevWeaveX** | Agency Showcase | [**Explore Agency**](https://devweavex.netlify.app/) |
@@ -85,6 +87,7 @@ I'm **Faizyab Hussain**, a **Full-Stack Developer & Vibe Coder** pioneering high
 <summary><b>📂 View More Lab Experiments (Wibba, QR Master, Parking Sys...)</b></summary>
 <br/>
 
+- [**ClinicFlow**](https://clinic-flow-managemnet.vercel.app/) - Smart medical management system.
 - [**Wibba Social**](https://wibba.netlify.app/) - Real-time interactions & modern feed.
 - [**AI Quiz App**](https://faizyabhussain07.github.io/modern-quiz-web-app/) - Instant scoring & interactive UI.
 - [**QR Master**](https://faizyabhussain07.github.io/Bar_QR_code-generator/) - Custom high-resolution scan codes.
