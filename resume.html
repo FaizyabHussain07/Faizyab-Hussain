@@ -1,645 +1,266 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="mobile-web-app-capable" content="yes">
-    <title>Resume | Faizyab Hussain - Full-Stack Solutions Architect</title>
-    <meta name="description"
-        content="Professional resume of Faizyab Hussain, documenting expertise in Full-Stack Development, AI integrations, and scalable web architectures.">
-    <meta name="keywords"
-        content="Resume, Faizyab Hussain, Full-Stack Developer, AI Architect, Tech Skills, Experience, Karachi, Pakistan">
-
-    <!-- OpenGraph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://faizyab-hussain.vercel.app/resume.html">
-    <meta property="og:site_name" content="Faizyab Hussain Resume">
-    <meta property="og:title" content="Resume | Faizyab Hussain - Full-Stack Developer">
-    <meta property="og:description"
-        content="Explore the professional experience, skills, and projects of Faizyab Hussain, a specialized Full-Stack AI Developer.">
-    <meta property="og:image" content="https://faizyab-hussain.vercel.app/banner-faizyabime.PNG">
-    <meta property="og:locale" content="en_US">
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Resume | Faizyab Hussain">
-    <meta name="twitter:description" content="Full-Stack Developer Resume - Specialized in AI & Scalable Web Apps.">
-    <meta name="twitter:image" content="https://faizyab-hussain.vercel.app/banner-faizyabime.PNG">
-    <meta name="twitter:site" content="@FaizyabHus74391">
-    <meta name="twitter:creator" content="@FaizyabHus74391">
-
-    <!-- Fonts -->
+    <title>Resume - Faizyab Hussain | Full-Stack Engineer & UI Systems Architect</title>
+    <meta name="description" content="Professional resume of Faizyab Hussain — Full-Stack Engineer & UI Systems Architect skilled in React, Next.js, Node.js, Firebase, and AI development. Available for freelance and remote engineering contracts.">
+    <meta name="author" content="Faizyab Hussain">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://faizyab-hussain.vercel.app/resume.html">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800&display=swap"
-        rel="stylesheet">
-    <!-- Tailwind CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="favicon.png" type="image/png">
-
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Faizyab Hussain",
-      "url": "https://faizyab-hussain.vercel.app/resume.html",
-      "jobTitle": "Full-Stack Developer",
-      "description": "Professional Resume of Faizyab Hussain"
-    }
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#12141C',
+                        'slate-dark': '#1E2230',
+                        silver: '#E2E8F0',
+                        muted: '#94A3B8',
+                        teal: '#007E8A',
+                        mustard: '#F0A500',
+                        'teal-light': '#00A8B8',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
     </script>
-
     <style>
-        :root {
-            --primary: #6366f1;
-            --accent: #a855f7;
-            --zinc-900: #18181b;
-            --zinc-950: #09090b;
-        }
-
-        /* Screen Styles */
-        .resume-container {
-            padding: 120px 1.5rem 80px;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .resume-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        @media (min-width: 1024px) {
-            .resume-grid {
-                grid-template-columns: 2fr 1fr;
-            }
-        }
-
-        .resume-card {
-            background: rgba(24, 24, 27, 0.4);
-            backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 2rem;
-            padding: 3rem;
-        }
-
-        .resume-header {
-            margin-bottom: 4rem;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-            padding-bottom: 3rem;
-            text-align: center;
-        }
-
-        @media (min-width: 768px) {
-            .resume-header {
-                text-align: left;
-                display: flex;
-                justify-content: space-between;
-                align-items: flex-end;
-            }
-        }
-
-        .name-title h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            font-weight: 800;
-            line-height: 1;
-            margin-bottom: 1rem;
-            font-family: 'Outfit', sans-serif;
-        }
-
-        .name-title p {
-            font-size: 1.25rem;
-            color: var(--primary);
-            font-weight: 600;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-        }
-
-        .contact-pills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-top: 2rem;
-            justify-content: center;
-        }
-
-        @media (min-width: 768px) {
-            .contact-pills {
-                justify-content: flex-start;
-            }
-        }
-
-        .pill {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 0.5rem 1rem;
-            border-radius: 100px;
-            font-size: 0.875rem;
-            color: #a1a1aa;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            transition: all 0.3s ease;
-        }
-
-        .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            margin-bottom: 2rem;
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-        }
-
-        .section-title i {
-            color: var(--primary);
-        }
-
-        .exp-item {
-            position: relative;
-            padding-left: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .exp-item::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0.5rem;
-            width: 10px;
-            height: 10px;
-            background: var(--primary);
-            border-radius: 50%;
-            box-shadow: 0 0 15px var(--primary);
-        }
-
-        .exp-item::after {
-            content: '';
-            position: absolute;
-            left: 4px;
-            top: 1.5rem;
-            width: 2px;
-            height: calc(100% + 2rem);
-            background: rgba(99, 102, 241, 0.1);
-        }
-
-        .exp-item:last-child::after {
-            display: none;
-        }
-
-        .exp-item h3 {
-            font-size: 1.25rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-        }
-
-        .exp-item .company {
-            color: var(--primary);
-            font-weight: 600;
-            font-size: 0.9rem;
-            margin-bottom: 0.75rem;
-        }
-
-        .exp-item .desc {
-            color: #71717a;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        .skill-group {
-            margin-bottom: 2rem;
-        }
-
-        .skill-group h4 {
-            font-size: 0.875rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #52525b;
-            margin-bottom: 1rem;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.5rem;
-        }
-
-        .s-tag {
-            background: rgba(255, 255, 255, 0.03);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            padding: 0.4rem 0.8rem;
-            border-radius: 0.5rem;
-            font-size: 0.85rem;
-            color: #d4d4d8;
-        }
-
-        /* Print - Classic ATS Layout */
-        /* Print - Classic ATS Layout - Single Page Optimized */
         @media print {
-            @page {
-                size: A4;
-                margin: 8mm 12mm;
-            }
-
-            body {
-                background: white !important;
-                color: #333 !important;
-                font-family: 'Arial', sans-serif !important;
-                line-height: 1.3 !important;
-                font-size: 9.5pt !important;
-            }
-
-            .resume-container,
-            nav,
-            .gradient-bg,
-            .grid-overlay,
-            .preloader,
-            .splash-screen {
-                display: none !important;
-            }
-
-            .classic-resume {
-                display: block !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-
-            .classic-resume h1 {
-                text-transform: uppercase !important;
-                margin-bottom: 2px !important;
-                color: #000 !important;
-                text-align: center !important;
-                font-size: 20pt !important;
-                font-weight: bold !important;
-                line-height: 1 !important;
-            }
-
-            .classic-contact-info {
-                text-align: center !important;
-                font-size: 9pt !important;
-                margin-bottom: 12px !important;
-                border-bottom: 1.5pt solid #444 !important;
-                padding-bottom: 6px !important;
-            }
-
-            .classic-contact-info a {
-                color: #0044cc !important;
-                text-decoration: none !important;
-            }
-
-            .classic-h3 {
-                text-transform: uppercase !important;
-                border-bottom: 0.5pt solid #ccc !important;
-                margin-top: 12px !important;
-                margin-bottom: 6px !important;
-                font-size: 10.5pt !important;
-                color: #111 !important;
-                font-weight: bold !important;
-                text-align: left !important;
-            }
-
-            .classic-job-title {
-                display: flex !important;
-                justify-content: space-between !important;
-                font-weight: bold !important;
-                font-size: 9.5pt !important;
-                margin-top: 2px !important;
-            }
-
-            .classic-company {
-                font-style: italic !important;
-                margin-bottom: 3px !important;
-                font-size: 9pt !important;
-                display: block !important;
-            }
-
-            .classic-resume ul {
-                margin-top: 2px !important;
-                padding-left: 18px !important;
-                list-style-type: disc !important;
-                margin-bottom: 5px !important;
-            }
-
-            .classic-resume li {
-                margin-bottom: 2px !important;
-                text-align: left !important;
-                line-height: 1.3 !important;
-            }
-
-            .classic-resume p {
-                margin-bottom: 6px !important;
-                text-align: justify !important;
-                line-height: 1.3 !important;
-            }
-
-            .classic-skills-section p {
-                margin: 2px 0 !important;
-            }
-
-            /* Force visibility */
-            [data-reveal] {
-                opacity: 1 !important;
-                transform: none !important;
-                visibility: visible !important;
-            }
+            .no-print { display: none !important; }
+            body { background-color: white !important; color: #1e293b !important; padding: 0 !important; }
+            .print-border { border: 1px solid #e2e8f0 !important; }
+            .skill-pill { border: 1px solid #e2e8f0 !important; background: #f1f5f9 !important; color: #475569 !important; }
+            h1, h2, h3 { color: #0f172a !important; }
+            .text-teal { color: #007E8A !important; }
         }
-
-        .classic-resume {
-            display: none;
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #12141C;
+            color: #E2E8F0;
+            -webkit-font-smoothing: antialiased;
+        }
+        ::selection { background: rgba(0,126,138,0.3); color: #E2E8F0; }
+        .skill-pill {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 6px;
+            background: rgba(30,34,48,0.6);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #94A3B8;
+            border: 1px solid rgba(255,255,255,0.06);
+            transition: all 0.2s ease;
+        }
+        .skill-pill:hover { border-color: rgba(0,126,138,0.3); color: #E2E8F0; }
+        .glass-card {
+            background: rgba(30,34,48,0.4);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.05);
         }
     </style>
 </head>
-
-<body>
-    <div class="classic-resume">
-        <h1>FAIZYAB HUSSAIN</h1>
-        <div class="classic-contact-info">
-            Karachi, Pakistan | +92 335 2811970<br>
-            <a href="mailto:syedfaizyabhussain07@gmail.com">syedfaizyabhussain07@gmail.com</a> |
-            <a href="https://linkedin.com/in/faizyab-hussain">LinkedIn</a> |
-            <a href="https://github.com/faizyabhussain07">GitHub</a> |
-            <a href="https://faizyab-hussain.vercel.app">Portfolio</a>
-        </div>
-
-        <h3 class="classic-h3">Professional Summary</h3>
-        <p>Results-driven Full-Stack Developer with expertise in building scalable web applications and AI-powered
-            tools. Proficient in the complete software development lifecycle, from UI/UX design in Figma to backend
-            architecture and deployment. Proven track record of delivering 100+ freelance projects and high-performance
-            digital solutions with a focus on user experience.</p>
-
-        <h3 class="classic-h3">Technical Skills</h3>
-        <div class="classic-skills-section">
-            <p><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+), React.js, Next.js, Tailwind CSS, Responsive
-                Web Design.</p>
-            <p><strong>Backend & Database:</strong> Node.js, Firebase, Supabase, Appwrite, RESTful APIs.</p>
-            <p><strong>Design & Tools:</strong> Figma (UI/UX), Git, GitHub, VS Code, AI Development Tools.</p>
-            <p><strong>Workflow:</strong> Agile Methodology, Performance Optimization (Lighthouse), Version Control.</p>
-        </div>
-
-        <h3 class="classic-h3">Professional Experience</h3>
-
-        <div class="classic-job-title">
-            <span>Tech Intern</span>
-            <span>Aug 2025 – Sept 2025</span>
-        </div>
-        <div class="classic-company">Kohaq, Karachi</div>
-        <ul>
-            <li>Collaborated in an Agile team environment to develop and maintain corporate web applications.</li>
-            <li>Implemented version control workflows using Git/GitHub to ensure seamless team collaboration.</li>
-            <li>Mastered professional coding standards and participated in code reviews.</li>
-        </ul>
-
-        <div class="classic-job-title">
-            <span>Freelance Web Developer</span>
-            <span>Sept 2024 – July 2025</span>
-        </div>
-        <div class="classic-company">Self-Employed, Remote</div>
-        <ul>
-            <li>Successfully delivered over 100+ web projects including e-commerce prototypes and portfolios.</li>
-            <li>Translated client requirements into functional, high-performance websites.</li>
-            <li>Ensured 100% mobile responsiveness and cross-browser compatibility.</li>
-        </ul>
-
-        <h3 class="classic-h3">Key Projects</h3>
-        <p><strong>PasteLink Pro</strong> | <em>Production-Ready Text Sharing Platform</em></p>
-        <ul>
-            <li>Engineered a secure, fast text-sharing utility with auto-deleting links and optional password protection.</li>
-            <li>Implemented a minimalist UI focused on privacy and zero-tracking for developers and power users.</li>
-        </ul>
-
-        <p><strong>Web Template Hub</strong> | <em>Open Source Library</em></p>
-        <ul>
-            <li>Engineered a collection of 100+ responsive web templates using Semantic HTML and Tailwind CSS.</li>
-            <li>Achieved a Lighthouse performance score of 95+ and focused on accessibility.</li>
-        </ul>
-
-        <p><strong>ProdSpark</strong> | <em>Product Directory Platform</em></p>
-        <ul>
-            <li>Developed a comprehensive platform for discovering, submitting, and reviewing innovative tools and
-                products.</li>
-            <li>Integrated a curated directory system with rating and search functionality.</li>
-        </ul>
-
-        <p><strong>Faizyab Al-Quran</strong> | <em>LMS Application</em></p>
-        <ul>
-            <li>Developed a modern LMS for Quranic studies with interactive learning modules.</li>
-            <li>Designed an intuitive UI and integrated high-performance backend architecture.</li>
-        </ul>
-
-        <h3 class="classic-h3">Education</h3>
-        <div class="classic-job-title">
-            <span>Web & App Development</span>
-            <span>2024 – 2026 (Exp.)</span>
-        </div>
-        <div class="classic-company">Saylani Mass I.T Training (S.M.I.T)</div>
-
-        <div class="classic-job-title">
-            <span>Intermediate (Computer Science)</span>
-            <span>2024 – 2026 (Exp.)</span>
-        </div>
-        <div class="classic-company">Sirajuddullah Govt. Degree College</div>
-
-        <h3 class="classic-h3">Certifications & Awards</h3>
-        <ul>
-            <li><strong>SMIT Achievement Award:</strong> Excellence in web development modules.</li>
-            <li><strong>Coding Night Participant:</strong> Competitive programming certificate.</li>
-            <li><strong>Intro to Programming:</strong> Foundational logic and development certification.</li>
-        </ul>
-    </div>
-    <div class="gradient-bg"></div>
-    <div class="grid-overlay"></div>
-
-    <nav class="fixed top-0 w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4">
-            <div class="glass-card rounded-2xl px-8 py-4 flex justify-between items-center text-white">
-                <a href="index.html" class="flex items-center gap-3 group">
-                    <img src="favicon.png" alt="Logo"
-                        class="w-10 h-10 rounded-lg transform group-hover:rotate-6 transition-transform duration-300">
-                    <div class="hidden md:block">
-                        <div class="font-bold text-lg leading-none">Faizyab Hussain</div>
-                        <div class="text-[10px] text-zinc-500 uppercase tracking-widest mt-1">Full-Stack Developer</div>
-                    </div>
+<body class="p-6 md:p-16 max-w-5xl mx-auto">
+    <!-- Header -->
+    <header class="flex flex-col md:flex-row justify-between items-start mb-12 pb-10 border-b border-white/5">
+        <div>
+            <div class="flex items-center gap-3 mb-4">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-black text-silver tracking-tighter">Faizyab Hussain</h1>
+                    <p class="text-sm text-teal font-bold uppercase tracking-widest">Full-Stack Engineer & UI Systems Architect</p>
+                </div>
+            </div>
+            <div class="mt-6 flex flex-wrap gap-4 text-sm font-medium text-muted">
+                <span class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-teal"></i> Karachi, Pakistan</span>
+                <a href="mailto:syedfaizyabhussain07@gmail.com" class="flex items-center gap-2 hover:text-teal transition-colors">
+                    <i data-lucide="mail" class="w-4 h-4 text-teal"></i> syedfaizyabhussain07@gmail.com
                 </a>
-
-                <div class="flex items-center gap-3">
-                    <button onclick="window.print()"
-                        class="px-5 py-2.5 bg-zinc-900 border border-zinc-800 rounded-xl hover:border-indigo-500 transition-all text-sm font-medium flex items-center gap-2">
-                        <i class="fas fa-print text-indigo-400"></i> Save as PDF
-                    </button>
-                    <a href="index.html"
-                        class="px-5 py-2.5 bg-indigo-600 rounded-xl hover:bg-indigo-700 transition-all text-sm font-bold shadow-lg shadow-indigo-600/20">Back
-                        to Home</a>
-                </div>
+                <a href="https://wa.me/923352811970" class="flex items-center gap-2 hover:text-teal transition-colors">
+                    <i data-lucide="phone" class="w-4 h-4 text-teal"></i> +92 335 2811970
+                </a>
+            </div>
+            <div class="mt-3 flex flex-wrap gap-6 text-sm text-muted">
+                <a href="https://github.com/faizyabhussain07" target="_blank" class="flex items-center gap-2 hover:text-silver transition-colors">
+                    <i data-lucide="github" class="w-4 h-4 text-teal"></i> github.com/faizyabhussain07
+                </a>
+                <a href="https://faizyab-hussain.vercel.app/" class="flex items-center gap-2 hover:text-silver transition-colors">
+                    <i data-lucide="globe" class="w-4 h-4 text-teal"></i> faizyab-hussain.vercel.app
+                </a>
             </div>
         </div>
-    </nav>
+        <a href="Resume_Faizyab_Hussain.pdf" target="_blank" class="no-print mt-8 md:mt-0 btn-teal text-white px-8 py-3.5 rounded-2xl font-bold flex items-center gap-2 shadow-xl shadow-teal/10 transition-all hover:shadow-teal/20">
+            <i data-lucide="download" class="w-4 h-4"></i> Download CV
+        </a>
+    </header>
 
-    <main class="resume-container">
-        <div class="resume-card" data-reveal>
-            <header class="resume-header">
-                <div class="name-title">
-                    <h1>Faizyab Hussain</h1>
-                    <p>Full-Stack Developer & Vibe Coder</p>
-                    <div class="contact-pills">
-                        <div class="pill"><i class="fas fa-envelope"></i> syedfaizyabhussain07@gmail.com</div>
-                        <div class="pill"><i class="fas fa-location-dot"></i> Karachi, Pakistan</div>
-                        <div class="pill"><i class="fas fa-phone"></i> +92 335 2811970</div>
-                        <a href="https://faizyab-hussain.vercel.app" class="pill text-decoration-none"><i
-                                class="fas fa-globe"></i> faizyab-hussain.vercel.app</a>
-                        <a href="https://github.com/faizyabhussain07" class="pill text-decoration-none"><i
-                                class="fab fa-github"></i> github.com/faizyabhussain07</a>
-                        <a href="https://linkedin.com/in/faizyab-hussain" class="pill text-decoration-none"><i
-                                class="fab fa-linkedin"></i> linkedin.com/in/faizyab-hussain</a>
+    <style>
+        .btn-teal {
+            background: linear-gradient(135deg, #007E8A 0%, #00A8B8 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-teal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,126,138,0.3);
+        }
+    </style>
+
+    <div class="grid lg:grid-cols-3 gap-16">
+        <!-- Sidebar -->
+        <div class="lg:col-span-1 space-y-12">
+            <section>
+                <h2 class="text-sm font-black uppercase tracking-[0.2em] text-teal mb-6 flex items-center gap-2">
+                    <i data-lucide="layers" class="w-4 h-4"></i> Core Arsenal
+                </h2>
+                <div class="space-y-6">
+                    <div>
+                        <h3 class="text-xs font-bold text-muted/60 uppercase tracking-widest mb-3">Frontend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">React.js</span>
+                            <span class="skill-pill">Next.js</span>
+                            <span class="skill-pill">TypeScript</span>
+                            <span class="skill-pill">Tailwind CSS</span>
+                            <span class="skill-pill">HTML5/CSS3</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-muted/60 uppercase tracking-widest mb-3">Backend</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">Node.js</span>
+                            <span class="skill-pill">Firebase</span>
+                            <span class="skill-pill">Supabase</span>
+                            <span class="skill-pill">REST APIs</span>
+                            <span class="skill-pill">PostgreSQL</span>
+                        </div>
+                    </div>
+                    <div>
+                        <h3 class="text-xs font-bold text-muted/60 uppercase tracking-widest mb-3">AI & Design</h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="skill-pill">AI Automation</span>
+                            <span class="skill-pill">Cursor/Bolt</span>
+                            <span class="skill-pill">Figma</span>
+                            <span class="skill-pill">UI Systems</span>
+                        </div>
                     </div>
                 </div>
-            </header>
+            </section>
 
-            <div class="resume-grid">
-                <div class="main-col space-y-12">
-                    <section class="summary-section">
-                        <h2 class="section-title"><i class="fas fa-user"></i> Professional Summary</h2>
-                        <p class="text-zinc-400 leading-relaxed">
-                            Full-Stack Developer with a passion for building modern, scalable web applications and
-                            AI-powered tools.
-                            Experienced in the complete development lifecycle, from UI/UX design to backend architecture
-                            and deployment.
-                            Proven track record of delivering high-performance digital solutions and freelance projects.
-                        </p>
-                    </section>
-
-                    <section class="experience-section">
-                        <h2 class="section-title"><i class="fas fa-briefcase"></i> Experience</h2>
-                        <div class="experience-list">
-                            <article class="exp-item">
-                                <h3>Tech Intern</h3>
-                                <div class="company">Kohaq • Aug 2025 — Sept 2025</div>
-                                <p class="desc">Mastered corporate web development workflows, version control with Git,
-                                    and collaborative coding standards in an agile team environment.</p>
-                            </article>
-                            <article class="exp-item">
-                                <h3>Freelance Web Developer</h3>
-                                <div class="company">Self-Employed • Sept 2024 — July 2025</div>
-                                <p class="desc">Shipped over 100+ web projects for diverse clients. Specialized in
-                                    responsive landing pages, e-commerce prototypes, and portfolio sites.</p>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="projects-section">
-                        <h2 class="section-title"><i class="fas fa-laptop-code"></i> Key Projects</h2>
-                        <div class="experience-list">
-                            <article class="exp-item">
-                                <h3>PasteLink Pro</h3>
-                                <div class="company">Production-Ready Text Sharing Platform</div>
-                                <p class="desc">A professional text sharing utility with auto-deleting links, password protection, and zero tracking. Built for security and speed.
-                                    <a href="https://paste-link-pro.vercel.app/"
-                                        class="text-indigo-400 no-underline hover:text-indigo-300">View Project</a>
-                                </p>
-                            </article>
-                            <article class="exp-item">
-                                <h3>Web Template Hub</h3>
-                                <div class="company">Open Source Library of Components & Templates</div>
-                                <p class="desc">Engineered a curated collection of 100+ modern, responsive web templates
-                                    and UI components. Built with semantic HTML, Tailwind CSS, and optimized for
-                                    performance.
-                                    <a href="https://web-template-hub.netlify.app"
-                                        class="text-indigo-400 no-underline hover:text-indigo-300">View Project</a>
-                                </p>
-                            </article>
-                            <article class="exp-item">
-                                <h3>ProdSpark</h3>
-                                <div class="company">Product Directory Platform</div>
-                                <p class="desc">A comprehensive platform to discover the best tools and products.
-                                    Browse, submit, rate, and review innovative tools in a curated directory.
-                                    <a href="https://prodspark.vercel.app/"
-                                        class="text-indigo-400 no-underline hover:text-indigo-300">View Project</a>
-                                </p>
-                            </article>
-                            <article class="exp-item">
-                                <h3>Faizyab Al-Quran</h3>
-                                <div class="company">Modern LMS Application</div>
-                                <p class="desc">Digital platform for Quranic studies combining modern technology with
-                                    academic support. Featuring interactive learning modules and intuitive UI.
-                                    <a href="http://faizyab-al-quran.vercel.app/"
-                                        class="text-indigo-400 no-underline hover:text-indigo-300">View Project</a>
-                                </p>
-                            </article>
-                        </div>
-                    </section>
-
-                    <section class="education-section">
-                        <h2 class="section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-                        <div class="experience-list">
-                            <article class="exp-item">
-                                <h3>Web & App Development</h3>
-                                <div class="company">S.M.I.T (Saylani Mass I.T Training) • 2024 — 2026</div>
-                            </article>
-                            <article class="exp-item">
-                                <h3>Intermediate (Computer Science)</h3>
-                                <div class="company">Sirajuddullah Govt. Degree College • 2024 — 2026</div>
-                            </article>
-                        </div>
-                    </section>
+            <section>
+                <h2 class="text-sm font-black uppercase tracking-[0.2em] text-teal mb-6 flex items-center gap-2">
+                    <i data-lucide="graduation-cap" class="w-4 h-4"></i> Training
+                </h2>
+                <div class="glass-card rounded-2xl p-5">
+                    <h3 class="font-bold text-silver">Saylani Mass IT Training</h3>
+                    <p class="text-xs text-muted font-medium">Full-Stack Web Development</p>
                 </div>
+            </section>
 
-                <div class="side-col space-y-12">
-                    <section class="skills-section">
-                        <h2 class="section-title"><i class="fas fa-layer-group"></i> Technical Skills</h2>
-                        <div class="skill-group">
-                            <h4>Frontend Development</h4>
-                            <div class="skill-tags">
-                                <span class="s-tag">HTML5</span> <span class="s-tag">CSS3</span> <span
-                                    class="s-tag">JS</span> <span class="s-tag">React</span> <span
-                                    class="s-tag">Next.js</span> <span class="s-tag">Tailwind</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Backend & Database</h4>
-                            <div class="skill-tags">
-                                <span class="s-tag">Node.js</span> <span class="s-tag">Firebase</span> <span
-                                    class="s-tag">Supabase</span> <span class="s-tag">Appwrite</span> <span
-                                    class="s-tag">REST APIs</span>
-                            </div>
-                        </div>
-                        <div class="skill-group">
-                            <h4>Tools & Design</h4>
-                            <div class="skill-tags">
-                                <span class="s-tag">Git</span> <span class="s-tag">GitHub</span> <span
-                                    class="s-tag">Figma</span> <span class="s-tag">UI/UX</span> <span class="s-tag">AI
-                                    Tools</span>
-                            </div>
-                        </div>
-                    </section>
-
-                    <section class="awards-section">
-                        <h2 class="section-title"><i class="fas fa-award"></i> Certifications & Awards</h2>
-                        <div class="space-y-4">
-                            <div class="glass-card p-4 rounded-xl border-l-4 border-indigo-500">
-                                <p class="text-xs text-zinc-500 mb-1">SMIT ACHIEVEMENT</p>
-                                <h4 class="font-bold text-sm">Coding Night Participant</h4>
-                            </div>
-                            <div class="glass-card p-4 rounded-xl border-l-4 border-purple-500">
-                                <p class="text-xs text-zinc-500 mb-1">CERTIFICATE</p>
-                                <h4 class="font-bold text-sm">Intro to Programming</h4>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-            </div>
+            <section>
+                <h2 class="text-sm font-black uppercase tracking-[0.2em] text-teal mb-6 flex items-center gap-2">
+                    <i data-lucide="award" class="w-4 h-4"></i> Honors
+                </h2>
+                <ul class="space-y-3 text-sm text-muted">
+                    <li class="flex gap-3"><i data-lucide="check" class="w-4 h-4 text-teal shrink-0"></i> SMIT Achievement Award</li>
+                    <li class="flex gap-3"><i data-lucide="check" class="w-4 h-4 text-teal shrink-0"></i> Coding Night Participant</li>
+                    <li class="flex gap-3"><i data-lucide="check" class="w-4 h-4 text-teal shrink-0"></i> Intro to Programming Merit</li>
+                </ul>
+            </section>
         </div>
-    </main>
 
-    <script src="script.js"></script>
+        <!-- Main Content -->
+        <div class="lg:col-span-2 space-y-12">
+            <section>
+                <h2 class="text-sm font-black uppercase tracking-[0.2em] text-teal mb-8 flex items-center gap-2">
+                    <i data-lucide="briefcase" class="w-4 h-4"></i> Professional Experience
+                </h2>
+                <div class="space-y-10">
+                    <div class="relative pl-8 border-l border-white/5">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-teal rounded-full border-4 border-obsidian"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-silver">Freelance Full-Stack Developer</h3>
+                            <span class="text-[10px] font-bold text-muted bg-slate-dark px-3 py-1 rounded-full uppercase tracking-tighter">2024 – Present</span>
+                        </div>
+                        <p class="text-muted text-sm font-medium mb-4">Self-Employed · Remote</p>
+                        <ul class="text-sm text-muted space-y-2 leading-relaxed">
+                            <li>• Shipped 10+ end-to-end web applications for international and local clients with 100% success rate.</li>
+                            <li>• Architected performant frontends using React and Next.js, consistently achieving 95+ Lighthouse scores.</li>
+                            <li>• Managed full product lifecycles from Figma prototyping to cloud deployment on Vercel and Netlify.</li>
+                            <li>• Developed proprietary Tailwind CSS component library reducing client time-to-market by 25%.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 border-l border-white/5">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-dark rounded-full border-4 border-obsidian"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-silver">Tech Intern</h3>
+                            <span class="text-[10px] font-bold text-muted bg-slate-dark px-3 py-1 rounded-full uppercase tracking-tighter">Aug 2025 – Sep 2025</span>
+                        </div>
+                        <p class="text-muted text-sm font-medium mb-4">Kohaq · Karachi, Pakistan</p>
+                        <ul class="text-sm text-muted space-y-2 leading-relaxed">
+                            <li>• Collaborated in corporate Agile environment to refine enterprise-scale UI components.</li>
+                            <li>• Adopted industry-standard coding conventions and participated in rigorous code reviews.</li>
+                            <li>• Increased deployment frequency by 20% through streamlined Git workflows.</li>
+                        </ul>
+                    </div>
+
+                    <div class="relative pl-8 border-l border-white/5">
+                        <div class="absolute -left-[9px] top-0 w-4 h-4 bg-slate-dark rounded-full border-4 border-obsidian"></div>
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="font-bold text-lg text-silver">DevWeaveX — Founder</h3>
+                            <span class="text-[10px] font-bold text-muted bg-slate-dark px-3 py-1 rounded-full uppercase tracking-tighter">2025 – Present</span>
+                        </div>
+                        <p class="text-muted text-sm font-medium mb-4">Personal Brand & Open Source Initiative</p>
+                        <ul class="text-sm text-muted space-y-2 leading-relaxed">
+                            <li>• Building premium web experiences and developer-first tooling for the modern web ecosystem.</li>
+                            <li>• Curating open-source resources and reusable component systems for the developer community.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section>
+                <h2 class="text-sm font-black uppercase tracking-[0.2em] text-teal mb-8 flex items-center gap-2">
+                    <i data-lucide="code-2" class="w-4 h-4"></i> Featured Projects
+                </h2>
+                <div class="grid sm:grid-cols-2 gap-6">
+                    <div class="p-6 bg-slate-dark border border-white/5 rounded-2xl hover:border-teal/20 transition-all">
+                        <h4 class="font-bold text-silver mb-2">PasteLink Pro</h4>
+                        <p class="text-xs text-muted leading-relaxed mb-4">Secure text-sharing SaaS with auto-expiry links and password protection.</p>
+                        <a href="https://paste-link-pro.vercel.app/" target="_blank" class="text-xs font-bold text-teal flex items-center gap-1 hover:text-teal-light transition-colors">LIVE DEMO <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                    </div>
+                    <div class="p-6 bg-slate-dark border border-white/5 rounded-2xl hover:border-teal/20 transition-all">
+                        <h4 class="font-bold text-silver mb-2">QuizSpark AI</h4>
+                        <p class="text-xs text-muted leading-relaxed mb-4">AI-powered platform for creating and analyzing interactive quizzes.</p>
+                        <a href="https://quiz-spark-ai.base44.app/" target="_blank" class="text-xs font-bold text-teal flex items-center gap-1 hover:text-teal-light transition-colors">LIVE DEMO <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                    </div>
+                    <div class="p-6 bg-slate-dark border border-white/5 rounded-2xl hover:border-teal/20 transition-all">
+                        <h4 class="font-bold text-silver mb-2">ProdSpark Platform</h4>
+                        <p class="text-xs text-muted leading-relaxed mb-4">Product discovery directory with AI-powered ratings and reviews.</p>
+                        <a href="https://prodspark.vercel.app/" target="_blank" class="text-xs font-bold text-teal flex items-center gap-1 hover:text-teal-light transition-colors">LIVE DEMO <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                    </div>
+                    <div class="p-6 bg-slate-dark border border-white/5 rounded-2xl hover:border-teal/20 transition-all">
+                        <h4 class="font-bold text-silver mb-2">Web Template Hub</h4>
+                        <p class="text-xs text-muted leading-relaxed mb-4">Curated ecosystem of 100+ modern responsive web templates.</p>
+                        <a href="https://web-template-hub.netlify.app/" target="_blank" class="text-xs font-bold text-teal flex items-center gap-1 hover:text-teal-light transition-colors">LIVE DEMO <i data-lucide="external-link" class="w-3 h-3"></i></a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer class="mt-20 pt-10 border-t border-white/5 text-center no-print">
+        <p class="text-[10px] font-black uppercase tracking-[0.3em] text-muted/30">© 2026 Faizyab Hussain. Built for Excellence.</p>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
-
 </html>

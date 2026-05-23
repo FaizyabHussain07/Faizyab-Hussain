@@ -1,0 +1,29 @@
+/* TEAM */
+    Name: Faizyab Hussain
+    Role: Full-Stack Engineer & UI Systems Architect
+    Site: https://faizyab-hussain.vercel.app/
+    Email: syedfaizyabhussain07@gmail.com
+    Location: Karachi, Pakistan
+
+/* THANKS */
+    Built with determination, late-night commits, and a passion for engineering excellence.
+    Inspired by the open-source community, modern web standards, and the pursuit of clean code.
+
+/* SITE */
+    Standards: HTML5, CSS3, JavaScript (ES6+)
+    Framework: Tailwind CSS, Lucide Icons
+    Components: GSAP, Lenis (Smooth Scroll)
+    Deployment: Vercel
+    Last Update: 2026-05-21
+
+/* COLOPHON */
+    Color Palette: Deep Obsidian (#12141C), Electric Teal (#007E8A), Metallic Silver (#E2E8F0), Mustard (#F0A500)
+    Typography: Inter (Google Fonts)
+    Icons: Lucide
+
+/* PRIVACY */
+    This site uses no tracking cookies, no analytics scripts, and no third-party data collection.
+    Contact form submissions are processed via FormSubmit.co with spam protection enabled.
+
+/* COPYRIGHT */
+    © 2026 Faizyab Hussain. All rights reserved.

@@ -1,0 +1,91 @@
+# Faizyab Hussain — Full-Stack Engineer & UI Systems Architect
+
+## About
+Faizyab Hussain is a Full-Stack Engineer & UI Systems Architect based in Karachi, Pakistan. Building scalable digital systems, AI-powered web apps, and high-performance interfaces for startups and businesses worldwide.
+
+## Quick Facts
+- **Name:** Faizyab Hussain
+- **Role:** Full-Stack Engineer & UI Systems Architect
+- **Location:** Karachi, Pakistan (Remote Worldwide)
+- **Email:** syedfaizyabhussain07@gmail.com
+- **Phone:** +92 335 2811970
+- **Website:** https://faizyab-hussain.vercel.app/
+- **GitHub:** https://github.com/faizyabhussain07
+- **LinkedIn:** https://linkedin.com/in/faizyabhussain07
+- **Twitter/X:** https://x.com/FaizyabHus74391
+
+## Core Skills
+- **Frontend:** React, Next.js, TypeScript, Tailwind CSS, HTML5, CSS3
+- **Backend:** Node.js, Firebase, Supabase, REST APIs, PostgreSQL
+- **Design:** Figma, UI Systems, Responsive Design, Prototyping
+- **Tools:** Git, GitHub, Vercel, Netlify, Cursor, AI Tools
+
+## Professional Experience
+### Freelance Full-Stack Developer (2024 – Present)
+- Shipped 10+ end-to-end web applications with 100% success rate
+- Achieved 95+ Lighthouse scores across all projects
+- Developed proprietary Tailwind CSS component library
+
+### Tech Intern — Kohaq, Karachi (Aug 2025 – Sep 2025)
+- Increased deployment frequency by 20% via streamlined Git workflows
+- Reduced production bugs by 15% through peer code reviews
+
+### DevWeaveX — Founder (2025 – Present)
+- Open-source initiative for premium web experiences and developer tooling
+
+## Featured Projects
+### Project Slik
+Modular SaaS engine automating full-stack scaffolding. React, Node.js, Firebase.
+
+### PasteLink Pro
+Secure zero-tracking text sharing platform with auto-expiry links. React, Node.js, AES-256.
+
+### ProdSpark
+Product discovery platform with AI-powered sorting and reviews. Next.js, Supabase.
+
+### Web Template Hub
+Curated ecosystem of 100+ modern, responsive web templates. HTML5, Tailwind.
+
+### DevWeaveX
+Open-source initiative for premium web experiences and developer-first tooling.
+
+### Help Hub AI
+AI-powered productivity and assistance platform. Modern AI workflows, responsive UI.
+
+### Prepflow AI Platform
+AI-powered SaaS platform for intelligent productivity workflows.
+
+### QuizSpark AI
+AI-powered quiz creation and analytics platform. OpenAI integration.
+
+### ClinicFlow
+Clinic management system with patient records and appointment scheduling.
+
+### Faizyab Al-Quran
+Digital Quran learning platform with translations and audio recitations.
+
+## Services
+- **Full-Stack Web Development** — Custom web applications with modern architecture
+- **UI/UX Design** — Premium interfaces with Figma-first workflow
+- **SEO & Performance** — Lighthouse 100 optimization, semantic HTML, structured data
+- **AI Integration** — LLM-powered features, embeddings, automation
+- **Consulting** — Architecture reviews, technical strategy, code audits
+
+## Pricing
+- **Basic (MVP Launch):** $299 — Single page, responsive, SEO
+- **Professional (Growth Engine):** $599 — Up to 5 pages, 100 Lighthouse, animations
+- **Enterprise (Scale Edition):** $999 — Full multi-page system, CMS, priority support
+
+## Location & GEO
+- **City:** Karachi, Sindh, Pakistan
+- **Coordinates:** 24.8607° N, 67.0011° E
+- **Region:** PK-SD
+- **Service Area:** Karachi, Pakistan, Remote Worldwide
+
+## Engineering Principles
+1. Performance First — Every millisecond counts
+2. Scalable Architecture — Systems designed to grow
+3. Clean Maintainable Code — Readable, documented, tested
+4. SEO as Infrastructure — Baked into every layer
+5. User-Centered Systems — UI psychology meets engineering
+6. Accessibility Standards — Semantic HTML, ARIA, WCAG compliance
