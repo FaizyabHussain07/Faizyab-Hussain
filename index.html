@@ -203,6 +203,18 @@
     /* ORB */
     .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
 
+    /* MODAL */
+    #success-modal{position:fixed;inset:0;z-index:99999;display:none;align-items:center;justify-content:center;padding:1.5rem;background:rgba(18,20,28,.8);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+    #success-modal.open{display:flex}
+    #success-modal .modal-content{background:#1E2230;border:1px solid rgba(255,255,255,.08);border-radius:24px;padding:2.5rem;max-width:440px;width:100%;text-align:center;animation:modalIn .4s cubic-bezier(.23,1,.32,1)}
+    @keyframes modalIn{0%{opacity:0;transform:scale(.9) translateY(20px)}100%{opacity:1;transform:scale(1) translateY(0)}}
+    #success-modal .modal-icon{width:64px;height:64px;border-radius:50%;background:rgba(0,126,138,.15);border:2px solid rgba(0,126,138,.3);display:flex;align-items:center;justify-content:center;margin:0 auto 1.25rem}
+    #success-modal .modal-icon svg{width:28px;height:28px;color:#007E8A}
+    #success-modal h3{font-size:1.25rem;font-weight:800;color:#E2E8F0;margin-bottom:.5rem}
+    #success-modal p{font-size:.875rem;color:#94A3B8;line-height:1.6;margin-bottom:1.5rem}
+    #success-modal .btn-modal{background:linear-gradient(135deg,#007E8A 0%,#00A8B8 100%);color:#fff;padding:.75rem 2rem;border-radius:12px;font-weight:700;font-size:.875rem;border:none;cursor:pointer;transition:all .3s ease}
+    #success-modal .btn-modal:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,126,138,.3)}
+
     @media(max-width:768px){.grid-overlay{background-size:40px 40px}}
     </style>
 </head>
@@ -1336,15 +1348,53 @@ form?.addEventListener('submit', (e) => {
         status.classList.remove('hidden');
         return;
     }
-    status.textContent = 'Sending...';
-    status.className = 'text-xs font-medium text-teal mt-2';
-    status.classList.remove('hidden');
-    setTimeout(() => {
-        status.textContent = 'Message sent! I\'ll get back to you within 24 hours.';
-        status.className = 'text-xs font-medium text-teal mt-2';
-        form.reset();
-        setTimeout(() => status.classList.add('hidden'), 5000);
-    }, 1500);
+    // Show loading state
+    const btn = document.getElementById('form-submit-btn');
+    const btnText = document.getElementById('btn-text');
+    const btnIcon = document.getElementById('btn-icon');
+    const btnSpinner = document.getElementById('btn-spinner');
+    btn.disabled = true;
+    btnText.textContent = 'Sending...';
+    btnIcon.classList.add('hidden');
+    btnSpinner.classList.remove('hidden');
+    status.classList.add('hidden');
+    // Submit to FormSubmit.co via fetch
+    const formData = new FormData(form);
+    fetch('https://formsubmit.co/ajax/syedfaizyabhussain07@gmail.com', {
+        method: 'POST',
+        body: formData
+    })
+    .then(res => res.json())
+    .then(data => {
+        if (data.success) {
+            form.reset();
+            showSuccessModal();
+        } else {
+            throw new Error('Submission failed');
+        }
+    })
+    .catch(() => {
+        status.textContent = 'Something went wrong. Please try again or email me directly.';
+        status.className = 'text-xs font-medium text-red-400 mt-2';
+        status.classList.remove('hidden');
+    })
+    .finally(() => {
+        btn.disabled = false;
+        btnText.textContent = 'Send Message';
+        btnIcon.classList.remove('hidden');
+        btnSpinner.classList.add('hidden');
+    });
+});
+
+// Success modal helpers
+function showSuccessModal() {
+    document.getElementById('success-modal').classList.add('open');
+}
+function closeSuccessModal() {
+    document.getElementById('success-modal').classList.remove('open');
+}
+document.getElementById('success-modal')?.addEventListener('click', (e) => {
+    if (e.target === e.currentTarget) closeSuccessModal();
 });
 
 // Magnetic effect
