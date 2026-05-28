@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 — Page Not Found | Faizyab Hussain — Full-Stack Developer</title>
+    <meta name="description" content="The page you're looking for doesn't exist. Return to Faizyab Hussain's portfolio — Full-Stack Developer & AI Product Builder from Karachi, Pakistan.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://faizyab-hussain.vercel.app/">
+    <link rel="icon" href="/faizyab-icon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#12141C',
+                        'slate-dark': '#1E2230',
+                        silver: '#E2E8F0',
+                        muted: '#94A3B8',
+                        teal: '#007E8A',
+                        'teal-light': '#00A8B8',
+                        mustard: '#F0A500',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background: #12141C;
+            color: #E2E8F0;
+            font-family: 'Inter', sans-serif;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            -webkit-font-smoothing: antialiased;
+            overflow: hidden;
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #007E8A 0%, #00A8B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .mesh-bg {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background:
+                radial-gradient(ellipse at 20% 50%, rgba(0,126,138,0.06) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 20%, rgba(240,165,0,0.04) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 80%, rgba(0,126,138,0.03) 0%, transparent 50%);
+            z-index: -1;
+            pointer-events: none;
+        }
+        .grid-overlay {
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px);
+            background-size: 60px 60px;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .btn-teal {
+            background: linear-gradient(135deg, #007E8A 0%, #00A8B8 100%);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-teal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(0,126,138,0.3);
+        }
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.04);
+            border-color: rgba(0,126,138,0.3);
+            transform: translateY(-2px);
+        }
+        .glow-orb {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.3;
+            position: fixed;
+            pointer-events: none;
+            animation: float 12s ease-in-out infinite;
+        }
+        .glow-orb:nth-child(1) {
+            background: #007E8A;
+            top: -50px;
+            right: -50px;
+        }
+        .glow-orb:nth-child(2) {
+            background: #F0A500;
+            bottom: -50px;
+            left: -50px;
+            animation-delay: -6s;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-20px) scale(1.05); }
+        }
+    </style>
+</head>
+<body>
+    <!-- Ambient Orbs -->
+    <div class="glow-orb"></div>
+    <div class="glow-orb"></div>
+
+    <!-- Background -->
+    <div class="mesh-bg"></div>
+    <div class="grid-overlay"></div>
+
+    <main class="relative z-10 max-w-lg mx-auto text-center px-6">
+        <!-- Logo -->
+        <a href="/" class="inline-block mb-10">
+            <img 
+                src="/faizyab-logo.png" 
+                alt="Faizyab Hussain Logo" 
+                class="h-14 w-auto mx-auto opacity-80 hover:opacity-100 transition-opacity"
+            />
+        </a>
+
+        <!-- 404 Code Display -->
+        <div class="mb-6">
+            <span class="text-[10px] font-bold uppercase tracking-[0.3em] text-teal bg-teal/10 px-3 py-1 rounded-full">
+                Error 404
+            </span>
+        </div>
+
+        <h1 class="text-8xl md:text-9xl font-black gradient-text tracking-tighter leading-none mb-4">
+            404
+        </h1>
+
+        <p class="text-2xl font-bold text-silver mb-3">
+            Page Not Found
+        </p>
+
+        <p class="text-sm text-muted leading-relaxed mb-10 max-w-sm mx-auto">
+            The page you're looking for doesn't exist or has been moved. Let's get you back on track.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a href="/" class="btn-teal inline-flex items-center gap-2 text-white px-8 py-4 rounded-2xl font-bold text-sm shadow-xl shadow-teal/10">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
+                </svg>
+                Go Home
+            </a>
+            <a href="/#projects" class="btn-outline inline-flex items-center gap-2 text-slate-300 px-8 py-4 rounded-2xl font-bold text-sm">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0l-4-4m4 4l-4 4" />
+                </svg>
+                View Projects
+            </a>
+            <a href="/#contact" class="btn-outline inline-flex items-center gap-2 text-slate-300 px-8 py-4 rounded-2xl font-bold text-sm">
+                <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                </svg>
+                Contact Me
+            </a>
+        </div>
+
+        <!-- Decorative bottom line -->
+        <p class="mt-16 text-[10px] font-mono text-muted/30">
+            © 2026 Faizyab Hussain · Full-Stack Developer
+        </p>
+    </main>
+</body>
+</html>

@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Sora:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem; /* account for sticky navbar */
+  }
+
+  body {
+    background-color: #07080c;
+    color: #f1f5f9;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background: rgba(0, 126, 138, 0.3);
+    color: #ffffff;
+  }
+}
+
+/* ── SCROLLBAR ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #07080c;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #007E8A;
+}
+
+/* ── PREMIUM MESH BACKGROUND ───────────────── */
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: 
+    radial-gradient(ellipse at 10% 20%, rgba(0, 126, 138, 0.07) 0%, transparent 45%),
+    radial-gradient(ellipse at 90% 10%, rgba(240, 165, 0, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse at 50% 80%, rgba(0, 168, 184, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 90%, rgba(255, 184, 32, 0.02) 0%, transparent 40%);
+}
+
+.grid-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.007) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.007) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+@media(max-width: 768px) {
+  .grid-overlay {
+    background-size: 40px 40px;
+  }
+}
+
+/* Noise overlay for premium analog feel */
+.noise-overlay {
+  position: fixed;
+  top: -100%;
+  left: -100%;
+  width: 300%;
+  height: 300%;
+  z-index: 9999;
+  opacity: 0.18;
+  pointer-events: none;
+  animation: noiseAnim 8s steps(10) infinite;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+}
+
+@keyframes noiseAnim {
+  0%, 100% { transform: translate(0,0) }
+  10% { transform: translate(-3%, -7%) }
+  20% { transform: translate(-10%, 4%) }
+  30% { transform: translate(5%, -15%) }
+  40% { transform: translate(-4%, 15%) }
+  50% { transform: translate(-10%, 7%) }
+  60% { transform: translate(10%, 0%) }
+  70% { transform: translate(0%, 10%) }
+  80% { transform: translate(2%, 20%) }
+  90% { transform: translate(-7%, 7%) }
+}
+
+/* ── PREMIUM WIDGETS & CLASS STYLES ───────── */
+
+/* Glass Cards (Linear & Vercel Style) */
+.glass-card {
+  background: rgba(15, 17, 26, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  border-color: rgba(0, 126, 138, 0.25);
+  background: rgba(15, 17, 26, 0.7);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(0, 126, 138, 0.04);
+  transform: translateY(-2px);
+}
+
+/* Gold/Mustard Tinted Glass Card */
+.glass-card-gold {
+  background: rgba(19, 17, 12, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-gold:hover {
+  border-color: rgba(240, 165, 0, 0.25);
+  background: rgba(19, 17, 12, 0.7);
+  box-shadow: 
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    0 0 30px rgba(240, 165, 0, 0.03);
+  transform: translateY(-2px);
+}
+
+/* Premium gradient headers */
+.text-gradient-teal {
+  background: linear-gradient(135deg, #f1f5f9 20%, #00A8B8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-gold {
+  background: linear-gradient(135deg, #f1f5f9 20%, #FFB820 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-brand {
+  background: linear-gradient(135deg, #00A8B8 0%, #FFB820 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Glow Borders */
+.glow-border-teal {
+  position: relative;
+}
+.glow-border-teal::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(0, 126, 138, 0.4), transparent, rgba(0, 168, 184, 0.4));
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.glow-border-teal:hover::before {
+  opacity: 1;
+}
+
+.glow-border-gold {
+  position: relative;
+}
+.glow-border-gold::before {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(135deg, rgba(240, 165, 0, 0.4), transparent, rgba(255, 184, 32, 0.4));
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.glow-border-gold:hover::before {
+  opacity: 1;
+}
+
+/* High-end developer buttons */
+.btn-premium-teal {
+  background: linear-gradient(135deg, #007E8A 0%, #00A8B8 100%);
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 
+    0 4px 12px rgba(0, 126, 138, 0.25),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-premium-teal:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 8px 20px rgba(0, 126, 138, 0.4),
+    0 0 15px rgba(0, 168, 184, 0.2);
+  filter: brightness(1.05);
+}
+.btn-premium-teal:active {
+  transform: translateY(0);
+}
+
+.btn-premium-gold {
+  background: linear-gradient(135deg, #F0A500 0%, #FFB820 100%);
+  color: #07080c;
+  font-weight: 600;
+  letter-spacing: 0.025em;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 
+    0 4px 12px rgba(240, 165, 0, 0.2),
+    0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-premium-gold:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 8px 20px rgba(240, 165, 0, 0.35),
+    0 0 15px rgba(255, 184, 32, 0.15);
+  filter: brightness(1.05);
+}
+
+.btn-premium-ghost {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.btn-premium-ghost:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+/* Premium Inputs */
+.premium-input {
+  background: rgba(15, 17, 26, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: #ffffff;
+  outline: none;
+  font-size: 0.875rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.premium-input:focus {
+  border-color: rgba(0, 126, 138, 0.5);
+  background: rgba(15, 17, 26, 0.85);
+  box-shadow: 0 0 0 3px rgba(0, 126, 138, 0.12);
+}
+
+/* Command Palette Backdrop */
+.cmd-palette-backdrop {
+  background: rgba(3, 4, 7, 0.7);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Custom Scroll Progress Bar */
+#scroll-progress-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #007E8A, #FFB820);
+  z-index: 99999;
+  transition: width 0.1s linear;
+}
+
+/* Timeline Custom Styles */
+.journey-line {
+  background: linear-gradient(to bottom, rgba(0, 126, 138, 0.05), rgba(0, 126, 138, 0.5) 20%, rgba(255, 184, 32, 0.5) 80%, rgba(255, 184, 32, 0.05));
+}
+.journey-node {
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 0 4px rgba(7, 8, 12, 1);
+  transition: all 0.3s ease;
+}
+.journey-node-active {
+  border-color: #007E8A;
+  background: #007E8A;
+  box-shadow: 0 0 15px rgba(0, 126, 138, 0.6), 0 0 0 4px rgba(7, 8, 12, 1);
+}
+.journey-node-gold {
+  border-color: #FFB820;
+  background: #FFB820;
+  box-shadow: 0 0 15px rgba(255, 184, 32, 0.6), 0 0 0 4px rgba(7, 8, 12, 1);
+}

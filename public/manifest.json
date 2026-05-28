@@ -26,7 +26,7 @@
   "shortcuts": [
     {
       "name": "Projects",
-      "url": "/#vault",
+      "url": "/#projects",
       "description": "View the engineering project archive"
     },
     {
@@ -36,8 +36,8 @@
     },
     {
       "name": "Resume",
-      "url": "/resume.html",
-      "description": "View professional resume"
+      "url": "/Resume_Faizyab_Hussain.pdf",
+      "description": "Download professional resume PDF"
     }
   ]
 }

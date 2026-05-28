@@ -1,0 +1,66 @@
+# ─── ROBOTS.TXT — Faizyab Hussain Portfolio ───
+# SEO / AEO / GEO optimized for maximum discoverability
+
+# Allow all major search engines full access
+User-agent: *
+Allow: /
+Disallow: /404.html
+Disallow: /resume.html
+Sitemap: https://faizyab-hussain.vercel.app/sitemap.xml
+
+# ─── AI Crawlers & Answer Engines ───
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Google-Cloud-Vision
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ─── Optimized crawl delay for performance ───
+Crawl-Delay: 1
+
+# ─── LLM training data opt-out: Allow (this site is public knowledge) ───
