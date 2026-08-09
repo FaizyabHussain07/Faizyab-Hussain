@@ -10,6 +10,8 @@ import sharp from 'sharp'
 
 const LOGO = readFileSync('public/faizyab-logo.png')
 const LOGO_B64 = LOGO.toString('base64')
+const HERO = readFileSync('public/images/hero.jpg')
+const HERO_B64 = HERO.toString('base64')
 
 // ─── OG image 1200x630 ──────────────────────────────────────────────
 const ogSvg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
@@ -22,6 +24,9 @@ const ogSvg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" 
       <stop offset="0%" stop-color="#E8A23C"/>
       <stop offset="100%" stop-color="#B97F22"/>
     </radialGradient>
+    <clipPath id="shot">
+      <rect x="770" y="150" width="330" height="330" rx="26"/>
+    </clipPath>
   </defs>
 
   <rect width="1200" height="630" fill="#0A1917"/>
@@ -53,10 +58,10 @@ const ogSvg = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" width="1200" 
   <text x="84" y="540" font-family="Segoe UI, Arial, sans-serif" font-size="24" fill="#8FA8A2">faizyab-hussain.vercel.app</text>
   <text x="84" y="578" font-family="Consolas, monospace" font-size="19" letter-spacing="1" fill="#5C7A72">github.com/FaizyabHussain07</text>
 
-  <!-- right: logo badge -->
-  <circle cx="870" cy="315" r="235" fill="#0F2E29" fill-opacity="0.6"/>
-  <rect x="695" y="140" width="350" height="350" rx="40" fill="#FFFFFF"/>
-  <image x="745" y="152" width="250" height="326" href="data:image/png;base64,${LOGO_B64}" preserveAspectRatio="xMidYMid meet"/>
+  <!-- right: hero screenshot preview -->
+  <circle cx="910" cy="315" r="240" fill="#0F2E29" fill-opacity="0.6"/>
+  <image x="770" y="150" width="330" height="330" href="data:image/jpeg;base64,${HERO_B64}" preserveAspectRatio="xMidYMid slice" clip-path="url(#shot)"/>
+  <rect x="770" y="150" width="330" height="330" rx="26" fill="none" stroke="#1D3A35" stroke-width="2"/>
 </svg>`)
 
 await sharp(ogSvg).png({ compressionLevel: 9 }).toFile('public/og-image.png')
