@@ -19,6 +19,8 @@ import {
   Rocket,
   Brain,
   Stethoscope,
+  PencilRuler,
+  SearchCheck,
 } from 'lucide-react'
 
 /* ============================================================
@@ -211,6 +213,20 @@ export const TECH_PROJECTS = [
     title: 'ClinicFlow',
     desc: 'Smart clinic management system — patient management, appointment scheduling, digital prescriptions with auto-generated PDFs and role-based dashboards.',
     live: 'https://clinic-flow-managemnet.vercel.app/',
+    github: null,
+  },
+  {
+    icon: PencilRuler,
+    title: 'BuildLayout',
+    desc: 'Draw house floor plans online — 2D floor plan editor, no signup needed. Precise drawing to the centimetre with walls, rooms, furniture and labels, snap-to-grid editing, starter templates, live cost estimate and PNG/PDF/JSON export. Best for homeowners, builders, small architecture studios and contractors.',
+    live: 'https://buildplan-studio-web.lovable.app/',
+    github: null,
+  },
+  {
+    icon: SearchCheck,
+    title: 'PromptAudit',
+    desc: 'SEO, GEO & AEO website audits with AI fix prompts — free during beta, 5 audits per week. Paste any public URL for an instant report with overall and category-wise scores, issue reports with severity, and production-ready fix prompts for Claude Code, Cursor, Codex CLI, Gemini CLI and Windsurf. Private and read-only.',
+    live: 'https://prompt-audit.lovable.app/',
     github: null,
   },
 ]
