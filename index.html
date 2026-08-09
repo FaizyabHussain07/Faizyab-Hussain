@@ -1,99 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ✦ PRIMARY SEO -->
-    <title>Faizyab Hussain — Full-Stack Developer & AI Product Builder | Karachi, Pakistan</title>
-    <meta name="description" content="Faizyab Hussain is a Full-Stack Developer, AI Builder, and SaaS Creator from Karachi, Pakistan. Engineering high-performance digital products, AI systems, and scalable web experiences. Available for global contracts.">
-    <meta name="keywords" content="Full-Stack Developer, AI Developer, SaaS Developer, React Developer, Next.js Developer, AI Product Engineer, Startup Developer, Modern Web Developer, Karachi, Pakistan, Freelance Web Developer, Portfolio, Faizyab Hussain">
+    <title>Faizyab Hussain — Web Developer | Modern Websites & Digital Experiences</title>
+    <meta name="description" content="Faizyab Hussain is a web developer in Karachi, Pakistan building modern, responsive websites and digital experiences for businesses and growing brands.">
     <meta name="author" content="Faizyab Hussain">
-    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
-    <meta name="theme-color" content="#12141C">
-    <meta name="geo.region" content="PK-SD">
-    <meta name="geo.placename" content="Karachi">
-    <meta name="geo.position" content="24.8607;67.0011">
-    <meta name="ICBM" content="24.8607, 67.0011">
-    <meta name="revisit-after" content="7 days">
-    <meta name="language" content="English">
-    <meta name="rating" content="general">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#0A1917">
     <link rel="canonical" href="https://faizyab-hussain.vercel.app/">
-    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
-    <link rel="icon" href="/faizyab-icon.png" type="image/png">
-    <link rel="apple-touch-icon" href="/faizyab-icon.png">
+
+    <!-- ✦ FAVICON / APP ICONS -->
+    <link rel="icon" href="/favicon.ico" sizes="48x48">
+    <link rel="icon" href="/icon-192.png" type="image/png" sizes="192x192">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/manifest.json">
-    <meta name="application-name" content="Faizyab Hussain">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- ✦ SELF-HOSTED FONTS (no external requests) -->
+    <link rel="preload" href="/fonts/PlusJakartaSans-normal-700-8021.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="/fonts/JetBrainsMono-normal-400-10685.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- ✦ OPEN GRAPH -->
-    <meta property="og:title" content="Faizyab Hussain | Full-Stack Developer & AI Product Builder">
-    <meta property="og:description" content="Building scalable modern AI products, SaaS platforms, and premium web experiences. Based in Karachi, Pakistan. Available worldwide for contracts and collaborations.">
-    <meta property="og:image" content="https://faizyab-hussain.vercel.app/faizyab-image-new.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Faizyab Hussain">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:title" content="Faizyab Hussain — Web Developer | Modern Websites & Digital Experiences">
+    <meta property="og:description" content="Faizyab Hussain is a web developer in Karachi, Pakistan building modern, responsive websites and digital experiences for businesses and growing brands.">
+    <meta property="og:url" content="https://faizyab-hussain.vercel.app/">
+    <meta property="og:image" content="https://faizyab-hussain.vercel.app/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
-    <meta property="og:image:alt" content="Faizyab Hussain — Full-Stack Developer & AI Product Builder">
-    <meta property="og:url" content="https://faizyab-hussain.vercel.app/">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="Faizyab Hussain Portfolio">
+    <meta property="og:image:alt" content="Faizyab Hussain — Web Developer building modern websites and digital experiences">
 
-    <!-- ✦ TWITTER CARD -->
+    <!-- ✦ TWITTER / X CARD -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Faizyab Hussain | Full-Stack Developer & AI Builder">
-    <meta name="twitter:description" content="Building scalable modern AI products, SaaS platforms, and premium web experiences. Available for contracts worldwide.">
-    <meta name="twitter:image" content="https://faizyab-hussain.vercel.app/faizyab-image-new.jpg">
-    <meta name="twitter:image:alt" content="Faizyab Hussain Portfolio">
-    <meta name="twitter:site" content="@FaizyabHus74391">
-    <meta name="twitter:creator" content="@FaizyabHus74391">
+    <meta name="twitter:title" content="Faizyab Hussain — Web Developer | Modern Websites & Digital Experiences">
+    <meta name="twitter:description" content="Faizyab Hussain is a web developer in Karachi, Pakistan building modern, responsive websites and digital experiences for businesses and growing brands.">
+    <meta name="twitter:image" content="https://faizyab-hussain.vercel.app/og-image.png">
+    <meta name="twitter:image:alt" content="Faizyab Hussain — Web Developer building modern websites and digital experiences">
 
-    <!-- ✦ FONTS -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- ✦ THEME BOOTSTRAP (avoids flash of wrong theme) -->
+    <script>
+        try {
+            document.documentElement.setAttribute('data-theme', localStorage.getItem('theme') || 'dark');
+        } catch (e) {}
+    </script>
 
-    <!-- ✦ PERFORMANCE: DNS Prefetch -->
-    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-</head>
-<body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
+    <!--
+      ✦ ANALYTICS INTEGRATION POINT
+      No third-party tracking is loaded on this site.
+      To add analytics later, drop the provider snippet here (e.g. a
+      self-hosted Plausible/Umami script or a GA4 tag) — no other code
+      changes are required.
+    -->
 
-    <!-- ✦ JSON-LD: Person -->
+    <!-- ✦ JSON-LD: Person (primary entity) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Faizyab Hussain",
+      "jobTitle": "Web Developer",
       "url": "https://faizyab-hussain.vercel.app/",
-      "jobTitle": "Full-Stack Engineer & AI Product Builder",
       "image": "https://faizyab-hussain.vercel.app/faizyab-image-new.jpg",
       "sameAs": [
-        "https://github.com/faizyabhussain07",
+        "https://github.com/FaizyabHussain07",
         "https://www.linkedin.com/in/faizyabhussain",
         "https://x.com/FaizyabHus74391",
-        "https://wa.me/923352811970"
+        "https://instagram.com/syedfaizyabhussain07"
       ],
       "email": "syedfaizyabhussain07@gmail.com",
-      "telephone": "+92-335-2811970",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Karachi",
-        "addressCountry": "PK"
-      },
-      "knowsAbout": ["Full-Stack Development", "React", "Next.js", "Node.js", "UI/UX Design", "Web Architecture", "AI Integration", "SaaS Development", "AI Product Engineering", "TypeScript", "Tailwind CSS", "Supabase", "Firebase", "MongoDB", "Express.js", "Framer Motion"],
-      "description": "Full-Stack Developer & AI Product Builder building scalable digital systems, AI-powered web apps, and premium interfaces for startups and businesses worldwide.",
-      "alumniOf": {
-        "@type": "EducationalOrganization",
-        "name": "Saylani Mass IT Training (SMIT)"
-      },
-      "worksFor": {
-        "@type": "Organization",
-        "name": "DevWeaveX"
-      }
+      "homeLocation": { "@type": "Place", "name": "Karachi, Pakistan" },
+      "knowsAbout": [
+        "Web Development", "React", "Next.js", "JavaScript", "TypeScript",
+        "HTML", "CSS", "Tailwind CSS", "Node.js", "Express",
+        "MongoDB", "MySQL", "Responsive Web Design", "Business Websites",
+        "AI Web Applications", "Vite", "Git"
+      ],
+      "description": "Faizyab Hussain is a web developer based in Karachi, Pakistan. He builds modern, responsive websites and digital experiences for businesses and growing brands using React, JavaScript, TypeScript, Next.js and Node.js."
     }
     </script>
 
@@ -102,93 +89,41 @@
     {
       "@context": "https://schema.org",
       "@type": "WebSite",
-      "name": "Faizyab Hussain — Full-Stack Developer & AI Product Builder",
+      "name": "Faizyab Hussain — Web Developer",
       "url": "https://faizyab-hussain.vercel.app/",
-      "description": "Full-Stack Developer & AI Product Builder from Karachi, Pakistan. Building scalable digital systems, AI-powered web apps, and high-performance interfaces for startups and businesses worldwide.",
-      "author": {"@type": "Person", "name": "Faizyab Hussain"},
-      "inLanguage": "en-US",
-      "applicationCategory": "PortfolioWebsite",
-      "keywords": ["Full-Stack Developer", "AI Developer", "SaaS Developer", "React Developer", "Next.js Developer", "AI Product Engineer", "Startup Developer", "Modern Web Developer"],
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": {
-          "@type": "EntryPoint",
-          "urlTemplate": "https://faizyab-hussain.vercel.app/?q={search_term_string}"
-        },
-        "query-input": "required name=search_term_string"
+      "description": "Portfolio of Faizyab Hussain, a web developer in Karachi, Pakistan building modern, responsive websites and digital experiences for businesses and growing brands.",
+      "inLanguage": "en",
+      "publisher": {
+        "@type": "Person",
+        "name": "Faizyab Hussain",
+        "url": "https://faizyab-hussain.vercel.app/"
       }
     }
     </script>
 
-    <!-- ✦ JSON-LD: BreadcrumbList -->
+    <!-- ✦ JSON-LD: Service (professional web development services) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://faizyab-hussain.vercel.app/"},
-        {"@type": "ListItem", "position": 2, "name": "Projects", "item": "https://faizyab-hussain.vercel.app/#projects"},
-        {"@type": "ListItem", "position": 3, "name": "Contact", "item": "https://faizyab-hussain.vercel.app/#contact"}
-      ]
-    }
-    </script>
-
-    <!-- ✦ JSON-LD: ItemList (Projects) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ItemList",
-      "name": "Faizyab Hussain's Engineering Projects",
-      "description": "Featured full-stack engineering, AI, and SaaS projects by Faizyab Hussain — a Full-Stack Developer & AI Product Builder from Karachi, Pakistan.",
-      "url": "https://faizyab-hussain.vercel.app/",
-      "numberOfItems": 9,
-      "itemListElement": [
-        {"@type": "SoftwareApplication", "position": 1, "name": "SLIK DEV", "applicationCategory": "WebApplication", "description": "Premium digital studio and agency platform with conversion-optimized design and case study layouts.", "url": "https://slik-dev.vercel.app/"},
-        {"@type": "SoftwareApplication", "position": 2, "name": "Clinic Flow", "applicationCategory": "MedicalApplication", "description": "Role-based clinic management system with patient records, appointments, billing, and PDF invoice generation.", "url": "https://github.com/faizyabhussain07"},
-        {"@type": "SoftwareApplication", "position": 3, "name": "QuizSpark AI", "applicationCategory": "EducationalApplication", "description": "AI-powered quiz creation platform with adaptive difficulty, real-time scoring, and student analytics.", "url": "https://quiz-spark-ai.base44.app/"},
-        {"@type": "SoftwareApplication", "position": 4, "name": "PasteLink Pro", "applicationCategory": "WebApplication", "description": "Zero-tracking encrypted text sharing platform with auto-expiry and password protection.", "url": "https://paste-link-pro.vercel.app/"},
-        {"@type": "SoftwareApplication", "position": 5, "name": "ProdSpark", "applicationCategory": "WebApplication", "description": "AI-powered product discovery and review platform with submission workflows.", "url": "https://prodspark.vercel.app/"},
-        {"@type": "SoftwareApplication", "position": 6, "name": "Helpy AI", "applicationCategory": "AIApplication", "description": "Conversational AI chat assistant with context memory and streaming responses.", "url": "https://helpy-ai.vercel.app/"},
-        {"@type": "SoftwareApplication", "position": 7, "name": "AppMedo / PrepFlow", "applicationCategory": "WebApplication", "description": "AI SaaS platform combining interview preparation with application tracking.", "url": "https://github.com/faizyabhussain07"},
-        {"@type": "SoftwareApplication", "position": 8, "name": "Web Template Hub", "applicationCategory": "DeveloperApplication", "description": "Curated marketplace of production-ready web templates with live responsive previews.", "url": "https://github.com/faizyabhussain07"},
-        {"@type": "SoftwareApplication", "position": 9, "name": "Faizyab Al Quran", "applicationCategory": "EducationalApplication", "description": "Digital Quran reading application with clean Arabic typography, translation support, and accessibility features.", "url": "https://github.com/faizyabhussain07"}
-      ]
-    }
-    </script>
-
-    <!-- ✦ JSON-LD: ProfessionalService -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "ProfessionalService",
-      "name": "Faizyab Hussain — Full-Stack & AI Engineering Services",
-      "url": "https://faizyab-hussain.vercel.app/",
-      "image": "https://faizyab-hussain.vercel.app/faizyab-image-new.jpg",
-      "description": "Professional full-stack and AI development services including SaaS products, MVPs, UI engineering, and custom AI integrations. Based in Karachi, Pakistan, serving clients globally.",
-      "areaServed": ["Karachi", "Pakistan", "Worldwide"],
-      "priceRange": "$299 - $999",
-      "email": "syedfaizyabhussain07@gmail.com",
-      "telephone": "+92-335-2811970",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Karachi",
-        "addressCountry": "PK"
+      "@type": "Service",
+      "name": "Web Development Services",
+      "serviceType": "Web Development",
+      "description": "Modern business websites, website redesigns, responsive landing pages and small custom web applications for businesses and local businesses.",
+      "provider": {
+        "@type": "Person",
+        "name": "Faizyab Hussain",
+        "jobTitle": "Web Developer",
+        "url": "https://faizyab-hussain.vercel.app/"
       },
-      "areaServed": ["Karachi", "Pakistan", "Worldwide"],
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Full-Stack & AI Development Services",
-        "itemListElement": [
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "AI-Powered Web Applications"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "SaaS Product Development"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Startup MVP Engineering"}},
-          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Full-Stack Web Development"}}
-        ]
+      "areaServed": "Worldwide",
+      "availableChannel": {
+        "@type": "ServiceChannel",
+        "serviceUrl": "https://faizyab-hussain.vercel.app/#contact"
       }
     }
     </script>
 
-    <!-- ✦ JSON-LD: FAQ (Base questions for AI crawlers) -->
+    <!-- ✦ JSON-LD: FAQ (mirrors the visible FAQ section — keep in sync with src/data/portfolio.js FAQS) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -196,46 +131,90 @@
       "mainEntity": [
         {
           "@type": "Question",
-          "name": "What kind of projects does Faizyab build?",
+          "name": "Who is Faizyab Hussain?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Faizyab specializes in full-stack digital products, multi-tenant SaaS platforms, custom landing pages, and AI-powered web applications with responsive design and sub-2-second load times."
+            "text": "Faizyab Hussain is a web developer based in Karachi, Pakistan. He builds modern, responsive websites and digital experiences for businesses and growing brands."
           }
         },
         {
           "@type": "Question",
-          "name": "Is Faizyab available for freelance or contract work?",
+          "name": "What does Faizyab Hussain do?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Faizyab is actively open to remote contract opportunities and freelance projects globally, working across different time zones from Karachi, Pakistan."
+            "text": "He designs and builds websites: business websites, landing pages, website redesigns and small custom web applications."
           }
         },
         {
           "@type": "Question",
-          "name": "What technologies does Faizyab use?",
+          "name": "What types of websites does Faizyab Hussain build?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Core technologies include React, Next.js, TypeScript, Tailwind CSS, Framer Motion, Node.js, Express, MongoDB, Supabase, PostgreSQL, and AI/LLM integrations."
+            "text": "Mainly websites for local businesses — restaurants, gyms, clinics, law firms, real estate, home services, barbershops and coaches — plus landing pages and small custom web applications."
           }
         },
         {
           "@type": "Question",
-          "name": "Does Faizyab build AI-powered products?",
+          "name": "Does Faizyab Hussain build websites for local businesses?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Yes. Faizyab integrates OpenAI and Claude APIs, builds prompt routing pipelines, designs semantic RAG search utilities, and configures automated AI agent workflows."
+            "text": "Yes. Local business websites are the main focus. The portfolio includes restaurant, gym, dental clinic, law firm, real estate, HVAC, barbershop and personal-trainer website concepts."
           }
         },
         {
           "@type": "Question",
-          "name": "How much does a SaaS MVP cost?",
+          "name": "What technologies does Faizyab Hussain use?",
           "acceptedAnswer": {
             "@type": "Answer",
-            "text": "Starter websites begin at $499, AI integration packages are $999, full SaaS products start at $1,499, and custom enterprise solutions are quoted per project."
+            "text": "React, Next.js, JavaScript, TypeScript, Tailwind CSS, Node.js and Express, with MongoDB or MySQL for data, built with Vite and version-controlled with Git and GitHub."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Faizyab Hussain based?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Karachi, Pakistan. He works remotely with businesses worldwide over video calls, email and messaging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can Faizyab Hussain redesign an existing website?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. He reviews the current site and rebuilds it with a modern, responsive design while keeping the content and structure that already works."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I see a demo before committing?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. A free concept demo — a small sample homepage design for your business — is available so you can see the direction before deciding anything."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does a website take?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on scope, but a typical business website takes a few weeks from the discovery call to launch."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I contact Faizyab Hussain?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Through the contact form on this website, or by email at syedfaizyabhussain07@gmail.com."
           }
         }
       ]
     }
     </script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

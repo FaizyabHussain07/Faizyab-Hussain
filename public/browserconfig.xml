@@ -2,12 +2,12 @@
 <browserconfig>
   <msapplication>
     <tile>
-      <square70x70logo src="faizyab-icon.png" />
-      <square150x150logo src="faizyab-icon.png" />
-      <wide310x150logo src="faizyab-icon.png" />
-      <square310x310logo src="faizyab-icon.png" />
-      <TileColor>#12141C</TileColor>
-      <TileImage src="faizyab-icon.png" />
+      <square70x70logo src="icon-192.png" />
+      <square150x150logo src="icon-192.png" />
+      <wide310x150logo src="icon-512.png" />
+      <square310x310logo src="icon-512.png" />
+      <TileColor>#0A1917</TileColor>
+      <TileImage src="icon-512.png" />
     </tile>
   </msapplication>
 </browserconfig>

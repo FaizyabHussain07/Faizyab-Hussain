@@ -1,34 +1,26 @@
-import { useState, useEffect } from 'react'
-import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X } from 'lucide-react'
+import { useEffect, useState } from 'react'
+import { motion } from 'framer-motion'
+import { Sun, Moon, Menu, X } from 'lucide-react'
+import { NAV_LINKS } from '../data/portfolio'
 
-const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Projects', href: '#projects' },
-  { label: 'About', href: '#about' },
-  { label: 'Skills', href: '#skills' },
-  { label: 'Services', href: '#services' },
-  { label: 'Contact', href: '#contact' },
-]
-
-export default function Navbar({ activeSection }) {
+export default function Navbar({ activeSection, theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const [showCta, setShowCta] = useState(false)
+  const [menuOpen, setMenuOpen] = useState(false)
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 30)
+      setScrolled(window.scrollY > 20)
+      setShowCta(window.scrollY > 400)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleNavClick = (href) => {
-    setMobileMenuOpen(false)
-    const targetElement = document.querySelector(href)
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth' })
-    }
+  const scrollTo = (href) => {
+    setMenuOpen(false)
+    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
   }
 
   return (
@@ -37,100 +29,62 @@ export default function Navbar({ activeSection }) {
         initial={{ y: -80, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-          scrolled 
-            ? 'bg-[#07080c]/75 backdrop-blur-xl border-b border-white/[0.04] shadow-lg shadow-black/10' 
-            : 'bg-transparent'
-        }`}
+        className={`nav ${scrolled ? 'scrolled' : ''}`}
       >
-        <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-16 sm:h-20">
-          
-          {/* Logo */}
-          <a 
-            href="#home" 
-            onClick={(e) => { e.preventDefault(); handleNavClick('#home') }}
-            className="flex items-center shrink-0 group"
-          >
-            <img 
-              src="/faizyab-logo.png" 
-              alt="Faizyab Hussain"
-              className="h-8 w-auto transition-transform duration-300 group-hover:scale-105"
-            />
+        <div className="nav-inner">
+          <a href="#home" className="brand" onClick={(e) => { e.preventDefault(); scrollTo('#home') }}>
+            <img src="/faizyab-logo.png" alt="Faizyab Hussain" className="brand-logo" width="324" height="337" />
+            <span className="brand-name">Faizyab Hussain</span>
           </a>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-1">
-            {NAV_LINKS.map((link) => {
-              const isActive = activeSection === link.href.slice(1)
-              return (
-                <button
-                  key={link.label}
-                  onClick={() => handleNavClick(link.href)}
-                  className={`relative px-3.5 py-2 text-sm font-medium rounded-xl transition-all duration-200 ${
-                    isActive 
-                      ? 'text-white' 
-                      : 'text-slate-400 hover:text-slate-200'
-                  }`}
-                >
-                  {isActive && (
-                    <motion.span
-                      layoutId="nav-active-pill"
-                      className="absolute inset-0 rounded-xl bg-white/[0.04] border border-white/[0.06]"
-                      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
-                    />
-                  )}
-                  <span className="relative z-10">{link.label}</span>
-                </button>
-              )
-            })}
+          <div className="nav-links">
+            {NAV_LINKS.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className={activeSection === link.href.slice(1) ? 'active' : ''}
+                onClick={(e) => { e.preventDefault(); scrollTo(link.href) }}
+              >
+                {link.label}
+              </a>
+            ))}
           </div>
 
-          {/* Right side - Mobile menu button only */}
-          <div className="flex items-center gap-2 md:hidden">
+          <div className="nav-right">
             <button
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2.5 rounded-xl text-slate-400 hover:text-white hover:bg-white/[0.04] transition-all duration-200"
-              aria-label="Toggle navigation menu"
+              className="theme-toggle"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light theme' : 'Switch to dark theme'}
             >
-              {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+              {theme === 'dark' ? <Sun className="icon" /> : <Moon className="icon" />}
+            </button>
+            {showCta && (
+              <a href="#contact" className="btn btn-primary btn-sm" onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}>
+                Get a free demo
+              </a>
+            )}
+            <button
+              className="menu-btn"
+              aria-label="Toggle menu"
+              aria-expanded={menuOpen}
+              onClick={() => setMenuOpen((o) => !o)}
+            >
+              {menuOpen ? <X className="icon" /> : <Menu className="icon" />}
             </button>
           </div>
-
         </div>
       </motion.nav>
 
-      {/* Mobile Drawer */}
-      <AnimatePresence>
-        {mobileMenuOpen && (
-          <motion.div
-            key="mobile-drawer"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
-            transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-x-0 top-16 z-40 bg-[#07080c]/90 backdrop-blur-2xl border-b border-white/[0.04] shadow-2xl"
-          >
-            <div className="px-6 py-4 flex flex-col gap-1 max-w-7xl mx-auto">
-              {NAV_LINKS.map((link) => {
-                const isActive = activeSection === link.href.slice(1)
-                return (
-                  <button
-                    key={link.label}
-                    onClick={() => handleNavClick(link.href)}
-                    className={`w-full text-left px-4 py-3.5 rounded-xl text-sm font-medium transition-all duration-150 ${
-                      isActive 
-                        ? 'text-white bg-white/[0.04] border-l-2 border-teal' 
-                        : 'text-slate-400 hover:text-white hover:bg-white/[0.02]'
-                    }`}
-                  >
-                    {link.label}
-                  </button>
-                )
-              })}
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+        {NAV_LINKS.map((link) => (
+          <a key={link.href} href={link.href} onClick={(e) => { e.preventDefault(); scrollTo(link.href) }}>
+            {link.label}
+          </a>
+        ))}
+        <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}>
+          Get a free demo
+        </a>
+      </div>
     </>
   )
 }
