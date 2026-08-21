@@ -1,53 +1,64 @@
-# Faizyab Hussain — Web Developer
+# Faizyab Hussain — Full-Stack Developer · AI Engineer · AI Product Builder
 
 ## About
-Faizyab Hussain is a web developer based in Karachi, Pakistan. He builds modern, responsive websites and digital experiences for businesses and local businesses.
+Faizyab Hussain is a Full-Stack Developer, AI Engineer and AI Product Builder based in Karachi, Pakistan. He builds modern web applications, SaaS products, AI-powered tools and business systems using modern web technologies. He builds scalable AI and web systems for startups, businesses and founders.
 
 ## Quick Facts
 - **Name:** Faizyab Hussain
-- **Role:** Web Developer
+- **Role:** Full-Stack Developer · AI Engineer · AI Product Builder
 - **Location:** Karachi, Pakistan (works remotely worldwide)
 - **Email:** syedfaizyabhussain07@gmail.com
 - **Website:** https://faizyab-hussain.vercel.app/
 - **GitHub:** https://github.com/FaizyabHussain07
 - **LinkedIn:** https://www.linkedin.com/in/faizyabhussain
-- **X/Twitter:** https://x.com/FaizyabHus74391
-- **Instagram:** https://instagram.com/syedfaizyabhussain07
 
-## Skills (used in this portfolio)
-- **Frontend:** HTML, CSS, JavaScript, TypeScript, React, Next.js, Tailwind CSS
-- **Backend:** Node.js, Express
-- **Databases:** MongoDB, MySQL
-- **Tools:** Git, GitHub, Vite, Vercel, Netlify, Figma
+## What He Builds
+- AI-powered SaaS products and applications
+- Full-stack web applications with modern frontend, backend and databases
+- Business systems (CRMs, dashboards, booking tools, internal apps)
+- Modern websites for businesses, startups and brands
+- AI integrations and LLM-powered features
+- SaaS products from concept to deployment
+
+## Tech Stack
+- **Frontend:** React, Next.js, TypeScript, JavaScript, HTML, CSS, Tailwind CSS
+- **Backend:** Node.js, Express.js, REST APIs
+- **Database:** MongoDB, MySQL, PostgreSQL, Supabase, Convex
+- **AI:** AI APIs, LLM Integrations, Prompt Engineering, AI Automation
+- **Tools:** Git, GitHub, Vercel, Netlify, Vite, Figma
 
 ## Services
-- Business websites
-- Website redesign
-- Responsive web development
-- Landing pages
-- Custom web applications
-- Lead capture and booking flows
-- Website maintenance
+- AI Product Development
+- Full-Stack Web Development
+- SaaS Development
+- AI Integration
+- Business Systems
+- Modern Website Development
+- Website Redesign
+- Landing Pages
 
-## Concept Projects (portfolio — clearly labeled as concepts)
-- **The Golden Fork** — Restaurant website concept: menu discovery, reservations, location, mobile usability.
-- **Iron District** — Gym/fitness concept: class schedules, trainer profiles, membership sign-ups.
-- **BrightSmile** — Dental clinic concept: simple, reassuring appointment booking.
-- **Sterling Legal** — Law firm concept: credibility, practice areas, consultation request flow.
-- **Horizon Realty** — Real estate concept: listing discovery, filtering, agent contact.
-- **AirFlow Pro** — HVAC/home services concept: service areas, quotes, emergency contact.
-- **Northside Barber** — Barbershop concept: strong visual identity, service menu, online booking.
-- **Peak Performance** — Personal-trainer concept: programs, lead capture.
-
-## Shipped Projects (live)
+## Shipped Projects
 - **DevPass** — Professional identity platform for software engineers. https://devpass-app.vercel.app/
 - **PasteLink Pro** — Secure temporary text and code sharing. https://paste-link-pro.vercel.app/
 - **Web Template Hub** — Free open-source library of HTML templates and Tailwind CSS components. https://web-template-hub.netlify.app/
 - **Slik** — Multi-framework SaaS boilerplate with a CLI. https://slik-dev.vercel.app/
 - **QuizSpark** — AI-powered quiz builder. https://quiz-spark-ai.base44.app/
-- **ClinicFlow** — Clinic management system with patient management and digital prescriptions. https://clinic-flow-managemnet.vercel.app/
+- **ClinicFlow** — Clinic management system. https://clinic-flow-managemnet.vercel.app/
+- **BuildLayout** — Online 2D floor plan editor. https://buildplan-studio-web.lovable.app/
+- **PromptAudit** — SEO, GEO & AEO audit tool with AI fix prompts. https://prompt-audit.lovable.app/
+
+## Business Website Concepts
+- **The Golden Fork** — Restaurant website concept
+- **Iron District** — Gym/fitness website concept
+- **BrightSmile** — Dental clinic website concept
+- **Sterling Legal** — Law firm website concept
+- **Horizon Realty** — Real estate website concept
+- **AirFlow Pro** — HVAC/home services website concept
+- **Northside Barber** — Barbershop website concept
+- **Peak Performance** — Personal trainer website concept
+
 ## Process
-01 Discover → 02 Plan → 03 Design → 04 Build → 05 Test → 06 Launch
+01 Discover → 02 Plan → 03 Design → 04 Build → 05 Test → 06 Deploy
 
 ## Transparency Note
 This portfolio contains no fabricated clients, testimonials, revenue figures, or business results. Concept projects are clearly labeled as concepts, and only shipped projects carry live links.

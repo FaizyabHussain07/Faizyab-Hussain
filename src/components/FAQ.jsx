@@ -10,7 +10,6 @@ function FaqItem({ question, answer }) {
   const toggle = () => {
     const el = bodyRef.current
     if (open) {
-      // Two-step so the closing transition animates from the current height.
       if (el) setMaxHeight(el.scrollHeight)
       requestAnimationFrame(() => setMaxHeight(0))
     } else if (el) {

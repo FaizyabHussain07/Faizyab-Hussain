@@ -1,13 +1,13 @@
 {
-  "name": "Faizyab Hussain — Web Developer",
+  "name": "Faizyab Hussain — Full-Stack Developer & AI Product Builder",
   "short_name": "Faizyab Hussain",
-  "description": "Web developer in Karachi, Pakistan building modern, responsive websites and digital experiences for businesses and growing brands.",
+  "description": "Full-Stack Developer, AI Engineer and AI Product Builder building scalable AI and web systems — SaaS products, business applications, modern websites and AI-powered experiences.",
   "start_url": "/",
   "display": "standalone",
   "orientation": "any",
   "background_color": "#0A1917",
   "theme_color": "#0A1917",
-  "categories": ["portfolio", "development"],
+  "categories": ["portfolio", "technology", "development"],
   "lang": "en",
   "icons": [
     {
@@ -26,18 +26,18 @@
   "shortcuts": [
     {
       "name": "Projects",
-      "url": "/#projects",
-      "description": "View website concepts and shipped projects"
+      "url": "/projects",
+      "description": "View shipped products and project case studies"
+    },
+    {
+      "name": "AI Development",
+      "url": "/ai-development",
+      "description": "AI product development and AI-powered applications"
     },
     {
       "name": "Contact",
-      "url": "/#contact",
+      "url": "/contact",
       "description": "Start a project inquiry"
-    },
-    {
-      "name": "Resume",
-      "url": "/Resume_Faizyab_Hussain.pdf",
-      "description": "Download the resume PDF"
     }
   ]
 }

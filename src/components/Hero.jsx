@@ -1,42 +1,48 @@
+import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
+import { HERO_TECH_STRIP } from '../data/portfolio'
 
 export default function Hero() {
-  const scrollTo = (href) => document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-
   return (
     <header className="hero" id="home">
       <div className="wrap hero-grid">
         <div className="hero-copy">
-          <Reveal><span className="eyebrow">Faizyab Hussain — Web Developer</span></Reveal>
+          <Reveal><span className="eyebrow">Full-Stack Developer · AI Engineer · AI Product Builder</span></Reveal>
           <Reveal delay={80}>
-            <h1>Modern websites<br />for local businesses.</h1>
+            <h1>Scalable AI &amp; Web Systems for Modern Businesses.</h1>
           </Reveal>
           <Reveal delay={160}>
-            <p>I design and build modern, responsive websites and digital experiences for businesses and local businesses — from restaurant and clinic sites to custom web applications.</p>
+            <p>I build websites, web apps, SaaS products and AI-powered systems for businesses and founders.</p>
           </Reveal>
           <Reveal delay={240}>
             <div className="hero-cta">
-              <a href="#projects" className="btn btn-ghost" onClick={(e) => { e.preventDefault(); scrollTo('#projects') }}>
-                View my work
-              </a>
-              <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}>
-                Get a free demo
-              </a>
+              <Link to="/projects" className="btn btn-ghost">
+                View My Work
+              </Link>
+              <Link to="/contact" className="btn btn-primary">
+                Let's Build Something
+              </Link>
             </div>
           </Reveal>
           <Reveal delay={320}>
             <div className="availability">
               <span className="pulse-dot" />
-              Available for freelance &amp; remote projects
+              Available for freelance, remote &amp; product opportunities
+            </div>
+          </Reveal>
+          <Reveal delay={400}>
+            <div className="hero-tech-strip">
+              {HERO_TECH_STRIP.map((tech) => (
+                <span key={tech} className="hero-tech-tag">{tech}</span>
+              ))}
             </div>
           </Reveal>
         </div>
 
-        {/* Right-side visual — modern business website / CRM interface preview */}
         <Reveal delay={200} className="hero-visual">
           <img
             src="/images/hero.jpg"
-            alt="Modern business website interface with booking and lead panel — concept by Faizyab Hussain"
+            alt="Modern web application interface — dashboard and AI system concept by Faizyab Hussain"
             width="1024"
             height="1024"
           />

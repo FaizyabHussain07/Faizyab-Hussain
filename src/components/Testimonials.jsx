@@ -1,32 +1,15 @@
-import { Quote } from 'lucide-react'
-import Reveal from './Reveal'
-import { TESTIMONIALS } from '../data/portfolio'
-
+// Testimonials removed — the previous section contained sample draft quotes
+// that could damage trust if a visitor tried to verify them.
+// Real testimonials can be added here once genuine client feedback is collected.
+//
+// For now, credibility is communicated through:
+// - Shipped projects with live demos
+// - Technical project descriptions
+// - GitHub repositories
+// - Case studies with real details
+//
+// To add real testimonials, add entries to the TESTIMONIALS array in
+// src/data/portfolio.js and uncomment this component.
 export default function Testimonials() {
-  return (
-    <section className="section" id="testimonials">
-      <div className="wrap">
-        <div className="section-head">
-          <Reveal><span className="eyebrow">Testimonials</span></Reveal>
-          <Reveal delay={80}><h2>What people say about working with me</h2></Reveal>
-          <Reveal delay={160}>
-            <p>From business owners and teams I've built websites and digital projects for.</p>
-          </Reveal>
-        </div>
-
-        <div className="testimonials-grid">
-          {TESTIMONIALS.map((t, i) => (
-            <Reveal key={t.name} className="testimonial-card" delay={(i % 3) * 80}>
-              <Quote size={22} className="testimonial-quote" />
-              <p className="testimonial-text">“{t.quote}”</p>
-              <footer className="testimonial-person">
-                <strong>{t.name}</strong>
-                <span>{t.role}</span>
-              </footer>
-            </Reveal>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
+  return null
 }

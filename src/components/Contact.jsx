@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import { Check } from 'lucide-react'
 import Reveal from './Reveal'
-import { CONTACT_METHODS, SITE } from '../data/portfolio'
+import { CONTACT_METHODS, PROJECT_TYPES, SITE } from '../data/portfolio'
 
 export default function Contact() {
-  const [status, setStatus] = useState('idle') // idle | sending | sent | error
+  const [status, setStatus] = useState('idle')
 
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -36,14 +36,14 @@ export default function Contact() {
           <Reveal delay={80}><h2 className="section-title">Let's build something.</h2></Reveal>
           <Reveal delay={160}>
             <p style={{ marginTop: 14, color: 'var(--muted-foreground)', fontSize: '15.5px', lineHeight: 1.6 }}>
-              Tell me a bit about your business and what you need. I'll get back to you with next steps — usually within a day or two.
+              Tell me about your project. I'll get back to you with next steps — usually within a day or two.
             </p>
           </Reveal>
           <div className="contact-methods">
             {CONTACT_METHODS.map((method) => {
               const Icon = method.icon
               const external = method.href && method.href.startsWith('http')
-              return method.href ? (
+              return (
                 <a
                   key={method.label}
                   className="contact-method"
@@ -54,11 +54,6 @@ export default function Contact() {
                   <Icon />
                   <span>{method.label}</span>
                 </a>
-              ) : (
-                <div key={method.label} className="contact-method">
-                  <Icon />
-                  <span>{method.label}</span>
-                </div>
               )
             })}
           </div>
@@ -77,8 +72,8 @@ export default function Contact() {
           </div>
           <div className="form-grid">
             <div className="field">
-              <label htmlFor="fbiz">Business / company</label>
-              <input id="fbiz" name="business" placeholder="e.g. The Golden Fork" />
+              <label htmlFor="fbiz">Company / Business</label>
+              <input id="fbiz" name="business" placeholder="e.g. Acme Corp" />
             </div>
             <div className="field">
               <label htmlFor="fweb">Website (optional)</label>
@@ -86,19 +81,27 @@ export default function Contact() {
             </div>
           </div>
           <div className="field">
-            <label htmlFor="fneed">What do you need?</label>
+            <label htmlFor="fneed">Project Type</label>
             <select id="fneed" name="need">
-              <option>A new website</option>
-              <option>A website redesign</option>
-              <option>A landing page</option>
-              <option>A custom web application</option>
-              <option>Ongoing maintenance</option>
-              <option>Not sure yet</option>
+              {PROJECT_TYPES.map((type) => (
+                <option key={type}>{type}</option>
+              ))}
+            </select>
+          </div>
+          <div className="field">
+            <label htmlFor="fbudget">Budget Range (optional)</label>
+            <select id="fbudget" name="budget">
+              <option value="">Prefer not to say</option>
+              <option>Under $1,000</option>
+              <option>$1,000 – $5,000</option>
+              <option>$5,000 – $15,000</option>
+              <option>$15,000 – $50,000</option>
+              <option>$50,000+</option>
             </select>
           </div>
           <div className="field">
             <label htmlFor="fmsg">Message</label>
-            <textarea id="fmsg" name="message" required placeholder="Tell me a bit about your business and what you're looking for." />
+            <textarea id="fmsg" name="message" required placeholder="Tell me about your project, goals and any technical requirements." />
           </div>
           <button type="submit" className="btn btn-primary" style={{ width: '100%' }} disabled={status === 'sending'}>
             {status === 'sending' ? 'Sending…' : 'Send message'}

@@ -1,16 +1,17 @@
 import { ArrowUpRight } from 'lucide-react'
+import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
 import { SERVICES } from '../data/portfolio'
 
 export default function Services() {
   return (
-    <section className="section" id="services">
+    <section className="section section-tinted" id="services">
       <div className="wrap">
         <div className="section-head">
           <Reveal><span className="eyebrow">Services</span></Reveal>
-          <Reveal delay={80}><h2>Everything your business needs online</h2></Reveal>
+          <Reveal delay={80}><h2>What I can build for you</h2></Reveal>
           <Reveal delay={160}>
-            <p>From a professional website to custom digital tools, I build practical solutions around your business and customers.</p>
+            <p>AI products, full-stack apps, SaaS, business systems, websites — I build what you need.</p>
           </Reveal>
         </div>
         <div className="services-grid">
@@ -27,6 +28,13 @@ export default function Services() {
             )
           })}
         </div>
+        <Reveal delay={200}>
+          <div className="section-cta">
+            <Link to="/services" className="btn btn-ghost">
+              View all services <ArrowUpRight size={15} />
+            </Link>
+          </div>
+        </Reveal>
       </div>
     </section>
   )

@@ -1,12 +1,14 @@
 import { useEffect, useState } from 'react'
+import { Link, useLocation } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { Sun, Moon, Menu, X } from 'lucide-react'
 import { NAV_LINKS } from '../data/portfolio'
 
-export default function Navbar({ activeSection, theme, toggleTheme }) {
+export default function Navbar({ theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
   const [showCta, setShowCta] = useState(false)
   const [menuOpen, setMenuOpen] = useState(false)
+  const location = useLocation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,10 +20,10 @@ export default function Navbar({ activeSection, theme, toggleTheme }) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const scrollTo = (href) => {
+  // Close mobile menu on route change
+  useEffect(() => {
     setMenuOpen(false)
-    document.querySelector(href)?.scrollIntoView({ behavior: 'smooth' })
-  }
+  }, [location.pathname])
 
   return (
     <>
@@ -32,22 +34,26 @@ export default function Navbar({ activeSection, theme, toggleTheme }) {
         className={`nav ${scrolled ? 'scrolled' : ''}`}
       >
         <div className="nav-inner">
-          <a href="#home" className="brand" onClick={(e) => { e.preventDefault(); scrollTo('#home') }}>
+          <Link to="/" className="brand">
             <img src="/faizyab-logo.png" alt="Faizyab Hussain" className="brand-logo" width="324" height="337" />
             <span className="brand-name">Faizyab Hussain</span>
-          </a>
+          </Link>
 
           <div className="nav-links">
-            {NAV_LINKS.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={activeSection === link.href.slice(1) ? 'active' : ''}
-                onClick={(e) => { e.preventDefault(); scrollTo(link.href) }}
-              >
-                {link.label}
-              </a>
-            ))}
+            {NAV_LINKS.map((link) => {
+              const isActive = link.href === '/'
+                ? location.pathname === '/'
+                : location.pathname.startsWith(link.href)
+              return (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={isActive ? 'active' : ''}
+                >
+                  {link.label}
+                </Link>
+              )
+            })}
           </div>
 
           <div className="nav-right">
@@ -59,9 +65,9 @@ export default function Navbar({ activeSection, theme, toggleTheme }) {
               {theme === 'dark' ? <Sun className="icon" /> : <Moon className="icon" />}
             </button>
             {showCta && (
-              <a href="#contact" className="btn btn-primary btn-sm" onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}>
-                Get a free demo
-              </a>
+              <Link to="/contact" className="btn btn-primary btn-sm">
+                Let's Build
+              </Link>
             )}
             <button
               className="menu-btn"
@@ -77,13 +83,13 @@ export default function Navbar({ activeSection, theme, toggleTheme }) {
 
       <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
         {NAV_LINKS.map((link) => (
-          <a key={link.href} href={link.href} onClick={(e) => { e.preventDefault(); scrollTo(link.href) }}>
+          <Link key={link.href} to={link.href} onClick={() => setMenuOpen(false)}>
             {link.label}
-          </a>
+          </Link>
         ))}
-        <a href="#contact" className="btn btn-primary" onClick={(e) => { e.preventDefault(); scrollTo('#contact') }}>
-          Get a free demo
-        </a>
+        <Link to="/contact" className="btn btn-primary" onClick={() => setMenuOpen(false)}>
+          Let's Build
+        </Link>
       </div>
     </>
   )

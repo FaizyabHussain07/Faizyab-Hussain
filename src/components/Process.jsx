@@ -3,13 +3,13 @@ import { PROCESS } from '../data/portfolio'
 
 export default function Process() {
   return (
-    <section className="section" id="process">
+    <section className="section section-tinted" id="process">
       <div className="wrap">
         <div className="section-head">
-          <Reveal><span className="eyebrow">Process</span></Reveal>
-          <Reveal delay={80}><h2>A simple process from idea to launch</h2></Reveal>
+          <Reveal><span className="eyebrow">How I Work</span></Reveal>
+          <Reveal delay={80}><h2>From idea to production</h2></Reveal>
           <Reveal delay={160}>
-            <p>No black box. Here's exactly how a project moves from a first conversation to a live website.</p>
+            <p>A structured approach to building software — from understanding the problem to shipping a production-ready product.</p>
           </Reveal>
         </div>
         <div className="process-list">
