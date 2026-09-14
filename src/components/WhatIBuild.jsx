@@ -1,4 +1,5 @@
 import Reveal from './Reveal'
+import { Link } from 'react-router-dom'
 import { WHAT_I_BUILD } from '../data/portfolio'
 
 export default function WhatIBuild() {
@@ -9,7 +10,7 @@ export default function WhatIBuild() {
           <Reveal><span className="eyebrow">What I Build</span></Reveal>
           <Reveal delay={80}><h2>From AI products to modern web experiences</h2></Reveal>
           <Reveal delay={160}>
-            <p>I build across the full spectrum of modern software — from AI-powered products and SaaS platforms to business systems and conversion-focused websites.</p>
+            <p>I build across the full spectrum of modern software — from <Link to="/ai-development">AI-powered products</Link> and SaaS platforms to <Link to="/solutions/business-systems">business systems</Link> and <Link to="/web-development">conversion-focused websites</Link>. See my <Link to="/services">full range of services</Link>.</p>
           </Reveal>
         </div>
 

@@ -9,7 +9,10 @@ export default function Hero() {
         <div className="hero-copy">
           <Reveal><span className="eyebrow">Full-Stack Developer · AI Engineer · AI Product Builder</span></Reveal>
           <Reveal delay={80}>
-            <h1>Scalable AI &amp; Web Systems for Modern Businesses.</h1>
+            <h1>
+              Faizyab Hussain: Full-Stack Developer &amp; AI Product Builder
+              <span className="hero-h1-line">Scalable AI &amp; Web Systems for Modern Businesses.</span>
+            </h1>
           </Reveal>
           <Reveal delay={160}>
             <p>I build websites, web apps, SaaS products and AI-powered systems for businesses and founders.</p>

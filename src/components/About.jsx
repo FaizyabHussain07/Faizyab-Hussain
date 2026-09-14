@@ -22,13 +22,13 @@ export default function About() {
             <p className="about-role">Full-Stack Developer · AI Engineer · AI Product Builder</p>
           </Reveal>
           <Reveal delay={160}>
-            <p>Developer based in Karachi, Pakistan. I build web applications, SaaS products, AI-powered tools and business systems.</p>
+            <p>Developer based in Karachi, Pakistan. I build <Link to="/solutions/web-applications">web applications</Link>, SaaS products, <Link to="/ai-development">AI-powered tools</Link> and business systems.</p>
           </Reveal>
           <Reveal delay={200}>
             <p>I take ideas from concept to working product — frontend, backend, APIs, databases, deployment. Currently focused on AI, software engineering and scalable systems.</p>
           </Reveal>
           <Reveal delay={240}>
-            <p>Recent work includes DevPass, PasteLink Pro, PromptAudit and business website concepts for restaurants, clinics and professional services.</p>
+            <p>Recent work includes DevPass, PasteLink Pro, PromptAudit and <Link to="/projects">business website concepts</Link> for restaurants, clinics and professional services.</p>
           </Reveal>
           <Reveal delay={320}>
             <div className="about-links">

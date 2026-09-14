@@ -54,7 +54,7 @@ export const SITE = {
   resume: '/Resume_Faizyab_Hussain.pdf',
   portrait: '/faizyab-image-new.jpg',
   location: 'Karachi, Pakistan',
-  description: 'Full-Stack Developer, AI Engineer and AI Product Builder based in Karachi, Pakistan. Building scalable AI and web systems — from SaaS products and business applications to modern websites and AI-powered experiences.',
+  description: 'Faizyab Hussain is a Full-Stack Developer and AI Engineer in Karachi building scalable SaaS products, web systems, and AI-powered experiences.',
 }
 
 /* ─── NAVIGATION ─── */

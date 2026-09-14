@@ -20,10 +20,12 @@ function FaqItem({ question, answer }) {
 
   return (
     <div className={`faq-item ${open ? 'open' : ''}`}>
-      <button className="faq-q" onClick={toggle} aria-expanded={open}>
-        {question}
-        <Plus />
-      </button>
+      <h3 className="faq-h3">
+        <button className="faq-q" onClick={toggle} aria-expanded={open}>
+          {question}
+          <Plus />
+        </button>
+      </h3>
       <div className="faq-a" ref={bodyRef} style={{ maxHeight }}>
         <p>{answer}</p>
       </div>
