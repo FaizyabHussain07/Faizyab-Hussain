@@ -38,6 +38,7 @@ Faizyab Hussain is a Full-Stack Developer, AI Engineer and AI Product Builder ba
 - Landing Pages
 
 ## Shipped Projects
+- **TeleCloud** — Private cloud drive powered by Telegram. https://app-telecloud.vercel.app/
 - **DevPass** — Professional identity platform for software engineers. https://devpass-app.vercel.app/
 - **PasteLink Pro** — Secure temporary text and code sharing. https://paste-link-pro.vercel.app/
 - **Web Template Hub** — Free open-source library of HTML templates and Tailwind CSS components. https://web-template-hub.netlify.app/

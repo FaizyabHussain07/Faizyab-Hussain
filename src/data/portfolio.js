@@ -152,6 +152,23 @@ export const PROJECT_CATEGORIES = [
 export const PROJECTS = [
   // ─── Shipped / Live Projects ───
   {
+    slug: 'telecloud',
+    title: 'TeleCloud',
+    category: 'AI & SaaS',
+    tag: 'shipped',
+    desc: 'Private cloud drive powered by Telegram — upload, organize, search and share files from any device. Files live in a private Telegram channel, PostgreSQL keeps metadata. PWA with multi-device access, folders, search, previews and share links.',
+    problem: 'Cloud storage is either expensive, limited or locked into a single provider — and most people already have unused storage sitting in Telegram.',
+    goal: 'Build a full cloud-drive experience backed by Telegram as the storage layer — familiar UI, multi-device access and zero storage cost.',
+    solution: 'Built a full-stack PWA where files are stored in a private Telegram channel, PostgreSQL manages metadata, and users get folders, search, previews, starring and share links with OAuth and email authentication.',
+    features: ['Telegram-backed storage', 'Multi-device PWA', 'Folder organization & drag & drop', 'Powerful search by name, type, size or date', 'Image, PDF, video & code previews', 'Star, share links, OAuth & email auth'],
+    tech: ['Next.js', 'PostgreSQL', 'Telegram API', 'OAuth'],
+    status: 'Live',
+    live: 'https://app-telecloud.vercel.app/',
+    github: null,
+    icon: Globe,
+    thumb: '/images/projects/telecloud.jpg',
+  },
+  {
     slug: 'devpass',
     title: 'DevPass',
     category: 'AI & SaaS',
@@ -166,6 +183,7 @@ export const PROJECTS = [
     live: 'https://devpass-app.vercel.app/',
     github: null,
     icon: BadgeCheck,
+    thumb: '/images/projects/devpass.jpg',
   },
   {
     slug: 'pastelink-pro',
@@ -182,6 +200,7 @@ export const PROJECTS = [
     live: 'https://paste-link-pro.vercel.app/',
     github: null,
     icon: Link2,
+    thumb: '/images/projects/pastelink-pro.jpg',
   },
   {
     slug: 'web-template-hub',
@@ -198,6 +217,7 @@ export const PROJECTS = [
     live: 'https://web-template-hub.netlify.app/',
     github: null,
     icon: LayoutTemplate,
+    thumb: '/images/projects/web-template-hub.jpg',
   },
   {
     slug: 'slik',
@@ -214,6 +234,7 @@ export const PROJECTS = [
     live: 'https://slik-dev.vercel.app/',
     github: null,
     icon: Rocket,
+    thumb: '/images/projects/slik.jpg',
   },
   {
     slug: 'quizspark',
@@ -230,6 +251,7 @@ export const PROJECTS = [
     live: 'https://quiz-spark-ai.base44.app/',
     github: null,
     icon: Brain,
+    thumb: '/images/projects/quizspark.jpg',
   },
   {
     slug: 'clinicflow',
@@ -246,6 +268,7 @@ export const PROJECTS = [
     live: 'https://clinic-flow-managemnet.vercel.app/',
     github: null,
     icon: Stethoscope,
+    thumb: '/images/projects/clinicflow.jpg',
   },
   {
     slug: 'buildlayout',
@@ -262,6 +285,7 @@ export const PROJECTS = [
     live: 'https://buildplan-studio-web.lovable.app/',
     github: null,
     icon: PencilRuler,
+    thumb: '/images/projects/buildlayout.jpg',
   },
   {
     slug: 'promptaudit',
@@ -278,6 +302,7 @@ export const PROJECTS = [
     live: 'https://prompt-audit.lovable.app/',
     github: null,
     icon: SearchCheck,
+    thumb: '/images/projects/promptaudit.jpg',
   },
 
   // ─── Concept Projects (Business Website Concepts) ───
