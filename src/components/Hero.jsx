@@ -11,7 +11,7 @@ export default function Hero() {
           <Reveal delay={80}>
             <h1>
               Faizyab Hussain: Full-Stack Developer &amp; AI Product Builder
-              <span className="hero-h1-line">Scalable AI &amp; Web Systems for Modern Businesses.</span>
+              <span className="hero-h1-line">Building Scalable Web, SaaS & AI Products for Modern Businesses.</span>
             </h1>
           </Reveal>
           <Reveal delay={160}>
