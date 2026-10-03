@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import Reveal from './Reveal'
-import { HERO_TECH_STRIP } from '../data/portfolio'
+import { HERO_TECH_STRIP, SITE } from '../data/portfolio'
 
 export default function Hero() {
   return (
@@ -22,6 +22,9 @@ export default function Hero() {
               <Link to="/projects" className="btn btn-ghost">
                 View My Work
               </Link>
+              <a href={SITE.resume} className="btn btn-ghost" target="_blank" rel="noopener noreferrer">
+                View Resume
+              </a>
               <Link to="/contact" className="btn btn-primary">
                 Let's Build Something
               </Link>
